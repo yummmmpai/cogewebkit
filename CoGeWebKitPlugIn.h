@@ -45,6 +45,8 @@
 	double lastScrollValueX;
 	double lastScrollValueY;
 	
+	NSString *JSOut;
+	
 }
 
 @property (readwrite, retain) NSString* theURLString;
@@ -73,19 +75,18 @@
 @property (assign) BOOL inputMouseLeftDown;
 @property (assign) BOOL inputMouseRightDown;
 
-//key event inputs
-@property (assign) NSString* inputKeyDown;
+@property (assign) NSUInteger inputColorSpace;
+
 
 // javascript specific
 @property (assign) BOOL inputReexecuteJS;
-
-@property (assign) BOOL inputShowScrollBar;
 
 @property (assign) id<QCPlugInOutputImageProvider> outputImage;
 @property (assign) double outputDocWidth;
 @property (assign) double outputDocHeight;
 
 @property (assign) NSString* outputJavascript;
+@property (assign) NSString* outputCurrentURL;
 @property (assign) NSArray* outputImageUrls;
 @property (assign) NSString* outputHTMLStringSource;
 @property (assign) double outputProgress;

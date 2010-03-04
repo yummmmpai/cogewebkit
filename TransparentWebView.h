@@ -13,6 +13,9 @@
 @interface TransparentWebView : WebView
 {
 
+	IBOutlet NSTextField * naviField;
 }
+
+-(IBAction)triggerGoBack:(id)sender;
 
 @end

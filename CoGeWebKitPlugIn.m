@@ -26,7 +26,6 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 
 @dynamic inputFilePath;
 @dynamic inputShowWindow;
-@dynamic inputShowScrollBar;
 
 @dynamic inputWidth;
 @dynamic inputHeight;
@@ -37,9 +36,7 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 @dynamic inputForwardHistory;
 @dynamic inputBackwardHistory;
 
-@dynamic inputKeyDown;
-
-
+@dynamic inputColorSpace;
 
 // event input
 @dynamic inputMouseScrollX;
@@ -50,6 +47,7 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 @dynamic inputMouseLeftDown;
 
 @dynamic outputJavascript;
+@dynamic outputCurrentURL;
 @dynamic outputImageUrls;
 @dynamic outputHTMLStringSource;
 @dynamic outputProgress;
@@ -121,6 +119,15 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				nil];
 	}
 	
+	if([key isEqualToString:@"inputColorSpace"])
+	{
+		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeIndex, QCPortAttributeTypeKey,
+				[NSNumber numberWithUnsignedInteger:0], QCPortAttributeDefaultValueKey, @"Color Space", QCPortAttributeNameKey,
+				[NSNumber numberWithUnsignedInteger:1], QCPortAttributeMaximumValueKey,
+				[NSArray arrayWithObjects:@"RGB", @"RGBLinear", nil], QCPortAttributeMenuItemsKey,
+				nil];
+	}
+	
 	if([key isEqualToString:@"inputJavascript"])
 	{
 		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeString, QCPortAttributeTypeKey,
@@ -175,13 +182,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				[NSNumber numberWithFloat:0.0], QCPortAttributeDefaultValueKey,
 				@"Mouse Scroll Y", QCPortAttributeNameKey, nil];
 	}
-
-	if([key isEqualToString:@"inputKeyDown"])
-	{
-		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeString, QCPortAttributeTypeKey,
-				@"", QCPortAttributeDefaultValueKey,
-				@"Pressed Key", QCPortAttributeNameKey, nil];
-	}
 	
 	
 	if([key isEqualToString:@"inputShowWindow"])
@@ -191,12 +191,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				@"View Browser Window", QCPortAttributeNameKey, nil];
 	}
 	
-	if([key isEqualToString:@"inputShowScrollBar"])
-	{
-		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeBoolean, QCPortAttributeTypeKey,
-				[NSNumber numberWithInt:1], QCPortAttributeDefaultValueKey,
-				@"Allow Scrollbar", QCPortAttributeNameKey, nil];
-	}
 	if([key isEqualToString:@"outputImage"])
 		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeImage, QCPortAttributeTypeKey,@"Image", QCPortAttributeNameKey,nil];
 	
@@ -218,6 +212,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	if([key isEqualToString:@"outputProgress"])
 		return [NSDictionary dictionaryWithObjectsAndKeys:@"Download Progress", QCPortAttributeNameKey, nil];	
 
+	if([key isEqualToString:@"outputCurrentURL"])
+		return [NSDictionary dictionaryWithObjectsAndKeys:@"Current URL", QCPortAttributeNameKey, nil];	
+
 	return nil;
 }
 
@@ -229,7 +226,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			@"inputJavascript",
 			@"inputReexecuteJS",
 			@"inputShowWindow",
-			@"inputShowScrollBar",
 			@"inputBackwardHistory",
 			@"inputForwardHistory",
 			@"inputReload",
@@ -240,14 +236,15 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			@"inputMouseScrollX",
 			@"inputMouseScrollY",
 			@"inputKeyDown",
-			@"inputViewScrollbar",
+			@"inputColorSpace",
 			@"outputImage",
 			@"outputDocWidth", 
 			@"outputDocHeight",
 			@"outputJavascript",
 			@"outputImageUrls", 
 			@"outputHTMLStringSource",
-			@"outputProgress",		
+			@"outputProgress",	
+			@"outputCurrentURL",
 			nil];
 }
 
@@ -310,6 +307,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		[self setUrlList:[NSMutableArray array]];
 		
 		updateOneshotOutputPorts = NO;
+		
+		JSOut = @"";
 	}
 	
 	return self;
@@ -512,6 +511,10 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 }
 
+-(void)webviewExecuteJS {
+
+	JSOut = [theWebView stringByEvaluatingJavaScriptFromString:self.inputJavascript];
+}
 
 
 
@@ -546,23 +549,43 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			
 	}
 	
+	//history handling
+	if ([self didValueForInputKeyChange:@"inputBackwardHistory"] && (self.inputBackwardHistory == TRUE)) {
+		
+		[theWebView performSelectorOnMainThread:@selector(goBack:) withObject:nil waitUntilDone:YES];
+		
+		self.outputCurrentURL = [theWebView mainFrameURL];
+	}
+
+	if ([self didValueForInputKeyChange:@"inputForwardHistory"] && (self.inputForwardHistory == TRUE)) {
+		
+		[theWebView performSelectorOnMainThread:@selector(goForward:) withObject:nil waitUntilDone:YES];
+
+		self.outputCurrentURL = [theWebView mainFrameURL];
+}
+
+	if ([self didValueForInputKeyChange:@"inputReload"] && (self.inputReload == TRUE)) {
+		
+		[theWebView performSelectorOnMainThread:@selector(reload:) withObject:nil waitUntilDone:YES];
+		
+		self.outputCurrentURL = [theWebView mainFrameURL];
+	}
+	
 	//put the progress
-//	self.outputProgress = ([theWebView estimatedProgress]) ? [theWebView estimatedProgress] : 0; 
+	self.outputProgress = ([theWebView estimatedProgress]) ? [theWebView estimatedProgress] : 0; 
 	
 	if ([self didValueForInputKeyChange:@"inputFilePath"])
 	{
 		
 		//stops swf playing - this actually stops current swf audio playing
 		//needed in any situation
-		 
-
 		
 		// special case flash handling:
 		if ([[self fileKind:self.inputFilePath] isEqualToString:@"Shockwave Flash Movie"])
 		{
 
-			
 			[self performSelectorOnMainThread:@selector(handleLoadingFlashSetup) withObject:nil waitUntilDone:YES];
+			
 		}
 		else
 		{	
@@ -580,19 +603,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		NSLog(@"filepath changed, reload it...");
 	}
 	
-	//show/hide scrollbar
-	if ([self didValueForInputKeyChange:@"inputShowScrollBar"]) {
-	
-		if (self.inputShowScrollBar) {
-			
-			[self performSelectorOnMainThread:@selector(executeJavascriptWithString:) withObject:[NSString stringWithString:@"document.body.style.overflow='scroll'"] waitUntilDone:YES];
-			
-		} else {
-
-			[self performSelectorOnMainThread:@selector(executeJavascriptWithString:) withObject:[NSString stringWithString:@"document.body.style.overflow='hidden'"] waitUntilDone:YES];
-
-		}
-	}
 	
 	if(updateOneshotOutputPorts)
 	{
@@ -601,9 +611,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		[self performSelectorOnMainThread:@selector(setOutputWidthAndHeight) withObject:nil waitUntilDone:YES];
 
-		
-
-		
 		updateOneshotOutputPorts = NO;
 	}
 	
@@ -617,6 +624,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		NSUInteger flag = 0;
 		NSUInteger clickCount = 0;
 		SEL selector; 
+		
 		
 		// now we switch through the possible mouse combinations and build flag and event lists.
 		// left mouse drag
@@ -682,6 +690,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			selector = NSSelectorFromString(@"mouseDragged:");
 		}
 		
+			
+
 		NSEvent* mouseEvent = [NSEvent mouseEventWithType:type 
 												 location:location 
 											modifierFlags:flag
@@ -689,12 +699,13 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 											 windowNumber:[[hitView window] windowNumber]	// dont assume offScreenWindow
 												  context:[[hitView window] graphicsContext] // ^^
 											  eventNumber:0 // % INT32_MAX;
- 											   clickCount:clickCount
+											   clickCount:clickCount
 												 pressure:0.0];
+		
 		
 		if(hitView)
 		{
-			NSLog(@"hitView class is:%@ at point:%@", [hitView className], NSStringFromPoint(location));
+			//NSLog(@"hitView class is:%@ at point:%@", [hitView className], NSStringFromPoint(location));
 			
 			[offscreenWindow makeFirstResponder:hitView];
 			
@@ -713,6 +724,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			[theWebView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:YES];
 			//[theWebView performSelector:selector withObject:mouseEvent];
 		}
+			
+		
+		
 	}
 	
 	//if width or height changed
@@ -755,15 +769,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	}
 	
 	
-#pragma mark Key Event Handle
-	
-	if ([self didValueForInputKeyChange:@"inputKeyDown"]) {
-	
-		//NSLog(@"key down");
-
-		
-	}
-	
 	
 #pragma mark javascript
 	
@@ -777,9 +782,11 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	if (([self didValueForInputKeyChange:@"inputJavascript"]) || (needJSExecute))
 	{
 		//be safe
-		if ([self.inputJavascript rangeOfString:@"window.close"].location == NSNotFound)
-		//	self.outputJavascript = [theWebView stringByEvaluatingJavaScriptFromString:self.inputJavascript];
+		if ([self.inputJavascript rangeOfString:@"window.close"].location == NSNotFound) {
 			NSLog(@"safe javascript :)");
+		[self performSelectorOnMainThread:@selector(webviewExecuteJS:) withObject:[NSString stringWithString:self.inputJavascript] waitUntilDone:YES];
+			self.outputJavascript = JSOut;
+		}
 		else
 			self.outputJavascript = @"hey, don't kill our plugin with a window.close, dude!";
 		
@@ -820,16 +827,34 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		#else
 		#define CogePrivatePlugInPixelFormat QCPlugInPixelFormatBGRA8
 		#endif
+			
+			if (self.inputColorSpace == 0) {
+				
+				self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
+																				pixelsWide:width
+																				pixelsHigh:height
+																					  name:webTexture1
+																				   flipped:YES
+																		   releaseCallback:_TextureReleaseCallback
+																			releaseContext:NULL
+																				colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
+																		  shouldColorMatch:YES];
+				
+				
+			} else {
+			
+				self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
+																				pixelsWide:width
+																				pixelsHigh:height
+																					  name:webTexture1
+																				   flipped:YES
+																		   releaseCallback:_TextureReleaseCallback
+																			releaseContext:NULL
+																				colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGBLinear)
+																		  shouldColorMatch:YES];
+				
+			} 
 		
-			self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
-																			pixelsWide:width
-																			pixelsHigh:height
-																				  name:webTexture1
-																			   flipped:YES
-																	   releaseCallback:_TextureReleaseCallback
-																		releaseContext:NULL
-																			colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
-																	  shouldColorMatch:YES];
 			
 			glPopAttrib();
 		}
@@ -963,6 +988,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	[self setUrlList:newURLArray];
 	[self setStringHTMLSource:[self sourceFromWebView:sender]];	
 	updateOneshotOutputPorts = YES;
+
 }
 
 #pragma mark -
