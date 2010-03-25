@@ -499,6 +499,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 	[theWebView setDrawsBackground:NO];
 	[[theWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.inputFilePath]]];
+	
 
 }
 
@@ -599,6 +600,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		//for pure swf, we need to set the filepath on the transparent window's textfield, weird...
 		[offscreenWindow setNaviPath:self.inputFilePath];
+		
+		self.outputCurrentURL = [NSString stringWithString:self.inputFilePath];
+
 		
 		NSLog(@"filepath changed, reload it...");
 	}
@@ -784,7 +788,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		//be safe
 		if ([self.inputJavascript rangeOfString:@"window.close"].location == NSNotFound) {
 			NSLog(@"safe javascript :)");
-		[self performSelectorOnMainThread:@selector(webviewExecuteJS:) withObject:[NSString stringWithString:self.inputJavascript] waitUntilDone:YES];
+		[self performSelectorOnMainThread:@selector(webviewExecuteJS) withObject:nil waitUntilDone:YES];
 			self.outputJavascript = JSOut;
 		}
 		else
@@ -872,11 +876,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	Called by Quartz Composer when the plug-in instance stops being used by Quartz Composer.
 	*/	
 	
-	CGLContextObj cgl_ctx = [context CGLContextObj];
-	CGLLockContext(cgl_ctx);
-	// delete our texture
-	glDeleteTextures(1, &webTexture1);
-	CGLUnlockContext(cgl_ctx);
 }
 
 - (void) stopExecution:(id<QCPlugInContext>)context
@@ -884,6 +883,11 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	/*
 	Called by Quartz Composer when rendering of the composition stops: perform any required cleanup for the plug-in.
 	*/
+	CGLContextObj cgl_ctx = [context CGLContextObj];
+	CGLLockContext(cgl_ctx);
+	// delete our texture
+	glDeleteTextures(1, &webTexture1);
+	CGLUnlockContext(cgl_ctx);
 }
 
 - (void) copyWebViewToBitmap1InBackground
