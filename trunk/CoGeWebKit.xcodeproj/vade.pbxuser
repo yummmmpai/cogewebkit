@@ -1,0 +1,2469 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 23E90CA60A83C53500A6A40A /* Quartz Composer */;
+		activeTarget = 233E2C640A83C768005A62DF /* Build & Copy */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* CoGeWebKit */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 23E90CA50A83C4F400A6A40A /* Code sense */;
+		executables = (
+			23E90CA60A83C53500A6A40A /* Quartz Composer */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					671,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					786,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					749,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					929,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					875,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					801,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					837,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					519,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 268973660;
+			PBXWorkspaceStateSaveDate = 268973660;
+		};
+		perUserProjectItems = {
+			1B5B5AD9100190410043536B = 1B5B5AD9100190410043536B /* PBXTextBookmark */;
+			1B5B5ADC100190410043536B = 1B5B5ADC100190410043536B /* PBXTextBookmark */;
+			1B5B5B1A1001B6780043536B = 1B5B5B1A1001B6780043536B /* PBXTextBookmark */;
+			1B5B5B1B1001B6780043536B = 1B5B5B1B1001B6780043536B /* PBXTextBookmark */;
+			1B5B5B7E1001C0280043536B = 1B5B5B7E1001C0280043536B /* PBXTextBookmark */;
+			1B5B5B7F1001C0280043536B = 1B5B5B7F1001C0280043536B /* PBXTextBookmark */;
+			1B5B5BFF1001CC6A0043536B = 1B5B5BFF1001CC6A0043536B /* PBXTextBookmark */;
+			1B5B5C031001CC6A0043536B = 1B5B5C031001CC6A0043536B /* PBXTextBookmark */;
+			1B5B5E1C1005B2330043536B = 1B5B5E1C1005B2330043536B /* PBXTextBookmark */;
+			1B5B5E351005B52D0043536B = 1B5B5E351005B52D0043536B /* PBXTextBookmark */;
+			1B5B5E361005B52D0043536B = 1B5B5E361005B52D0043536B /* PBXTextBookmark */;
+			1B5B5E951006DCF30043536B = 1B5B5E951006DCF30043536B /* PBXTextBookmark */;
+			1B5B5E961006DCF30043536B = 1B5B5E961006DCF30043536B /* PlistBookmark */;
+			1B5B5F14100780B30043536B = 1B5B5F14100780B30043536B /* PBXTextBookmark */;
+			1B5B5F15100780B30043536B = 1B5B5F15100780B30043536B /* PBXTextBookmark */;
+			1B5B5F17100780B30043536B = 1B5B5F17100780B30043536B /* PBXTextBookmark */;
+			1B5B5F24100781060043536B = 1B5B5F24100781060043536B /* PBXTextBookmark */;
+			1B5B5F611007ACE70043536B = 1B5B5F611007ACE70043536B /* PBXTextBookmark */;
+			1B5B5F661007ACE70043536B = 1B5B5F661007ACE70043536B /* PBXTextBookmark */;
+			1B5B5F711007E3450043536B = 1B5B5F711007E3450043536B /* PBXTextBookmark */;
+			1B5B5F7610082EBB0043536B = 1B5B5F7610082EBB0043536B /* PBXTextBookmark */;
+			1B5B5FC41008364E0043536B = 1B5B5FC41008364E0043536B /* PBXTextBookmark */;
+			1B5B5FD8100838B10043536B /* PBXTextBookmark */ = 1B5B5FD8100838B10043536B /* PBXTextBookmark */;
+			1B5B5FD9100838B10043536B /* PBXTextBookmark */ = 1B5B5FD9100838B10043536B /* PBXTextBookmark */;
+			1B5B5FE2100838B30043536B /* PBXTextBookmark */ = 1B5B5FE2100838B30043536B /* PBXTextBookmark */;
+			1B5B5FE3100838B30043536B /* PBXTextBookmark */ = 1B5B5FE3100838B30043536B /* PBXTextBookmark */;
+			1B5B5FE61008390F0043536B /* PBXTextBookmark */ = 1B5B5FE61008390F0043536B /* PBXTextBookmark */;
+			1B5B5FE7100839110043536B /* PBXTextBookmark */ = 1B5B5FE7100839110043536B /* PBXTextBookmark */;
+			1BA791B30FFC7F01007CE5DB = 1BA791B30FFC7F01007CE5DB /* PBXTextBookmark */;
+			1BA791B40FFC7F01007CE5DB = 1BA791B40FFC7F01007CE5DB /* PBXTextBookmark */;
+			1BA794680FFC9E00007CE5DB = 1BA794680FFC9E00007CE5DB /* PBXTextBookmark */;
+			1BA7946E0FFC9E00007CE5DB = 1BA7946E0FFC9E00007CE5DB /* PBXTextBookmark */;
+			1BA794700FFC9E00007CE5DB = 1BA794700FFC9E00007CE5DB /* PlistBookmark */;
+			1BA7952B0FFD8D42007CE5DB = 1BA7952B0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7952C0FFD8D42007CE5DB = 1BA7952C0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7952E0FFD8D42007CE5DB = 1BA7952E0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795300FFD8D42007CE5DB = 1BA795300FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795320FFD8D42007CE5DB = 1BA795320FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795340FFD8D42007CE5DB = 1BA795340FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795360FFD8D42007CE5DB = 1BA795360FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795380FFD8D42007CE5DB = 1BA795380FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7953A0FFD8D42007CE5DB = 1BA7953A0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7953C0FFD8D42007CE5DB = 1BA7953C0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7953E0FFD8D42007CE5DB = 1BA7953E0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795400FFD8D42007CE5DB = 1BA795400FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795420FFD8D42007CE5DB = 1BA795420FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795440FFD8D42007CE5DB = 1BA795440FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795460FFD8D42007CE5DB = 1BA795460FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795480FFD8D42007CE5DB = 1BA795480FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7954A0FFD8D42007CE5DB = 1BA7954A0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7954C0FFD8D42007CE5DB = 1BA7954C0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7954E0FFD8D42007CE5DB = 1BA7954E0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795500FFD8D42007CE5DB = 1BA795500FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795520FFD8D42007CE5DB = 1BA795520FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795540FFD8D42007CE5DB = 1BA795540FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795560FFD8D42007CE5DB = 1BA795560FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795580FFD8D42007CE5DB = 1BA795580FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7955A0FFD8D42007CE5DB = 1BA7955A0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7955C0FFD8D42007CE5DB = 1BA7955C0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7955E0FFD8D42007CE5DB = 1BA7955E0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795600FFD8D42007CE5DB = 1BA795600FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795620FFD8D42007CE5DB = 1BA795620FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795640FFD8D42007CE5DB = 1BA795640FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795660FFD8D42007CE5DB = 1BA795660FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795680FFD8D42007CE5DB = 1BA795680FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7956A0FFD8D42007CE5DB = 1BA7956A0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7956C0FFD8D42007CE5DB = 1BA7956C0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7956E0FFD8D42007CE5DB = 1BA7956E0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795700FFD8D42007CE5DB = 1BA795700FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795720FFD8D42007CE5DB = 1BA795720FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795740FFD8D42007CE5DB = 1BA795740FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795760FFD8D42007CE5DB = 1BA795760FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795780FFD8D42007CE5DB = 1BA795780FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7957A0FFD8D42007CE5DB = 1BA7957A0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7957C0FFD8D42007CE5DB = 1BA7957C0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7957E0FFD8D42007CE5DB = 1BA7957E0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795800FFD8D42007CE5DB = 1BA795800FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795820FFD8D42007CE5DB = 1BA795820FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795840FFD8D42007CE5DB = 1BA795840FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795860FFD8D42007CE5DB = 1BA795860FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795880FFD8D42007CE5DB = 1BA795880FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7958A0FFD8D42007CE5DB = 1BA7958A0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7958E0FFD8D42007CE5DB = 1BA7958E0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7958F0FFD8D42007CE5DB = 1BA7958F0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795910FFD8D42007CE5DB = 1BA795910FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795930FFD8D42007CE5DB = 1BA795930FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795950FFD8D42007CE5DB = 1BA795950FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795970FFD8D42007CE5DB = 1BA795970FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795990FFD8D42007CE5DB = 1BA795990FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7959B0FFD8D42007CE5DB = 1BA7959B0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7959D0FFD8D42007CE5DB = 1BA7959D0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7959F0FFD8D42007CE5DB = 1BA7959F0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795A10FFD8D42007CE5DB = 1BA795A10FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795A30FFD8D42007CE5DB = 1BA795A30FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795A50FFD8D42007CE5DB = 1BA795A50FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795A70FFD8D42007CE5DB = 1BA795A70FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795AB0FFD8D42007CE5DB = 1BA795AB0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795AD0FFD8D42007CE5DB = 1BA795AD0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795AF0FFD8D42007CE5DB = 1BA795AF0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795B10FFD8D42007CE5DB = 1BA795B10FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795B30FFD8D42007CE5DB = 1BA795B30FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795B50FFD8D42007CE5DB = 1BA795B50FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795BD0FFD8D42007CE5DB = 1BA795BD0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795BF0FFD8D42007CE5DB = 1BA795BF0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795C30FFD8D42007CE5DB = 1BA795C30FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795C50FFD8D42007CE5DB = 1BA795C50FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795C70FFD8D42007CE5DB = 1BA795C70FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795C90FFD8D42007CE5DB = 1BA795C90FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795CB0FFD8D42007CE5DB = 1BA795CB0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795CD0FFD8D42007CE5DB = 1BA795CD0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795CF0FFD8D42007CE5DB = 1BA795CF0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795D10FFD8D42007CE5DB = 1BA795D10FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795D30FFD8D42007CE5DB = 1BA795D30FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795D50FFD8D42007CE5DB = 1BA795D50FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795DB0FFD8D42007CE5DB = 1BA795DB0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795DD0FFD8D42007CE5DB = 1BA795DD0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795DF0FFD8D42007CE5DB = 1BA795DF0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795E10FFD8D42007CE5DB = 1BA795E10FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795E30FFD8D42007CE5DB = 1BA795E30FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795EB0FFD8D42007CE5DB = 1BA795EB0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795ED0FFD8D42007CE5DB = 1BA795ED0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795F50FFD8D42007CE5DB = 1BA795F50FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795F70FFD8D42007CE5DB = 1BA795F70FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795FD0FFD8D42007CE5DB = 1BA795FD0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA795FF0FFD8D42007CE5DB = 1BA795FF0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA796050FFD8D42007CE5DB = 1BA796050FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA796070FFD8D42007CE5DB = 1BA796070FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7960B0FFD8D42007CE5DB = 1BA7960B0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7960F0FFD8D42007CE5DB = 1BA7960F0FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA796190FFD8D42007CE5DB = 1BA796190FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA796230FFD8D42007CE5DB = 1BA796230FFD8D42007CE5DB /* PBXTextBookmark */;
+			1BA7962B0FFD9189007CE5DB = 1BA7962B0FFD9189007CE5DB /* PBXTextBookmark */;
+			1BA796300FFD9189007CE5DB = 1BA796300FFD9189007CE5DB /* PBXTextBookmark */;
+		};
+		sourceControlManager = 23E90CA40A83C4F400A6A40A /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	16BA95400A7EB2EB001E4983 /* CoGeWebKitPlugIn.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1107, 1624}}";
+			sepNavSelRange = "{332, 0}";
+			sepNavVisRange = "{148, 1302}";
+			sepNavVisRect = "{{0, 0}, {839, 550}}";
+		};
+	};
+	16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1350, 14462}}";
+			sepNavSelRange = "{18853, 0}";
+			sepNavVisRange = "{17853, 1887}";
+		};
+	};
+	1B5B5ACB100188E00043536B /* TransparentWebView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 744}}";
+			sepNavSelRange = "{237, 0}";
+			sepNavVisRange = "{0, 243}";
+			sepNavWindowFrame = "{{15, 1}, {995, 872}}";
+		};
+	};
+	1B5B5ACC100188E00043536B /* TransparentWebView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 744}}";
+			sepNavSelRange = "{242, 0}";
+			sepNavVisRange = "{0, 249}";
+			sepNavWindowFrame = "{{15, 1}, {995, 872}}";
+		};
+	};
+	1B5B5AD9100190410043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5ACB100188E00043536B /* TransparentWebView.h */;
+		name = "TransparentWebView.h: 12";
+		rLen = 0;
+		rLoc = 191;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 0;
+	};
+	1B5B5ADC100190410043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5ACC100188E00043536B /* TransparentWebView.m */;
+		name = "TransparentWebView.m: 14";
+		rLen = 0;
+		rLoc = 207;
+		rType = 0;
+		vrLen = 249;
+		vrLoc = 0;
+	};
+	1B5B5AE6100194BB0043536B /* TransparentWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1107, 671}}";
+			sepNavSelRange = "{205, 0}";
+			sepNavVisRange = "{0, 216}";
+		};
+	};
+	1B5B5AE7100194BB0043536B /* TransparentWindow.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 744}}";
+			sepNavSelRange = "{568, 0}";
+			sepNavVisRange = "{0, 573}";
+			sepNavWindowFrame = "{{15, 1}, {995, 872}}";
+		};
+	};
+	1B5B5B1A1001B6780043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5AE6100194BB0043536B /* TransparentWindow.h */;
+		name = "TransparentWindow.h: 13";
+		rLen = 0;
+		rLoc = 205;
+		rType = 0;
+		vrLen = 216;
+		vrLoc = 0;
+	};
+	1B5B5B1B1001B6780043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5AE7100194BB0043536B /* TransparentWindow.m */;
+		name = "TransparentWindow.m: 13";
+		rLen = 0;
+		rLoc = 567;
+		rType = 0;
+		vrLen = 211;
+		vrLoc = 0;
+	};
+	1B5B5B6C1001BC9D0043536B /* NonTransparentWebTitleBar.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 692}}";
+			sepNavSelRange = "{261, 0}";
+			sepNavVisRange = "{0, 268}";
+		};
+	};
+	1B5B5B6D1001BC9D0043536B /* NonTransparentWebTitleBar.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 744}}";
+			sepNavSelRange = "{362, 0}";
+			sepNavVisRange = "{0, 370}";
+			sepNavWindowFrame = "{{15, 1}, {995, 872}}";
+		};
+	};
+	1B5B5B7E1001C0280043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5B6C1001BC9D0043536B /* NonTransparentWebTitleBar.h */;
+		name = "NonTransparentWebTitleBar.h: 17";
+		rLen = 0;
+		rLoc = 261;
+		rType = 0;
+		vrLen = 268;
+		vrLoc = 0;
+	};
+	1B5B5B7F1001C0280043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5B6D1001BC9D0043536B /* NonTransparentWebTitleBar.m */;
+		name = "NonTransparentWebTitleBar.m: 20";
+		rLen = 0;
+		rLoc = 364;
+		rType = 0;
+		vrLen = 342;
+		vrLoc = 0;
+	};
+	1B5B5B8D1001C2CE0043536B /* gl.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = gl.h;
+		path = /Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Headers/gl.h;
+		sourceTree = "<absolute>";
+	};
+	1B5B5BFF1001CC6A0043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5B8D1001C2CE0043536B /* gl.h */;
+		name = "gl.h: 2765";
+		rLen = 173;
+		rLoc = 136502;
+		rType = 0;
+		vrLen = 3711;
+		vrLoc = 135148;
+	};
+	1B5B5C031001CC6A0043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5B8D1001C2CE0043536B /* gl.h */;
+		name = "gl.h: 2765";
+		rLen = 173;
+		rLoc = 136502;
+		rType = 0;
+		vrLen = 3711;
+		vrLoc = 135148;
+	};
+	1B5B5DD31005AAE00043536B /* wrapper.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 692}}";
+			sepNavSelRange = "{448, 0}";
+			sepNavVisRange = "{0, 448}";
+			sepNavWindowFrame = "{{15, 1}, {995, 872}}";
+		};
+	};
+	1B5B5E1C1005B2330043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5DD31005AAE00043536B /* wrapper.html */;
+		name = "wrapper.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 448;
+		vrLoc = 0;
+	};
+	1B5B5E351005B52D0043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5B6D1001BC9D0043536B /* NonTransparentWebTitleBar.m */;
+		name = "NonTransparentWebTitleBar.m: 15";
+		rLen = 0;
+		rLoc = 306;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 0;
+	};
+	1B5B5E361005B52D0043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5B6C1001BC9D0043536B /* NonTransparentWebTitleBar.h */;
+		name = "NonTransparentWebTitleBar.h: 17";
+		rLen = 0;
+		rLoc = 261;
+		rType = 0;
+		vrLen = 268;
+		vrLoc = 0;
+	};
+	1B5B5E951006DCF30043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5DD31005AAE00043536B /* wrapper.html */;
+		name = "wrapper.html: 12";
+		rLen = 0;
+		rLoc = 448;
+		rType = 0;
+		vrLen = 448;
+		vrLoc = 0;
+	};
+	1B5B5E961006DCF30043536B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /SVNWorkingCopies/CoGeWebKit/Info.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1B5B5F14100780B30043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5AE7100194BB0043536B /* TransparentWindow.m */;
+		name = "TransparentWindow.m: 12";
+		rLen = 17;
+		rLoc = 187;
+		rType = 0;
+		vrLen = 682;
+		vrLoc = 0;
+	};
+	1B5B5F15100780B30043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5AE6100194BB0043536B /* TransparentWindow.h */;
+		name = "TransparentWindow.h: 13";
+		rLen = 0;
+		rLoc = 205;
+		rType = 0;
+		vrLen = 216;
+		vrLoc = 0;
+	};
+	1B5B5F17100780B30043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5ACB100188E00043536B /* TransparentWebView.h */;
+		name = "TransparentWebView.h: 17";
+		rLen = 0;
+		rLoc = 237;
+		rType = 0;
+		vrLen = 243;
+		vrLoc = 0;
+	};
+	1B5B5F24100781060043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5ACC100188E00043536B /* TransparentWebView.m */;
+		name = "TransparentWebView.m: 19";
+		rLen = 0;
+		rLoc = 242;
+		rType = 0;
+		vrLen = 251;
+		vrLoc = 0;
+	};
+	1B5B5F611007ACE70043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5F621007ACE70043536B /* stdint.h */;
+		name = "stdint.h: 146";
+		rLen = 38;
+		rLoc = 3762;
+		rType = 0;
+		vrLen = 1610;
+		vrLoc = 3115;
+	};
+	1B5B5F621007ACE70043536B /* stdint.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = stdint.h;
+		path = "/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin9/4.0.1/include/stdint.h";
+		sourceTree = "<absolute>";
+	};
+	1B5B5F661007ACE70043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1B5B5F671007ACE70043536B /* stdint.h */;
+		name = "stdint.h: 146";
+		rLen = 38;
+		rLoc = 3762;
+		rType = 0;
+		vrLen = 1610;
+		vrLoc = 3115;
+	};
+	1B5B5F671007ACE70043536B /* stdint.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = stdint.h;
+		path = "/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin9/4.0.1/include/stdint.h";
+		sourceTree = "<absolute>";
+	};
+	1B5B5F711007E3450043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95400A7EB2EB001E4983 /* CoGeWebKitPlugIn.h */;
+		name = "CoGeWebKitPlugIn.h: 16";
+		rLen = 0;
+		rLoc = 332;
+		rType = 0;
+		vrLen = 1302;
+		vrLoc = 148;
+	};
+	1B5B5F7610082EBB0043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 572";
+		rLen = 0;
+		rLoc = 18382;
+		rType = 0;
+		vrLen = 1482;
+		vrLoc = 18122;
+	};
+	1B5B5FC41008364E0043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 643";
+		rLen = 0;
+		rLoc = 19398;
+		rType = 0;
+		vrLen = 1281;
+		vrLoc = 16555;
+	};
+	1B5B5FD8100838B10043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: invalid initializer";
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		rLen = 1;
+		rLoc = 588;
+		rType = 1;
+	};
+	1B5B5FD9100838B10043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 581";
+		rLen = 0;
+		rLoc = 18413;
+		rType = 0;
+		vrLen = 1496;
+		vrLoc = 18068;
+	};
+	1B5B5FE2100838B30043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: invalid initializer";
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		rLen = 1;
+		rLoc = 588;
+		rType = 1;
+	};
+	1B5B5FE3100838B30043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 589";
+		rLen = 0;
+		rLoc = 18853;
+		rType = 0;
+		vrLen = 1887;
+		vrLoc = 17853;
+	};
+	1B5B5FE61008390F0043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 668";
+		rLen = 0;
+		rLoc = 21243;
+		rType = 0;
+		vrLen = 1525;
+		vrLoc = 18191;
+	};
+	1B5B5FE7100839110043536B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 589";
+		rLen = 0;
+		rLoc = 18853;
+		rType = 0;
+		vrLen = 1887;
+		vrLoc = 17853;
+	};
+	1BA791B30FFC7F01007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 239";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1912;
+		vrLoc = 4669;
+	};
+	1BA791B40FFC7F01007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95400A7EB2EB001E4983 /* CoGeWebKitPlugIn.h */;
+		name = "CoGeWebKitPlugIn.h: 16";
+		rLen = 0;
+		rLoc = 529;
+		rType = 0;
+		vrLen = 722;
+		vrLoc = 0;
+	};
+	1BA794680FFC9E00007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA794690FFC9E00007CE5DB /* Carbon.h */;
+		name = "Carbon.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 987;
+		vrLoc = 0;
+	};
+	1BA794690FFC9E00007CE5DB /* Carbon.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Carbon.h;
+		path = /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7946E0FFC9E00007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7946F0FFC9E00007CE5DB /* Carbon.h */;
+		name = "Carbon.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 987;
+		vrLoc = 0;
+	};
+	1BA7946F0FFC9E00007CE5DB /* Carbon.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Carbon.h;
+		path = /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h;
+		sourceTree = "<absolute>";
+	};
+	1BA794700FFC9E00007CE5DB /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/vade/Downloads/CoGeWebKitBeta1 2/CoGeWebKit_Beta1/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1BA795130FFD2FEF007CE5DB /* WebView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebView.h;
+		path = /Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/WebKit.framework/Versions/A/Headers/WebView.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7952B0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795130FFD2FEF007CE5DB /* WebView.h */;
+		name = "WebView.h: 360";
+		rLen = 6;
+		rLoc = 13622;
+		rType = 0;
+		vrLen = 1509;
+		vrLoc = 12419;
+	};
+	1BA7952C0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7952D0FFD8D42007CE5DB /* CarbonUtils.h */;
+		name = "CarbonUtils.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1970;
+		vrLoc = 0;
+	};
+	1BA7952D0FFD8D42007CE5DB /* CarbonUtils.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CarbonUtils.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/CarbonUtils.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7952E0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7952F0FFD8D42007CE5DB /* DOMMediaList.h */;
+		name = "DOMMediaList.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1718;
+		vrLoc = 0;
+	};
+	1BA7952F0FFD8D42007CE5DB /* DOMMediaList.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMMediaList.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMMediaList.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795300FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795310FFD8D42007CE5DB /* DOMProcessingInstruction.h */;
+		name = "DOMProcessingInstruction.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1604;
+		vrLoc = 0;
+	};
+	1BA795310FFD8D42007CE5DB /* DOMProcessingInstruction.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMProcessingInstruction.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMProcessingInstruction.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795320FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795330FFD8D42007CE5DB /* DOMEvent.h */;
+		name = "DOMEvent.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2086;
+		vrLoc = 207;
+	};
+	1BA795330FFD8D42007CE5DB /* DOMEvent.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMEvent.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMEvent.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795340FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795350FFD8D42007CE5DB /* DOMEvents.h */;
+		name = "DOMEvents.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1943;
+		vrLoc = 0;
+	};
+	1BA795350FFD8D42007CE5DB /* DOMEvents.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMEvents.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMEvents.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795360FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795370FFD8D42007CE5DB /* DOMCounter.h */;
+		name = "DOMCounter.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 0;
+	};
+	1BA795370FFD8D42007CE5DB /* DOMCounter.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCounter.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCounter.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795380FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795390FFD8D42007CE5DB /* npruntime.h */;
+		name = "npruntime.h: 245";
+		rLen = 23;
+		rLoc = 10168;
+		rType = 0;
+		vrLen = 2894;
+		vrLoc = 6593;
+	};
+	1BA795390FFD8D42007CE5DB /* npruntime.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = npruntime.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/npruntime.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7953A0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7953B0FFD8D42007CE5DB /* DOMXPathResult.h */;
+		name = "DOMXPathResult.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1997;
+		vrLoc = 277;
+	};
+	1BA7953B0FFD8D42007CE5DB /* DOMXPathResult.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMXPathResult.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMXPathResult.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7953C0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7953D0FFD8D42007CE5DB /* DOMHTMLObjectElement.h */;
+		name = "DOMHTMLObjectElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2015;
+		vrLoc = 277;
+	};
+	1BA7953D0FFD8D42007CE5DB /* DOMHTMLObjectElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLObjectElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLObjectElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7953E0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7953F0FFD8D42007CE5DB /* DOMHTMLEmbedElement.h */;
+		name = "DOMHTMLEmbedElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1708;
+		vrLoc = 0;
+	};
+	1BA7953F0FFD8D42007CE5DB /* DOMHTMLEmbedElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLEmbedElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLEmbedElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795400FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795410FFD8D42007CE5DB /* DOMHTMLElement.h */;
+		name = "DOMHTMLElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2064;
+		vrLoc = 0;
+	};
+	1BA795410FFD8D42007CE5DB /* DOMHTMLElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795420FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795430FFD8D42007CE5DB /* DOMHTMLDocument.h */;
+		name = "DOMHTMLDocument.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2185;
+		vrLoc = 0;
+	};
+	1BA795430FFD8D42007CE5DB /* DOMHTMLDocument.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDocument.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDocument.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795440FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795450FFD8D42007CE5DB /* DOMHTMLDivElement.h */;
+		name = "DOMHTMLDivElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1567;
+		vrLoc = 0;
+	};
+	1BA795450FFD8D42007CE5DB /* DOMHTMLDivElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDivElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDivElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795460FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795470FFD8D42007CE5DB /* DOMHTMLDirectoryElement.h */;
+		name = "DOMHTMLDirectoryElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1546;
+		vrLoc = 0;
+	};
+	1BA795470FFD8D42007CE5DB /* DOMHTMLDirectoryElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDirectoryElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDirectoryElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795480FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795490FFD8D42007CE5DB /* DOMHTMLDListElement.h */;
+		name = "DOMHTMLDListElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1542;
+		vrLoc = 0;
+	};
+	1BA795490FFD8D42007CE5DB /* DOMHTMLDListElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDListElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDListElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7954A0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7954B0FFD8D42007CE5DB /* DOMHTMLCollection.h */;
+		name = "DOMHTMLCollection.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1655;
+		vrLoc = 0;
+	};
+	1BA7954B0FFD8D42007CE5DB /* DOMHTMLCollection.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLCollection.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLCollection.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7954C0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7954D0FFD8D42007CE5DB /* DOMHTMLButtonElement.h */;
+		name = "DOMHTMLButtonElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1812;
+		vrLoc = 0;
+	};
+	1BA7954D0FFD8D42007CE5DB /* DOMHTMLButtonElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLButtonElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLButtonElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7954E0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7954F0FFD8D42007CE5DB /* DOMHTMLAppletElement.h */;
+		name = "DOMHTMLAppletElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1881;
+		vrLoc = 0;
+	};
+	1BA7954F0FFD8D42007CE5DB /* DOMHTMLAppletElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLAppletElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLAppletElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795500FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795510FFD8D42007CE5DB /* DOMEntity.h */;
+		name = "DOMEntity.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1654;
+		vrLoc = 0;
+	};
+	1BA795510FFD8D42007CE5DB /* DOMEntity.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMEntity.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMEntity.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795520FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795530FFD8D42007CE5DB /* DOMAttr.h */;
+		name = "DOMAttr.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1784;
+		vrLoc = 0;
+	};
+	1BA795530FFD8D42007CE5DB /* DOMAttr.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMAttr.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMAttr.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795540FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795550FFD8D42007CE5DB /* DOMCDATASection.h */;
+		name = "DOMCDATASection.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1500;
+		vrLoc = 0;
+	};
+	1BA795550FFD8D42007CE5DB /* DOMCDATASection.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCDATASection.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCDATASection.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795560FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795570FFD8D42007CE5DB /* DOMCSS.h */;
+		name = "DOMCSS.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1718;
+		vrLoc = 9385;
+	};
+	1BA795570FFD8D42007CE5DB /* DOMCSS.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCSS.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCSS.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795580FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795590FFD8D42007CE5DB /* DOMImplementation.h */;
+		name = "DOMImplementation.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2703;
+		vrLoc = 0;
+	};
+	1BA795590FFD8D42007CE5DB /* DOMImplementation.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMImplementation.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMImplementation.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7955A0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7955B0FFD8D42007CE5DB /* DOMDocumentType.h */;
+		name = "DOMDocumentType.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1839;
+		vrLoc = 0;
+	};
+	1BA7955B0FFD8D42007CE5DB /* DOMDocumentType.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMDocumentType.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMDocumentType.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7955C0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7955D0FFD8D42007CE5DB /* DOMDocumentFragment.h */;
+		name = "DOMDocumentFragment.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 0;
+	};
+	1BA7955D0FFD8D42007CE5DB /* DOMDocumentFragment.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMDocumentFragment.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMDocumentFragment.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7955E0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7955F0FFD8D42007CE5DB /* DOMDocument.h */;
+		name = "DOMDocument.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2673;
+		vrLoc = 1546;
+	};
+	1BA7955F0FFD8D42007CE5DB /* DOMDocument.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMDocument.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMDocument.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795600FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795610FFD8D42007CE5DB /* DOMNodeIterator.h */;
+		name = "DOMNodeIterator.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1839;
+		vrLoc = 0;
+	};
+	1BA795610FFD8D42007CE5DB /* DOMNodeIterator.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMNodeIterator.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMNodeIterator.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795620FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795630FFD8D42007CE5DB /* DOMNodeFilter.h */;
+		name = "DOMNodeFilter.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2108;
+		vrLoc = 0;
+	};
+	1BA795630FFD8D42007CE5DB /* DOMNodeFilter.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMNodeFilter.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMNodeFilter.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795640FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795650FFD8D42007CE5DB /* DOMNode.h */;
+		name = "DOMNode.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1885;
+		vrLoc = 790;
+	};
+	1BA795650FFD8D42007CE5DB /* DOMNode.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMNode.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMNode.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795660FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795670FFD8D42007CE5DB /* DOMObject.h */;
+		name = "DOMObject.h: 28";
+		rLen = 15;
+		rLoc = 1477;
+		rType = 0;
+		vrLen = 1801;
+		vrLoc = 0;
+	};
+	1BA795670FFD8D42007CE5DB /* DOMObject.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMObject.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMObject.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795680FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795690FFD8D42007CE5DB /* WebScriptObject.h */;
+		name = "WebScriptObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2045;
+		vrLoc = 0;
+	};
+	1BA795690FFD8D42007CE5DB /* WebScriptObject.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebScriptObject.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebScriptObject.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7956A0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7956B0FFD8D42007CE5DB /* npapi.h */;
+		name = "npapi.h: 436";
+		rLen = 0;
+		rLoc = 12726;
+		rType = 0;
+		vrLen = 1144;
+		vrLoc = 14013;
+	};
+	1BA7956B0FFD8D42007CE5DB /* npapi.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = npapi.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/npapi.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7956C0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7956D0FFD8D42007CE5DB /* npfunctions.h */;
+		name = "npfunctions.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1663;
+		vrLoc = 6409;
+	};
+	1BA7956D0FFD8D42007CE5DB /* npfunctions.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = npfunctions.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/npfunctions.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7956E0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7956F0FFD8D42007CE5DB /* WebPluginContainer.h */;
+		name = "WebPluginContainer.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1767;
+		vrLoc = 1275;
+	};
+	1BA7956F0FFD8D42007CE5DB /* WebPluginContainer.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebPluginContainer.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebPluginContainer.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795700FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795710FFD8D42007CE5DB /* WebPluginViewFactory.h */;
+		name = "WebPluginViewFactory.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1724;
+		vrLoc = 1577;
+	};
+	1BA795710FFD8D42007CE5DB /* WebPluginViewFactory.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebPluginViewFactory.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebPluginViewFactory.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795720FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795730FFD8D42007CE5DB /* WebPlugin.h */;
+		name = "WebPlugin.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2068;
+		vrLoc = 2069;
+	};
+	1BA795730FFD8D42007CE5DB /* WebPlugin.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebPlugin.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebPlugin.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795740FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795750FFD8D42007CE5DB /* WebBackForwardList.h */;
+		name = "WebBackForwardList.h: 21";
+		rLen = 0;
+		rLoc = 1144;
+		rType = 0;
+		vrLen = 2248;
+		vrLoc = 0;
+	};
+	1BA795750FFD8D42007CE5DB /* WebBackForwardList.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebBackForwardList.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebBackForwardList.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795760FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795770FFD8D42007CE5DB /* WebDataSource.h */;
+		name = "WebDataSource.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2189;
+		vrLoc = 83;
+	};
+	1BA795770FFD8D42007CE5DB /* WebDataSource.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebDataSource.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebDataSource.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795780FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795790FFD8D42007CE5DB /* WebDOMOperations.h */;
+		name = "WebDOMOperations.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2025;
+		vrLoc = 0;
+	};
+	1BA795790FFD8D42007CE5DB /* WebDOMOperations.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebDOMOperations.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebDOMOperations.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7957A0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7957B0FFD8D42007CE5DB /* WebFrameLoadDelegate.h */;
+		name = "WebFrameLoadDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2534;
+		vrLoc = 0;
+	};
+	1BA7957B0FFD8D42007CE5DB /* WebFrameLoadDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebFrameLoadDelegate.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebFrameLoadDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7957C0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7957D0FFD8D42007CE5DB /* WebFrame.h */;
+		name = "WebFrame.h: 88";
+		rLen = 11;
+		rLoc = 3095;
+		rType = 0;
+		vrLen = 1491;
+		vrLoc = 2402;
+	};
+	1BA7957D0FFD8D42007CE5DB /* WebFrame.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebFrame.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebFrame.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7957E0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7957F0FFD8D42007CE5DB /* DOMCore.h */;
+		name = "DOMCore.h: 15";
+		rLen = 0;
+		rLoc = 765;
+		rType = 0;
+		vrLen = 2052;
+		vrLoc = 0;
+	};
+	1BA7957F0FFD8D42007CE5DB /* DOMCore.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCore.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCore.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795800FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795810FFD8D42007CE5DB /* DOM.h */;
+		name = "DOM.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1722;
+		vrLoc = 0;
+	};
+	1BA795810FFD8D42007CE5DB /* DOM.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOM.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOM.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795820FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795830FFD8D42007CE5DB /* DOMViews.h */;
+		name = "DOMViews.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1546;
+		vrLoc = 0;
+	};
+	1BA795830FFD8D42007CE5DB /* DOMViews.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMViews.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMViews.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795840FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795850FFD8D42007CE5DB /* DOMAbstractView.h */;
+		name = "DOMAbstractView.h: 20";
+		rLen = 0;
+		rLoc = 1101;
+		rType = 0;
+		vrLen = 1576;
+		vrLoc = 0;
+	};
+	1BA795850FFD8D42007CE5DB /* DOMAbstractView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMAbstractView.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMAbstractView.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795860FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795870FFD8D42007CE5DB /* WebKit.h */;
+		name = "WebKit.h: 34";
+		rLen = 16;
+		rLoc = 1759;
+		rType = 0;
+		vrLen = 2317;
+		vrLoc = 74;
+	};
+	1BA795870FFD8D42007CE5DB /* WebKit.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebKit.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebKit.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795880FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795890FFD8D42007CE5DB /* WebView.h */;
+		name = "WebView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1842;
+		vrLoc = 5187;
+	};
+	1BA795890FFD8D42007CE5DB /* WebView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebView.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebView.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7958A0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7958B0FFD8D42007CE5DB /* WebUIDelegate.h */;
+		name = "WebUIDelegate.h: 33";
+		rLen = 0;
+		rLoc = 1753;
+		rType = 0;
+		vrLen = 1995;
+		vrLoc = 2564;
+	};
+	1BA7958B0FFD8D42007CE5DB /* WebUIDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebUIDelegate.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebUIDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7958D0FFD8D42007CE5DB /* WebResourceLoadDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebResourceLoadDelegate.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebResourceLoadDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7958E0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795130FFD2FEF007CE5DB /* WebView.h */;
+		name = "WebView.h: 360";
+		rLen = 6;
+		rLoc = 13622;
+		rType = 0;
+		vrLen = 1509;
+		vrLoc = 12419;
+	};
+	1BA7958F0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795900FFD8D42007CE5DB /* npapi.h */;
+		name = "npapi.h: 701";
+		rLen = 29;
+		rLoc = 22046;
+		rType = 0;
+		vrLen = 2336;
+		vrLoc = 19939;
+	};
+	1BA795900FFD8D42007CE5DB /* npapi.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = npapi.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/npapi.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795910FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795920FFD8D42007CE5DB /* npfunctions.h */;
+		name = "npfunctions.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2849;
+		vrLoc = 0;
+	};
+	1BA795920FFD8D42007CE5DB /* npfunctions.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = npfunctions.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/npfunctions.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795930FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795940FFD8D42007CE5DB /* npruntime.h */;
+		name = "npruntime.h: 245";
+		rLen = 23;
+		rLoc = 10168;
+		rType = 0;
+		vrLen = 2536;
+		vrLoc = 9061;
+	};
+	1BA795940FFD8D42007CE5DB /* npruntime.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = npruntime.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/npruntime.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795950FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795960FFD8D42007CE5DB /* WebKit.h */;
+		name = "WebKit.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2388;
+		vrLoc = 3;
+	};
+	1BA795960FFD8D42007CE5DB /* WebKit.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebKit.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebKit.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795970FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795980FFD8D42007CE5DB /* DOM.h */;
+		name = "DOM.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1722;
+		vrLoc = 0;
+	};
+	1BA795980FFD8D42007CE5DB /* DOM.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOM.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOM.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795990FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7959A0FFD8D42007CE5DB /* CarbonUtils.h */;
+		name = "CarbonUtils.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1970;
+		vrLoc = 0;
+	};
+	1BA7959A0FFD8D42007CE5DB /* CarbonUtils.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CarbonUtils.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/CarbonUtils.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7959B0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7959C0FFD8D42007CE5DB /* DOMAbstractView.h */;
+		name = "DOMAbstractView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1576;
+		vrLoc = 0;
+	};
+	1BA7959C0FFD8D42007CE5DB /* DOMAbstractView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMAbstractView.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMAbstractView.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7959D0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7959E0FFD8D42007CE5DB /* DOMMediaList.h */;
+		name = "DOMMediaList.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1718;
+		vrLoc = 0;
+	};
+	1BA7959E0FFD8D42007CE5DB /* DOMMediaList.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMMediaList.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMMediaList.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7959F0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795A00FFD8D42007CE5DB /* DOMProcessingInstruction.h */;
+		name = "DOMProcessingInstruction.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1604;
+		vrLoc = 0;
+	};
+	1BA795A00FFD8D42007CE5DB /* DOMProcessingInstruction.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMProcessingInstruction.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMProcessingInstruction.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795A10FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795A20FFD8D42007CE5DB /* WebFrame.h */;
+		name = "WebFrame.h: 88";
+		rLen = 11;
+		rLoc = 3095;
+		rType = 0;
+		vrLen = 1491;
+		vrLoc = 2402;
+	};
+	1BA795A20FFD8D42007CE5DB /* WebFrame.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebFrame.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebFrame.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795A30FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795A40FFD8D42007CE5DB /* DOMDocument.h */;
+		name = "DOMDocument.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1982;
+		vrLoc = 358;
+	};
+	1BA795A40FFD8D42007CE5DB /* DOMDocument.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMDocument.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMDocument.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795A50FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795A60FFD8D42007CE5DB /* DOMNode.h */;
+		name = "DOMNode.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1991;
+		vrLoc = 1559;
+	};
+	1BA795A60FFD8D42007CE5DB /* DOMNode.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMNode.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMNode.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795A70FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795A80FFD8D42007CE5DB /* DOMObject.h */;
+		name = "DOMObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1801;
+		vrLoc = 0;
+	};
+	1BA795A80FFD8D42007CE5DB /* DOMObject.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMObject.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMObject.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795AB0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795AC0FFD8D42007CE5DB /* DOMEntity.h */;
+		name = "DOMEntity.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1654;
+		vrLoc = 0;
+	};
+	1BA795AC0FFD8D42007CE5DB /* DOMEntity.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMEntity.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMEntity.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795AD0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795AE0FFD8D42007CE5DB /* DOMEvent.h */;
+		name = "DOMEvent.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2086;
+		vrLoc = 207;
+	};
+	1BA795AE0FFD8D42007CE5DB /* DOMEvent.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMEvent.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMEvent.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795AF0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795B00FFD8D42007CE5DB /* DOMEvents.h */;
+		name = "DOMEvents.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1943;
+		vrLoc = 0;
+	};
+	1BA795B00FFD8D42007CE5DB /* DOMEvents.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMEvents.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMEvents.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795B10FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795B20FFD8D42007CE5DB /* DOMDocumentFragment.h */;
+		name = "DOMDocumentFragment.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 0;
+	};
+	1BA795B20FFD8D42007CE5DB /* DOMDocumentFragment.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMDocumentFragment.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMDocumentFragment.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795B30FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795B40FFD8D42007CE5DB /* DOMCounter.h */;
+		name = "DOMCounter.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 0;
+	};
+	1BA795B40FFD8D42007CE5DB /* DOMCounter.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCounter.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCounter.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795B50FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795B60FFD8D42007CE5DB /* DOMCore.h */;
+		name = "DOMCore.h: 15";
+		rLen = 0;
+		rLoc = 765;
+		rType = 0;
+		vrLen = 2052;
+		vrLoc = 0;
+	};
+	1BA795B60FFD8D42007CE5DB /* DOMCore.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCore.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCore.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795BD0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795BE0FFD8D42007CE5DB /* WebPlugin.h */;
+		name = "WebPlugin.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2068;
+		vrLoc = 2069;
+	};
+	1BA795BE0FFD8D42007CE5DB /* WebPlugin.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebPlugin.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebPlugin.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795BF0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795C00FFD8D42007CE5DB /* DOMXPathResult.h */;
+		name = "DOMXPathResult.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1997;
+		vrLoc = 277;
+	};
+	1BA795C00FFD8D42007CE5DB /* DOMXPathResult.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMXPathResult.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMXPathResult.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795C30FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795C40FFD8D42007CE5DB /* DOMHTMLObjectElement.h */;
+		name = "DOMHTMLObjectElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2015;
+		vrLoc = 277;
+	};
+	1BA795C40FFD8D42007CE5DB /* DOMHTMLObjectElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLObjectElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLObjectElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795C50FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795C60FFD8D42007CE5DB /* DOMHTMLEmbedElement.h */;
+		name = "DOMHTMLEmbedElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1708;
+		vrLoc = 0;
+	};
+	1BA795C60FFD8D42007CE5DB /* DOMHTMLEmbedElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLEmbedElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLEmbedElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795C70FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795C80FFD8D42007CE5DB /* DOMHTMLElement.h */;
+		name = "DOMHTMLElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2064;
+		vrLoc = 0;
+	};
+	1BA795C80FFD8D42007CE5DB /* DOMHTMLElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795C90FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795CA0FFD8D42007CE5DB /* DOMHTMLDocument.h */;
+		name = "DOMHTMLDocument.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2185;
+		vrLoc = 0;
+	};
+	1BA795CA0FFD8D42007CE5DB /* DOMHTMLDocument.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDocument.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDocument.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795CB0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795CC0FFD8D42007CE5DB /* DOMHTMLDivElement.h */;
+		name = "DOMHTMLDivElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1567;
+		vrLoc = 0;
+	};
+	1BA795CC0FFD8D42007CE5DB /* DOMHTMLDivElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDivElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDivElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795CD0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795CE0FFD8D42007CE5DB /* DOMHTMLDirectoryElement.h */;
+		name = "DOMHTMLDirectoryElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1546;
+		vrLoc = 0;
+	};
+	1BA795CE0FFD8D42007CE5DB /* DOMHTMLDirectoryElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDirectoryElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDirectoryElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795CF0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795D00FFD8D42007CE5DB /* DOMHTMLDListElement.h */;
+		name = "DOMHTMLDListElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1542;
+		vrLoc = 0;
+	};
+	1BA795D00FFD8D42007CE5DB /* DOMHTMLDListElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLDListElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLDListElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795D10FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795D20FFD8D42007CE5DB /* DOMHTMLCollection.h */;
+		name = "DOMHTMLCollection.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1655;
+		vrLoc = 0;
+	};
+	1BA795D20FFD8D42007CE5DB /* DOMHTMLCollection.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLCollection.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLCollection.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795D30FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795D40FFD8D42007CE5DB /* DOMHTMLButtonElement.h */;
+		name = "DOMHTMLButtonElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1812;
+		vrLoc = 0;
+	};
+	1BA795D40FFD8D42007CE5DB /* DOMHTMLButtonElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLButtonElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLButtonElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795D50FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795D60FFD8D42007CE5DB /* DOMHTMLAppletElement.h */;
+		name = "DOMHTMLAppletElement.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1881;
+		vrLoc = 0;
+	};
+	1BA795D60FFD8D42007CE5DB /* DOMHTMLAppletElement.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMHTMLAppletElement.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMHTMLAppletElement.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795DB0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795DC0FFD8D42007CE5DB /* DOMAttr.h */;
+		name = "DOMAttr.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1784;
+		vrLoc = 0;
+	};
+	1BA795DC0FFD8D42007CE5DB /* DOMAttr.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMAttr.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMAttr.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795DD0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795DE0FFD8D42007CE5DB /* DOMCDATASection.h */;
+		name = "DOMCDATASection.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1500;
+		vrLoc = 0;
+	};
+	1BA795DE0FFD8D42007CE5DB /* DOMCDATASection.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCDATASection.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCDATASection.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795DF0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795E00FFD8D42007CE5DB /* DOMCSS.h */;
+		name = "DOMCSS.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1718;
+		vrLoc = 9385;
+	};
+	1BA795E00FFD8D42007CE5DB /* DOMCSS.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMCSS.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMCSS.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795E10FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795E20FFD8D42007CE5DB /* DOMImplementation.h */;
+		name = "DOMImplementation.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2703;
+		vrLoc = 0;
+	};
+	1BA795E20FFD8D42007CE5DB /* DOMImplementation.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMImplementation.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMImplementation.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795E30FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795E40FFD8D42007CE5DB /* DOMDocumentType.h */;
+		name = "DOMDocumentType.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1839;
+		vrLoc = 0;
+	};
+	1BA795E40FFD8D42007CE5DB /* DOMDocumentType.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMDocumentType.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMDocumentType.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795EB0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795EC0FFD8D42007CE5DB /* DOMNodeFilter.h */;
+		name = "DOMNodeFilter.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2105;
+		vrLoc = 3;
+	};
+	1BA795EC0FFD8D42007CE5DB /* DOMNodeFilter.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMNodeFilter.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMNodeFilter.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795ED0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795EE0FFD8D42007CE5DB /* DOMNodeIterator.h */;
+		name = "DOMNodeIterator.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1839;
+		vrLoc = 0;
+	};
+	1BA795EE0FFD8D42007CE5DB /* DOMNodeIterator.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMNodeIterator.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMNodeIterator.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795F50FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795F60FFD8D42007CE5DB /* WebScriptObject.h */;
+		name = "WebScriptObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2045;
+		vrLoc = 0;
+	};
+	1BA795F60FFD8D42007CE5DB /* WebScriptObject.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebScriptObject.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebScriptObject.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795F70FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795F80FFD8D42007CE5DB /* WebView.h */;
+		name = "WebView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 4794;
+	};
+	1BA795F80FFD8D42007CE5DB /* WebView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebView.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebView.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795FD0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA795FE0FFD8D42007CE5DB /* WebPluginContainer.h */;
+		name = "WebPluginContainer.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1767;
+		vrLoc = 1275;
+	};
+	1BA795FE0FFD8D42007CE5DB /* WebPluginContainer.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebPluginContainer.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebPluginContainer.h;
+		sourceTree = "<absolute>";
+	};
+	1BA795FF0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA796000FFD8D42007CE5DB /* WebPluginViewFactory.h */;
+		name = "WebPluginViewFactory.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1724;
+		vrLoc = 1577;
+	};
+	1BA796000FFD8D42007CE5DB /* WebPluginViewFactory.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebPluginViewFactory.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebPluginViewFactory.h;
+		sourceTree = "<absolute>";
+	};
+	1BA796050FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA796060FFD8D42007CE5DB /* WebDOMOperations.h */;
+		name = "WebDOMOperations.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 983;
+		vrLoc = 2497;
+	};
+	1BA796060FFD8D42007CE5DB /* WebDOMOperations.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebDOMOperations.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebDOMOperations.h;
+		sourceTree = "<absolute>";
+	};
+	1BA796070FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA796080FFD8D42007CE5DB /* WebBackForwardList.h */;
+		name = "WebBackForwardList.h: 21";
+		rLen = 0;
+		rLoc = 1144;
+		rType = 0;
+		vrLen = 2248;
+		vrLoc = 0;
+	};
+	1BA796080FFD8D42007CE5DB /* WebBackForwardList.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebBackForwardList.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebBackForwardList.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7960B0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7960C0FFD8D42007CE5DB /* WebDataSource.h */;
+		name = "WebDataSource.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2189;
+		vrLoc = 83;
+	};
+	1BA7960C0FFD8D42007CE5DB /* WebDataSource.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebDataSource.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebDataSource.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7960F0FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA796100FFD8D42007CE5DB /* WebFrameLoadDelegate.h */;
+		name = "WebFrameLoadDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2534;
+		vrLoc = 0;
+	};
+	1BA796100FFD8D42007CE5DB /* WebFrameLoadDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebFrameLoadDelegate.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebFrameLoadDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	1BA796190FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7961A0FFD8D42007CE5DB /* DOMViews.h */;
+		name = "DOMViews.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1546;
+		vrLoc = 0;
+	};
+	1BA7961A0FFD8D42007CE5DB /* DOMViews.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DOMViews.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/DOMViews.h;
+		sourceTree = "<absolute>";
+	};
+	1BA796230FFD8D42007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA796240FFD8D42007CE5DB /* WebUIDelegate.h */;
+		name = "WebUIDelegate.h: 33";
+		rLen = 0;
+		rLoc = 1753;
+		rType = 0;
+		vrLen = 1995;
+		vrLoc = 2564;
+	};
+	1BA796240FFD8D42007CE5DB /* WebUIDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = WebUIDelegate.h;
+		path = /System/Library/Frameworks/WebKit.framework/Headers/WebUIDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	1BA7962B0FFD9189007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7958D0FFD8D42007CE5DB /* WebResourceLoadDelegate.h */;
+		name = "WebResourceLoadDelegate.h: 42";
+		rLen = 708;
+		rLoc = 1845;
+		rType = 0;
+		vrLen = 2556;
+		vrLoc = 0;
+	};
+	1BA796300FFD9189007CE5DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1BA7958D0FFD8D42007CE5DB /* WebResourceLoadDelegate.h */;
+		name = "WebResourceLoadDelegate.h: 42";
+		rLen = 708;
+		rLoc = 1845;
+		rType = 0;
+		vrLen = 2556;
+		vrLoc = 0;
+	};
+	233E2C640A83C768005A62DF /* Build & Copy */ = {
+		activeExec = 0;
+	};
+	23E90CA40A83C4F400A6A40A /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	23E90CA50A83C4F400A6A40A /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	23E90CA60A83C53500A6A40A /* Quartz Composer */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 0;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = 23E90CA70A83C53500A6A40A /* Quartz Composer.app */;
+		libgmallocEnabled = 0;
+		name = "Quartz Composer";
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	23E90CA70A83C53500A6A40A /* Quartz Composer.app */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = wrapper.application;
+		name = "Quartz Composer.app";
+		path = "/Developer/Applications/Quartz Composer.app";
+		sourceTree = "<absolute>";
+	};
+	8D5B49AC048680CD000E48DA /* CoGeWebKit */ = {
+		activeExec = 0;
+	};
+}
