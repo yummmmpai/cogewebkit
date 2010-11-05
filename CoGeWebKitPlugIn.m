@@ -12,7 +12,7 @@
 #import "CoGeWebKitPlugIn.h"
 
 #define	kQCPlugIn_Name				@"CoGeWebKit"
-#define	kQCPlugIn_Description		@"Renders the file at the given URL with WebKit. "
+#define	kQCPlugIn_Description		@"CoGeWebKit Beta 3. Renders the file at the given URL with WebKit."
 
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
@@ -43,6 +43,7 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 @dynamic inputMouseY;
 @dynamic inputMouseRightDown;
 @dynamic inputMouseLeftDown;
+@dynamic inputCharacter;
 
 @dynamic outputJavascript;
 @dynamic outputCurrentURL;
@@ -608,6 +609,38 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 #pragma mark input event handling - this needs MAJOR CLEANUP
 	
+	if ([self didValueForInputKeyChange:@"inputCharacter"]) {
+		
+		if (![[self inputCharacter] isEqualToString:@""]) {
+
+			NSPoint location = [self normalizedMouseLocationForMouseX:self.inputMouseX mouseY:self.inputMouseY isFlippedY:NO];
+			NSView* hitView = [(NSView*)theWebView hitTest:location];
+			SEL selector = NSSelectorFromString(@"keyDown:");
+			
+			NSEvent* keyEvent = [NSEvent keyEventWithType:NSKeyDown
+												 location:location 
+											modifierFlags:NSKeyDownMask
+												timestamp:(NSTimeInterval)CFAbsoluteTimeGetCurrent()
+											 windowNumber:[[hitView window] windowNumber]	// dont assume offScreenWindow
+												  context:[[hitView window] graphicsContext] // ^^
+											   characters:self.inputCharacter
+							  charactersIgnoringModifiers:@""
+												isARepeat:NO
+												  keyCode:0];
+			
+			
+			if(hitView)
+			{
+				
+				[hitView performSelectorOnMainThread:selector withObject:keyEvent waitUntilDone:YES];
+			}
+			
+		} 
+
+		
+		
+	}
+	
 	if([self didValueForInputKeyChange:@"inputMouseX"] || [self didValueForInputKeyChange:@"inputMouseX"] || [self didValueForInputKeyChange:@"inputMouseLeftDown"] || [self didValueForInputKeyChange:@"inputMouseRightDown"])
 	{
 		NSPoint location = [self normalizedMouseLocationForMouseX:self.inputMouseX mouseY:self.inputMouseY isFlippedY:NO];
@@ -697,24 +730,12 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		if(hitView)
 		{
-		//	NSLog(@"hitView class is:%@ at point:%@", [hitView className], NSStringFromPoint(location));
-			
-			[offscreenWindow makeFirstResponder:hitView];
-			
-			// dont allow clicks on UI items that mess up the offscreen window, OR if its a plugin..
-			if([hitView isMemberOfClass:[NSPopUpButton class]] || [hitView isMemberOfClass:[NSScroller class]])
-			{
-				NSLog(@"is an NSControl no clicky");
-			}
-			else
-			{
-				[hitView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:YES];
-			}
+
+			[hitView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:YES];
 		}
 		else
 		{
 			[theWebView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:YES];
-			//[theWebView performSelector:selector withObject:mouseEvent];
 		}
 			
 		

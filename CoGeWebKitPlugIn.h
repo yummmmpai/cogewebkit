@@ -77,6 +77,7 @@
 @property (assign) BOOL inputMouseLeftDown;
 @property (assign) BOOL inputMouseRightDown;
 
+@property (assign) NSString* inputCharacter;
 
 // javascript specific
 @property (assign) BOOL inputReexecuteJS;
