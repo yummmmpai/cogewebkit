@@ -12,7 +12,7 @@
 #import "CoGeWebKitPlugIn.h"
 
 #define	kQCPlugIn_Name				@"CoGeWebKit"
-#define	kQCPlugIn_Description		@"Renders the file at the given URL with WebKit. Alpha version! - updates, performance tuning and bug fixes by vade."
+#define	kQCPlugIn_Description		@"Renders the file at the given URL with WebKit. "
 
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
@@ -35,8 +35,6 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 @dynamic inputReload;
 @dynamic inputForwardHistory;
 @dynamic inputBackwardHistory;
-
-@dynamic inputColorSpace;
 
 // event input
 @dynamic inputMouseScrollX;
@@ -118,16 +116,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				[NSNumber numberWithFloat:[[NSScreen mainScreen] frame].size.height], QCPortAttributeMaximumValueKey,
 				nil];
 	}
-	
-	if([key isEqualToString:@"inputColorSpace"])
-	{
-		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeIndex, QCPortAttributeTypeKey,
-				[NSNumber numberWithUnsignedInteger:0], QCPortAttributeDefaultValueKey, @"Color Space", QCPortAttributeNameKey,
-				[NSNumber numberWithUnsignedInteger:1], QCPortAttributeMaximumValueKey,
-				[NSArray arrayWithObjects:@"RGB", @"RGBLinear", nil], QCPortAttributeMenuItemsKey,
-				nil];
-	}
-	
+		
 	if([key isEqualToString:@"inputJavascript"])
 	{
 		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeString, QCPortAttributeTypeKey,
@@ -236,7 +225,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			@"inputMouseScrollX",
 			@"inputMouseScrollY",
 			@"inputKeyDown",
-			@"inputColorSpace",
 			@"outputImage",
 			@"outputDocWidth", 
 			@"outputDocHeight",
@@ -354,7 +342,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 @implementation CoGeWebKitPlugIn (Execution)
 
-- (void)buildWebTexture1:(id)context
+- (void) buildWebTexture1:(CGLContextObj)context
 {
 	CGLContextObj cgl_ctx = context;
 	CGLLockContext(cgl_ctx);
@@ -368,7 +356,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	[bitmap release];
 	[theWebView unlockFocus];
 	
-	NSLog (@"bitmap data format: isPlanar:%d, samplesPerPixel:%d, bitsPerPixel:%d, bytesPerRow:%d, bytesPerPlane:%d",[bitmap isPlanar], [bitmap samplesPerPixel], [bitmap bitsPerPixel], [bitmap bytesPerRow], [bitmap bytesPerPlane]);
+//	NSLog (@"bitmap data format: isPlanar:%d, samplesPerPixel:%d, bitsPerPixel:%d, bytesPerRow:%d, bytesPerPlane:%d",[bitmap isPlanar], [bitmap samplesPerPixel], [bitmap bitsPerPixel], [bitmap bytesPerRow], [bitmap bytesPerPlane]);
 	
 	// create our texture 
 	glEnable(GL_TEXTURE_RECTANGLE_EXT);
@@ -385,24 +373,24 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 	glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
+	
 	
 	// Set proper unpacking row length for bitmap
 	//glPixelStorei(GL_UNPACK_ROW_LENGTH, width);	
 	
 	// Set byte aligned unpacking (needed for 3 byte per pixel bitmaps)
 	//glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
-		
+	
 	// this definitely works
 	glTexImage2D( GL_TEXTURE_RECTANGLE_EXT, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, width, height, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [[self webBitmap1] bitmapData]);
-		
+	
 	// unset our client storage options storage
 	// these fucks were causing our FBOs to fail.
 	//glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_STORAGE_HINT_APPLE , GL_STORAGE_PRIVATE_APPLE);
 	glPixelStorei(GL_UNPACK_CLIENT_STORAGE_APPLE, GL_FALSE);
 	
 	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
-
+	
 	//[bitmap release];
 	
 	[lock1 unlock];
@@ -709,7 +697,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		if(hitView)
 		{
-			//NSLog(@"hitView class is:%@ at point:%@", [hitView className], NSStringFromPoint(location));
+		//	NSLog(@"hitView class is:%@ at point:%@", [hitView className], NSStringFromPoint(location));
 			
 			[offscreenWindow makeFirstResponder:hitView];
 			
@@ -746,11 +734,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		[self performSelectorOnMainThread:@selector(webviewSetFrame) withObject:nil waitUntilDone:YES];
 		
-		//bounds changed, destroy current texture
-		glDeleteTextures(1, &webTexture1);
-		
-		[self buildWebTexture1:cgl_ctx];
-		//[self performSelectorOnMainThread:@selector(buildWebTexture1:) withObject:cgl_ctx waitUntilDone:YES];
+		needsrebuild = YES;
 	}
 
 #pragma mark Scroll handling
@@ -758,7 +742,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//inital mouse scroll handle
 	if ([self didValueForInputKeyChange:@"inputMouseScrollY"]) {
 	
-		NSLog(@"mouse scroll");
+		//NSLog(@"mouse scroll");
 		
 		[self performSelectorOnMainThread:@selector(webviewScrollY:) withObject:[NSNumber numberWithDouble:self.inputMouseScrollY] waitUntilDone:YES];
 	
@@ -796,21 +780,35 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		needJSExecute = NO;
 	}
+
 	
-#pragma mark image provider
+#pragma mark Image provider
 	
 	{
-		if(![self workingOn1])
-		{	// create our image data.
-			//NSLog(@"firing copyWebViewToBitmap1InBackground");
-			//[self performSelectorInBackground:@selector(copyWebViewToBitmap1InBackground) withObject:webBitmap1];
-			[self performSelectorOnMainThread:@selector(copyWebViewToBitmap1InBackground) withObject:webBitmap1 waitUntilDone:YES];
+		
+		if (needsrebuild) {
+			
+			//bounds changed, destroy current texture
+			glDeleteTextures(1, &webTexture1);
+			[self buildWebTexture1:cgl_ctx];
+			
+			needsrebuild = NO;
 		}
 		
-	//	if(![self workingOn1])
+		
+		if(![self workingOn1])
+		{	// create our image data.
+		//	NSLog(@"firing copyWebViewToBitmap1InBackground");
+			[self performSelectorInBackground:@selector(copyWebViewToBitmap1InBackground) withObject:webBitmap1];
+		}
+		
+		if(![self workingOn1])
 		{
+		
+			
 			// update our texture
 			glPushAttrib(GL_COLOR_BUFFER_BIT | GL_TRANSFORM_BIT | GL_VIEWPORT);
+			
 			
 			glEnable(GL_TEXTURE_RECTANGLE_EXT);
 			glBindTexture(GL_TEXTURE_RECTANGLE_EXT, webTexture1);
@@ -820,20 +818,19 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			
 			@synchronized(webBitmap1)
 			{
-				// use accessors for atomic thread safe access... 
-				glTexSubImage2D(GL_TEXTURE_RECTANGLE_EXT, 0, 0, 0, width, height, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [[self webBitmap1] bitmapData]); 
+
+				glTexImage2D( GL_TEXTURE_RECTANGLE_EXT, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, width, height, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [[self webBitmap1] bitmapData]);
 			}
 			
 			glFlushRenderAPPLE();
-		
+			
+		 
 		#if __BIG_ENDIAN__
 		#define CogePrivatePlugInPixelFormat QCPlugInPixelFormatARGB8
 		#else
 		#define CogePrivatePlugInPixelFormat QCPlugInPixelFormatBGRA8
 		#endif
 			
-			if (self.inputColorSpace == 0) {
-				
 				self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
 																				pixelsWide:width
 																				pixelsHigh:height
@@ -843,24 +840,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 																			releaseContext:NULL
 																				colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
 																		  shouldColorMatch:YES];
-				
-				
-			} else {
-			
-				self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
-																				pixelsWide:width
-																				pixelsHigh:height
-																					  name:webTexture1
-																				   flipped:YES
-																		   releaseCallback:_TextureReleaseCallback
-																			releaseContext:NULL
-																				colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGBLinear)
-																		  shouldColorMatch:YES];
-				
-			} 
-		
-			
+							
 			glPopAttrib();
+			
 		}
 	}
 	
@@ -892,10 +874,10 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 - (void) copyWebViewToBitmap1InBackground
 {
-//	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-		
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	
 	[self setWorkingOn1:YES];
-
+	
 	[theWebView lockFocus];
 	NSBitmapImageRep *newBitmap = [[NSBitmapImageRep alloc] initWithFocusedViewRect:[theWebView bounds]];
 	[theWebView unlockFocus];
@@ -905,16 +887,14 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	@synchronized(webBitmap1)
 	{
-		//[self setWebBitmap1:newBitmap];
-		[self performSelectorOnMainThread:@selector(setWebBitmap1:) withObject:newBitmap waitUntilDone:YES];
+		[self setWebBitmap1:newBitmap];
 	}
 	[newBitmap release];
 	
 	[self setWorkingOn1:NO];
-		
-	//[pool drain];
 	
-//	[pool release];
+	[pool drain];
+	
 }
 
 - (NSPoint) normalizedMouseLocationForMouseX:(double)inputMouseX mouseY:(double)inputMouseY isFlippedY:(BOOL)flippedy

@@ -47,6 +47,8 @@
 	
 	NSString *JSOut;
 	
+	BOOL needsrebuild;
+	
 }
 
 @property (readwrite, retain) NSString* theURLString;
@@ -75,8 +77,6 @@
 @property (assign) BOOL inputMouseLeftDown;
 @property (assign) BOOL inputMouseRightDown;
 
-@property (assign) NSUInteger inputColorSpace;
-
 
 // javascript specific
 @property (assign) BOOL inputReexecuteJS;
@@ -95,7 +95,7 @@
 @end
 
 @interface CoGeWebKitPlugIn (Execution)
-- (void) buildWebTexture1:(id)context;
+- (void) buildWebTexture1:(CGLContextObj)context;
 
 // thread worker method..
 - (void) copyWebViewToBitmap1InBackground;
