@@ -18,6 +18,7 @@
 
 	[self setBackgroundColor:[NSColor clearColor]];
 	[self setOpaque:NO];
+	
 	return self;
 }
 

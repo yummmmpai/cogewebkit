@@ -270,8 +270,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>6</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -324,20 +323,20 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9E4A520E115BCE6C00B46C72</string>
+										<string>9EF1EB04116BC7B70084F8A8</string>
 										<key>history</key>
 										<array>
 											<string>9E00CF930FFA4F21002A83A9</string>
 											<string>9E62653F1062215100C025CD</string>
 											<string>9E87E208113C677D0075354F</string>
-											<string>9EC56FE7113DCA2700B43853</string>
 											<string>9EC56FE8113DCA2700B43853</string>
 											<string>9EC56FFB113DCB7900B43853</string>
-											<string>9EC571011140262C00B43853</string>
-											<string>9EC571371140357C00B43853</string>
 											<string>9E4A51DB115BC83900B46C72</string>
-											<string>9E4A51DC115BC83900B46C72</string>
-											<string>9E4A51DD115BC83900B46C72</string>
+											<string>9EB7D241116BAAFD00AFB188</string>
+											<string>9EB7D242116BAAFD00AFB188</string>
+											<string>9EB7D243116BAAFD00AFB188</string>
+											<string>9EF1EA9E116BB5E30084F8A8</string>
+											<string>9EF1EAA0116BB5E30084F8A8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -349,14 +348,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1472, 510}}</string>
+								<string>{{0, 0}, {1472, 467}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 146 1680 882 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>510pt</string>
+							<string>467pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -369,14 +368,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 515}, {1472, 326}}</string>
+								<string>{{0, 472}, {1472, 369}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 146 1680 882 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>326pt</string>
+							<string>369pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -395,9 +394,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>9E4A51C6115BC60B00B46C72</string>
+				<string>9EF1EB05116BC7B70084F8A8</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>9E4A51C7115BC60B00B46C72</string>
+				<string>9EF1EB06116BC7B70084F8A8</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -533,10 +532,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>9E4A51D1115BC60B00B46C72</string>
-		<string>9E4A51D2115BC60B00B46C72</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>9E00CC4D0FF9EF85002A83A9</string>
 		<string>/Users/lov/Documents/QC Projects/CoGeWebKit/CoGeWebKit.xcodeproj</string>
 	</array>
@@ -618,7 +613,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>9E00CC4D0FF9EF85002A83A9</string>
-				<string>9E4A51C8115BC60B00B46C72</string>
+				<string>9EF1EB07116BC7B70084F8A8</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

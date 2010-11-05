@@ -16,6 +16,7 @@
 	return NO;
 }
 
+
 -(IBAction)triggerGoBack:(id)sender {
 
 	[naviField setTitleWithMnemonic:[self mainFrameURL]];
