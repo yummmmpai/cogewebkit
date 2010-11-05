@@ -19,7 +19,7 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 {
 	// we dont delete our texture becauser we generate it once and update it via glSubTexImage2D.
 	// we release during disableExecution.
-	//glDeleteTextures(1, &name);
+	glDeleteTextures(1, &name);
 }
 
 @implementation CoGeWebKitPlugIn
@@ -786,30 +786,28 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	{
 		
-		if (needsrebuild) {
-			
+		if (needsrebuild) 
+		{
 			//bounds changed, destroy current texture
-			glDeleteTextures(1, &webTexture1);
 			[self buildWebTexture1:cgl_ctx];
 			
 			needsrebuild = NO;
 		}
 		
 		
-		if(![self workingOn1])
+		if (![self workingOn1])
 		{	// create our image data.
 		//	NSLog(@"firing copyWebViewToBitmap1InBackground");
 			[self performSelectorInBackground:@selector(copyWebViewToBitmap1InBackground) withObject:webBitmap1];
 		}
 		
-		if(![self workingOn1])
+	//	if (![self workingOn1])
 		{
-		
 			
 			// update our texture
 			glPushAttrib(GL_COLOR_BUFFER_BIT | GL_TRANSFORM_BIT | GL_VIEWPORT);
 			
-			
+			glGenTextures(1, &webTexture1);
 			glEnable(GL_TEXTURE_RECTANGLE_EXT);
 			glBindTexture(GL_TEXTURE_RECTANGLE_EXT, webTexture1);
 					
@@ -839,8 +837,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 																		   releaseCallback:_TextureReleaseCallback
 																			releaseContext:NULL
 																				colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
-																		  shouldColorMatch:YES];
-							
+																		  shouldColorMatch:NO];
+			
+			glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
 			glPopAttrib();
 			
 		}
