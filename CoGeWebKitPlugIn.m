@@ -12,7 +12,7 @@
 #import "CoGeWebKitPlugIn.h"
 
 #define	kQCPlugIn_Name				@"CoGeWebKit"
-#define	kQCPlugIn_Description		@"CoGeWebKit Beta 3. Renders the file at the given URL with WebKit."
+#define	kQCPlugIn_Description		@"CoGeWebKit Beta 3 via .lov. and vade. Renders the file at the given URL with WebKit."
 
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
@@ -31,6 +31,8 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 @dynamic inputHeight;
 @dynamic inputJavascript;
 @dynamic inputReexecuteJS;
+
+@dynamic inputForceFlashRendering;
 
 @dynamic inputReload;
 @dynamic inputForwardHistory;
@@ -58,7 +60,7 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 
 // class stuff
 @synthesize theURLString;
-@synthesize webBitmap1;
+@synthesize webBitmap;
 @synthesize workingOn1;
 @synthesize urlList;
 @synthesize stringHTMLSource;
@@ -130,6 +132,14 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				[NSNumber numberWithInt:0], QCPortAttributeDefaultValueKey,
 				@"Re-execute Javascript", QCPortAttributeNameKey, nil];
 	}
+
+	if([key isEqualToString:@"inputForceFlashRendering"])
+	{
+		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeBoolean, QCPortAttributeTypeKey,
+				[NSNumber numberWithInt:0], QCPortAttributeDefaultValueKey,
+				@"Force Flash Rendering", QCPortAttributeNameKey, nil];
+	}
+	
 	
 	if([key isEqualToString:@"inputMouseX"])
 	{
@@ -180,6 +190,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				[NSNumber numberWithInt:0], QCPortAttributeDefaultValueKey,
 				@"View Browser Window", QCPortAttributeNameKey, nil];
 	}
+
 	
 	if([key isEqualToString:@"outputImage"])
 		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeImage, QCPortAttributeTypeKey,@"Image", QCPortAttributeNameKey,nil];
@@ -211,6 +222,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 + (NSArray*) sortedPropertyPortKeys
 {
 	return [NSArray arrayWithObjects:@"inputFilePath",
+			@"inputForceFlashRendering",
 			@"inputWidth",
 			@"inputHeight",
 			@"inputJavascript",
@@ -272,6 +284,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//delegate to make popup works
 	[theWebView setPolicyDelegate:self];
 	[theWebView setUIDelegate:self];
+
 	
 
 }
@@ -285,7 +298,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		*/		
 		
 		//init on the main thread
-		[self performSelectorOnMainThread:@selector(initWebViewOnMainThread) withObject:nil waitUntilDone:YES];
+		[self performSelectorOnMainThread:@selector(initWebViewOnMainThread) withObject:nil waitUntilDone:NO];
 		
 		lock1 = [[NSRecursiveLock alloc] init];
 		
@@ -343,63 +356,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 @implementation CoGeWebKitPlugIn (Execution)
 
-- (void) buildWebTexture1:(CGLContextObj)context
-{
-	CGLContextObj cgl_ctx = context;
-	CGLLockContext(cgl_ctx);
-	
-	[lock1 lock];
-	
-	// create our image data.
-	[theWebView lockFocus];
-	NSBitmapImageRep* bitmap = [[NSBitmapImageRep alloc] initWithFocusedViewRect:[theWebView bounds]];
-	[self setWebBitmap1:bitmap];
-	[bitmap release];
-	[theWebView unlockFocus];
-	
-//	NSLog (@"bitmap data format: isPlanar:%d, samplesPerPixel:%d, bitsPerPixel:%d, bytesPerRow:%d, bytesPerPlane:%d",[bitmap isPlanar], [bitmap samplesPerPixel], [bitmap bitsPerPixel], [bitmap bytesPerRow], [bitmap bytesPerPlane]);
-	
-	// create our texture 
-	glEnable(GL_TEXTURE_RECTANGLE_EXT);
-	glGenTextures(1, &webTexture1);
-	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, webTexture1);
-	
-	// with storage hints & texture range -- assuming image depth should be 32 (8 bit rgba + 8 bit alpha ?). Sounds right.
-	// glTextureRangeAPPLE(GL_TEXTURE_RECTANGLE_EXT,  self.inputWidth * self.inputHeight * (32 >> 3), [[self webBitmap1] bitmapData]); 
-	// glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_STORAGE_HINT_APPLE , GL_STORAGE_CACHED_APPLE);
-	glPixelStorei(GL_UNPACK_CLIENT_STORAGE_APPLE, GL_TRUE);
-	
-	// proper tex params.
-	glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-	
-	
-	// Set proper unpacking row length for bitmap
-	//glPixelStorei(GL_UNPACK_ROW_LENGTH, width);	
-	
-	// Set byte aligned unpacking (needed for 3 byte per pixel bitmaps)
-	//glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
-	
-	// this definitely works
-	glTexImage2D( GL_TEXTURE_RECTANGLE_EXT, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, width, height, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [[self webBitmap1] bitmapData]);
-	
-	// unset our client storage options storage
-	// these fucks were causing our FBOs to fail.
-	//glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_STORAGE_HINT_APPLE , GL_STORAGE_PRIVATE_APPLE);
-	glPixelStorei(GL_UNPACK_CLIENT_STORAGE_APPLE, GL_FALSE);
-	
-	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
-	
-	//[bitmap release];
-	
-	[lock1 unlock];
-	CGLUnlockContext(cgl_ctx);
-}
-
-
-
 - (BOOL) startExecution:(id<QCPlugInContext>)context
 {
 	/*
@@ -411,7 +367,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	width = self.inputWidth;
 	height = self.inputHeight;
 	
-		
 	return YES;
 }
 
@@ -421,12 +376,13 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	Called by Quartz Composer when the plug-in instance starts being used by Quartz Composer.
 	*/
 	//we are going to init our textures, and use client storage optimizations
-	CGLContextObj cgl_ctx = [context CGLContextObj];
-	CGLLockContext(cgl_ctx);
+//	CGLContextObj cgl_ctx = [context CGLContextObj];
 	
-	[self buildWebTexture1:cgl_ctx];
+//	[self buildWebTexture:cgl_ctx];
 	
-	CGLUnlockContext(cgl_ctx);
+	needsrebuild = YES;
+	
+	
 	
 }
 
@@ -480,30 +436,52 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 }
 
 -(void)webviewSetFrame {
-
+	
 	[theWebView setFrame:NSMakeRect(0, 0, width, height)];
+;
+	
+	liveresize = NO;
+	
+	needsrebuild = YES;
 }
 
--(void)webviewLoadRequest {
+-(void)webviewLoadRequest:(NSString *)filepath {
+	
+	//if (self.inputFilePath != nil) 
+	{
 
-	[theWebView setDrawsBackground:NO];
-	[[theWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.inputFilePath]]];
+		[offscreenWindow setBackgroundColor:[NSColor clearColor]];
+		
+		[[theWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:filepath]]];
+		[theWebView setDrawsBackground:NO];
+		[offscreenWindow setOpaque:NO];
+		
+		NSLog(@"webview request loaded");
+		
+	}
 	
 
 }
 
 -(void)loadHTMLOnMainThread:(NSString *)htmlstring {
 	
-	[[theWebView mainFrame] loadHTMLString:htmlstring baseURL:[NSURL URLWithString:@""]];
+//	NSLog(@"inject html: %@", htmlstring);
 	
-	[theWebView reload:nil];
+	NSLog(@"load local flash stuff...");
+	
+	//first, we have to clear the current HTML
+	[self webviewLoadRequest:@""];
+	
+	
+	[[theWebView mainFrame] loadHTMLString:htmlstring baseURL:[NSURL URLWithString:@"/"]];
 	[theWebView setDrawsBackground:NO];
+	[theWebView reload:nil];
 	
 }
 
--(void)webviewExecuteJS {
+-(void)webviewExecuteJS:(NSString *)newjs {
 
-	JSOut = [theWebView stringByEvaluatingJavaScriptFromString:self.inputJavascript];
+	JSOut = [theWebView stringByEvaluatingJavaScriptFromString:newjs];
 }
 
 
@@ -538,31 +516,75 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		}	
 			
 	}
+
+
+	//if filepath changed, reload
+	if ([self didValueForInputKeyChange:@"inputForceFlashRendering"])
+	{
+		
+	//	NSLog(@"inputForceFlashRendering changed!");
+		
+		if(self.inputForceFlashRendering)
+		{
+			needsforcerenderflash = YES;
+		}
+		else
+		{
+			needsforcerenderflash = NO;
+		}	
+		
+	}
+	
+	
 	
 	//history handling
 	if ([self didValueForInputKeyChange:@"inputBackwardHistory"] && (self.inputBackwardHistory == TRUE)) {
 		
-		[theWebView performSelectorOnMainThread:@selector(goBack:) withObject:nil waitUntilDone:YES];
+		[theWebView performSelectorOnMainThread:@selector(goBack:) withObject:nil waitUntilDone:NO];
 		
 		self.outputCurrentURL = [theWebView mainFrameURL];
 	}
 
 	if ([self didValueForInputKeyChange:@"inputForwardHistory"] && (self.inputForwardHistory == TRUE)) {
 		
-		[theWebView performSelectorOnMainThread:@selector(goForward:) withObject:nil waitUntilDone:YES];
+		[theWebView performSelectorOnMainThread:@selector(goForward:) withObject:nil waitUntilDone:NO];
 
 		self.outputCurrentURL = [theWebView mainFrameURL];
 }
 
 	if ([self didValueForInputKeyChange:@"inputReload"] && (self.inputReload == TRUE)) {
 		
-		[theWebView performSelectorOnMainThread:@selector(reload:) withObject:nil waitUntilDone:YES];
+		[theWebView performSelectorOnMainThread:@selector(reload:) withObject:nil waitUntilDone:NO];
 		
 		self.outputCurrentURL = [theWebView mainFrameURL];
 	}
 	
 	//put the progress
 	self.outputProgress = ([theWebView estimatedProgress]) ? [theWebView estimatedProgress] : 0; 
+
+	//if width or height changed
+	if (([self didValueForInputKeyChange:@"inputWidth"]) || ([self didValueForInputKeyChange:@"inputHeight"])) {
+
+		liveresize = YES;
+
+	//	NSLog(@"need new width or height, do it...");
+		
+		width = floorf(self.inputWidth);
+		height = floorf(self.inputHeight);
+		
+		[offscreenWindow setContentSize:NSMakeSize(width, height + 38.0)];
+		
+		[self performSelectorOnMainThread:@selector(webviewSetFrame) withObject:nil waitUntilDone:NO];
+		
+		if (rendersflash) {
+			
+			[self performSelectorOnMainThread:@selector(handleLoadingFlashSetup:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
+			
+		}
+		
+	}
+	
+	
 	
 	if ([self didValueForInputKeyChange:@"inputFilePath"])
 	{
@@ -571,29 +593,44 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		//needed in any situation
 		
 		// special case flash handling:
-		if ([[self fileKind:self.inputFilePath] isEqualToString:@"Shockwave Flash Movie"])
-		{
+		if ([self.inputFilePath length] > 4) {
 
-			[self performSelectorOnMainThread:@selector(handleLoadingFlashSetup) withObject:nil waitUntilDone:YES];
+			if (([[self.inputFilePath substringFromIndex:[self.inputFilePath length]-4] isEqualToString: @".swf"]))		{
+				
+				rendersflash = YES;
+				NSLog(@"will render flash!");
+				
+				[self performSelectorOnMainThread:@selector(handleLoadingFlashSetup:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
+				
+				
+			}
+			else
+			{	
+				rendersflash = NO;
+				
+				//load content
+				[self setTheURLString:self.inputFilePath];
+				[self performSelectorOnMainThread:@selector(webviewLoadRequest:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
+			}
 			
-		}
-		else
-		{	
+			//for pure swf, we need to set the filepath on the transparent window's textfield, weird...
+			//NO, WE DON'T WANNA THIS PIECE OF SITH
+			//	[offscreenWindow setNaviPath:self.inputFilePath];
 			
 			
-			//load content
+			
+			NSLog(@"filepath changed, reload it...");
+			
+		} else {
+			
+			//it will just a reset
 			[self setTheURLString:self.inputFilePath];
-			
-			[self performSelectorOnMainThread:@selector(webviewLoadRequest) withObject:nil waitUntilDone:YES];
+			[self performSelectorOnMainThread:@selector(webviewLoadRequest:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
 		}
-		
-		//for pure swf, we need to set the filepath on the transparent window's textfield, weird...
-		[offscreenWindow setNaviPath:self.inputFilePath];
-		
+
 		self.outputCurrentURL = [NSString stringWithString:self.inputFilePath];
 
-		
-		NSLog(@"filepath changed, reload it...");
+	
 	}
 	
 	
@@ -602,7 +639,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		self.outputImageUrls = urlList;
 		self.outputHTMLStringSource = stringHTMLSource;
 		
-		[self performSelectorOnMainThread:@selector(setOutputWidthAndHeight) withObject:nil waitUntilDone:YES];
+		[self performSelectorOnMainThread:@selector(setOutputWidthAndHeight) withObject:nil waitUntilDone:NO];
 
 		updateOneshotOutputPorts = NO;
 	}
@@ -632,7 +669,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			if(hitView)
 			{
 				
-				[hitView performSelectorOnMainThread:selector withObject:keyEvent waitUntilDone:YES];
+				[hitView performSelectorOnMainThread:selector withObject:keyEvent waitUntilDone:NO];
 			}
 			
 		} 
@@ -731,32 +768,17 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		if(hitView)
 		{
 
-			[hitView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:YES];
+			[hitView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:NO];
 		}
 		else
 		{
-			[theWebView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:YES];
+			[theWebView performSelectorOnMainThread:selector withObject:mouseEvent waitUntilDone:NO];
 		}
 			
 		
 		
 	}
 	
-	//if width or height changed
-	if (([self didValueForInputKeyChange:@"inputWidth"]) || ([self didValueForInputKeyChange:@"inputHeight"])) {
-		
-		// NSLog(@"need new width or height, do it...");
-		
-		width = floorf(self.inputWidth);
-		height = floorf(self.inputHeight);
-		
-		//set new size
-		[offscreenWindow setContentSize:NSMakeSize(width, height + 38.0)];
-		
-		[self performSelectorOnMainThread:@selector(webviewSetFrame) withObject:nil waitUntilDone:YES];
-		
-		needsrebuild = YES;
-	}
 
 #pragma mark Scroll handling
 	
@@ -765,7 +787,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 		//NSLog(@"mouse scroll");
 		
-		[self performSelectorOnMainThread:@selector(webviewScrollY:) withObject:[NSNumber numberWithDouble:self.inputMouseScrollY] waitUntilDone:YES];
+		[self performSelectorOnMainThread:@selector(webviewScrollY:) withObject:[NSNumber numberWithDouble:self.inputMouseScrollY] waitUntilDone:NO];
 	
 	}
 
@@ -773,7 +795,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		//NSLog(@"mouse scroll");
 
-		[self performSelectorOnMainThread:@selector(webviewScrollX:) withObject:[NSNumber numberWithDouble:self.inputMouseScrollX] waitUntilDone:YES];
+		[self performSelectorOnMainThread:@selector(webviewScrollX:) withObject:[NSNumber numberWithDouble:self.inputMouseScrollX] waitUntilDone:NO];
 		
 	}
 	
@@ -793,7 +815,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		//be safe
 		if ([self.inputJavascript rangeOfString:@"window.close"].location == NSNotFound) {
 			NSLog(@"safe javascript :)");
-		[self performSelectorOnMainThread:@selector(webviewExecuteJS) withObject:nil waitUntilDone:YES];
+			[self performSelectorOnMainThread:@selector(webviewExecuteJS:) withObject:[NSString stringWithString:self.inputJavascript] waitUntilDone:NO];
 			self.outputJavascript = JSOut;
 		}
 		else
@@ -805,66 +827,72 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 #pragma mark Image provider
 	
+	if (!(self.workingOn1) || (needsrebuild)) 
 	{
 		
-		if (needsrebuild) 
-		{
-			//bounds changed, destroy current texture
-			[self buildWebTexture1:cgl_ctx];
-			
-			needsrebuild = NO;
-		}
+	//	NSLog(@"start rebuilding!");
+		[self performSelectorOnMainThread:@selector(copyWebViewToBitmapInBackground) withObject:webBitmap waitUntilDone:NO];
+	//	NSLog(@"rebuilding finished!");
+	//	NSLog(@"bitmap width: %d  inputwidth: %d", [self.webBitmap pixelsWide], width);
 		
-		
-		if (![self workingOn1])
-		{	// create our image data.
-		//	NSLog(@"firing copyWebViewToBitmap1InBackground");
-			[self performSelectorInBackground:@selector(copyWebViewToBitmap1InBackground) withObject:webBitmap1];
-		}
-		
-	//	if (![self workingOn1])
-		{
-			
-			// update our texture
-			glPushAttrib(GL_COLOR_BUFFER_BIT | GL_TRANSFORM_BIT | GL_VIEWPORT);
-			
-			glGenTextures(1, &webTexture1);
-			glEnable(GL_TEXTURE_RECTANGLE_EXT);
-			glBindTexture(GL_TEXTURE_RECTANGLE_EXT, webTexture1);
-					
-			//GLint xOffset = 0;
-			//GLint yOffset = 0;
-			
-			@synchronized(webBitmap1)
-			{
+		needsrebuild = NO;
+	}	
+	
+	
 
-				glTexImage2D( GL_TEXTURE_RECTANGLE_EXT, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, width, height, 0, [[self webBitmap1] samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [[self webBitmap1] bitmapData]);
-			}
+	//NSLog(@"rendering...");
+	glPushAttrib(GL_COLOR_BUFFER_BIT | GL_TRANSFORM_BIT | GL_VIEWPORT);
+	
+	// create our texture 
+	glEnable(GL_TEXTURE_RECTANGLE_EXT);
+	glGenTextures(1, &webTexture1);
+	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, webTexture1);
+	
+	
+	if ((self.webBitmap != NULL) && (!liveresize)) {
+		
+		
+		@synchronized(webBitmap) 
+		{
+
+			glPixelStorei(GL_UNPACK_ROW_LENGTH, [self.webBitmap bytesPerRow] / [self.webBitmap samplesPerPixel]);
+			glPixelStorei (GL_UNPACK_ALIGNMENT, 1); 
 			
-			glFlushRenderAPPLE();
 			
-		 
-		#if __BIG_ENDIAN__
-		#define CogePrivatePlugInPixelFormat QCPlugInPixelFormatARGB8
-		#else
-		#define CogePrivatePlugInPixelFormat QCPlugInPixelFormatBGRA8
-		#endif
+			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_S, GL_CLAMP);
+			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_T, GL_CLAMP);
 			
-				self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
-																				pixelsWide:width
-																				pixelsHigh:height
-																					  name:webTexture1
-																				   flipped:YES
-																		   releaseCallback:_TextureReleaseCallback
-																			releaseContext:NULL
-																				colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
-																		  shouldColorMatch:NO];
-			
-			glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
-			glPopAttrib();
+			glTexImage2D(GL_TEXTURE_RECTANGLE_EXT, 0, [self.webBitmap samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, [self.webBitmap pixelsWide], [self.webBitmap pixelsHigh], 0, [self.webBitmap samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [self.webBitmap bitmapData]);
 			
 		}
+		
 	}
+	
+	glFlushRenderAPPLE();
+	
+	
+#if __BIG_ENDIAN__
+#define CogePrivatePlugInPixelFormat QCPlugInPixelFormatARGB8
+#else
+#define CogePrivatePlugInPixelFormat QCPlugInPixelFormatBGRA8
+#endif
+	
+	self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
+																	pixelsWide:width
+																	pixelsHigh:height
+																		  name:webTexture1
+																	   flipped:YES
+															   releaseCallback:_TextureReleaseCallback
+																releaseContext:NULL
+																	colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
+															  shouldColorMatch:YES];
+	
+	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
+	
+	glPopAttrib();
+	
 	
 	// unlock to allow anything else to grab the context
 	CGLUnlockContext(cgl_ctx);
@@ -892,28 +920,66 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	CGLUnlockContext(cgl_ctx);
 }
 
-- (void) copyWebViewToBitmap1InBackground
+- (void) copyWebViewToBitmapInBackground
 {
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+//	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
 	[self setWorkingOn1:YES];
 	
-	[theWebView lockFocus];
-	NSBitmapImageRep *newBitmap = [[NSBitmapImageRep alloc] initWithFocusedViewRect:[theWebView bounds]];
-	[theWebView unlockFocus];
+//	[lock1 lock];
+
+	NSView *view = [[theWebView mainFrame] frameView];
+	NSBitmapImageRep *bitmap;
+
+
+	// this shit needed
+	// or 
+	// the offscreen content won't update on startup
+	//
 	
-	// setters are atomic across threads, so this is thread safe weee...
-	//[self performSelectorOnMainThread:@selector(setWebBitmap1:) withObject:newBitmap waitUntilDone:YES];
-	
-	@synchronized(webBitmap1)
-	{
-		[self setWebBitmap1:newBitmap];
+	if ([view visibleRect].size.width != width) {
+	//	NSLog(@"visible: %f", [view visibleRect].size.width);
+	//	NSLog(@"set new frame!");
+		[offscreenWindow setContentSize:NSMakeSize(width, height+38.0)];
+		[view setFrame:NSMakeRect(0, 0, width, height)];
+		[view setNeedsDisplay:YES];
+		[offscreenWindow display];
+		 
 	}
-	[newBitmap release];
+	
+
+	if ((rendersflash) || (needsforcerenderflash)) {
+		
+	//	NSLog(@"will render flash content!");
+		
+		bitmap = [view bitmapImageRepForCachingDisplayInRect:[view visibleRect]];
+		[view cacheDisplayInRect:[view visibleRect] toBitmapImageRep:bitmap];	
+		
+		@synchronized(webBitmap)
+		{
+			[self setWebBitmap:bitmap];
+		}
+		
+	} else {
+		
+		[view lockFocus];
+		bitmap = [[NSBitmapImageRep alloc] initWithFocusedViewRect:[view visibleRect]];
+		[view unlockFocus];
+		
+		@synchronized(webBitmap)
+		{
+			[self setWebBitmap:bitmap];
+			[bitmap release]; 
+		}
+	}
+	
+				
+	
+//	[lock1 unlock];
 	
 	[self setWorkingOn1:NO];
 	
-	[pool drain];
+//	[pool drain];
 	
 }
 
@@ -1002,44 +1068,37 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
     return [[[[webView mainFrame] dataSource] representation] documentSource];
 }
 
-//found here: http://importantshock.wordpress.com/2007/01/07/cocoa-snippet-finding-a-files-kind/
-- (NSString *)fileKind:(NSString *)path
-{
-	NSString *kind = nil;
-	NSURL *url = [NSURL fileURLWithPath:[path stringByExpandingTildeInPath]];
-	LSCopyKindStringForURL((CFURLRef)url, (CFStringRef *)&kind);
-	return kind ? [kind autorelease] : @""; // If kind happens to be an empty string, don't autorelease it
-}
 
-- (void) handleLoadingFlashSetup
+- (void) handleLoadingFlashSetup:(NSString *)swffile;
 {
 	//
 	// ok, the method is load the wrapper - replace size and name - load the string for the webview
 	//
 	
-	 NSLog(@"kind: %@", [self fileKind:self.inputFilePath]);
-	// NSLog(@"path for wrapper: %@", [thisBundle pathForResource:@"wrapper" ofType:@"html"]);
+	//
+	// ok, the method is load the wrapper - replace size and name - load the string for the webview
+	//
 	
 	//load the wrapper to a string
-	NSString *wrapper = [NSString stringWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"wrapper" ofType:@"html"] encoding:NSUTF8StringEncoding error:NULL];
+	NSString *wrapper = [NSString stringWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"wrapperNEW" ofType:@"html"] encoding:NSUTF8StringEncoding error:NULL];
 	
 	//replacing data
-	NSString *html1 = [wrapper stringByReplacingOccurrencesOfString:@"thewidth" withString:[NSString stringWithFormat:@"%f",self.inputWidth]];
-	NSString *html2 = [html1 stringByReplacingOccurrencesOfString:@"theheight" withString:[NSString stringWithFormat:@"%f",self.inputHeight]];
+	NSString *html1 = [wrapper stringByReplacingOccurrencesOfString:@"thewidth" withString:[NSString stringWithFormat:@"%d",[[NSNumber numberWithInteger:width] intValue]]];
+	NSString *html2 = [html1 stringByReplacingOccurrencesOfString:@"theheight" withString:[NSString stringWithFormat:@"%d",[[NSNumber numberWithInteger:height] intValue]]];
 	
 	
-	NSString *htmlfull = [html2 stringByReplacingOccurrencesOfString:@"thefilename.swf" withString:self.inputFilePath];
-	
-	//	NSLog(@"html content: %@", htmlfull);
-	//	NSLog(@"ok, 'upload' or html content...");
+	NSString *htmlfull = [html2 stringByReplacingOccurrencesOfString:@"thefilename.swf" withString:swffile];
+
+
+//	NSLog(@"html content: %@", htmlfull);
+//	NSLog(@"ok, 'upload' or html content...");
 	
 	//load with webframe
-	
-	[self performSelectorOnMainThread:@selector(loadHTMLOnMainThread:) withObject:htmlfull waitUntilDone:YES];
+	[self performSelectorOnMainThread:@selector(loadHTMLOnMainThread:) withObject:htmlfull waitUntilDone:NO];
 	
 	[offscreenWindow setBackgroundColor:[NSColor clearColor]];
 	[offscreenWindow setOpaque:NO];
-		
+	
 	
 	// set this to "fire" oneshot updates
 	updateOneshotOutputPorts = YES;

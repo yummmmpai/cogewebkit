@@ -24,7 +24,7 @@
 	NSString* theURLString;
 	
 	// we use two textures to double buffer texture upload
-	NSBitmapImageRep* webBitmap1;
+	NSBitmapImageRep* webBitmap;
 	NSUInteger width, height;
 	
 	GLuint webTexture1;
@@ -49,10 +49,15 @@
 	
 	BOOL needsrebuild;
 	
+	BOOL rendersflash;
+	BOOL needsforcerenderflash;
+	
+	BOOL liveresize;
+	
 }
 
 @property (readwrite, retain) NSString* theURLString;
-@property (readwrite, retain) NSBitmapImageRep* webBitmap1;
+@property (readwrite, retain) NSBitmapImageRep* webBitmap;
 @property (readwrite, assign) BOOL workingOn1;
 @property (readwrite, retain) NSString* stringHTMLSource;
 @property (readwrite, retain) NSMutableArray *urlList;
@@ -82,6 +87,9 @@
 // javascript specific
 @property (assign) BOOL inputReexecuteJS;
 
+//for fucking swf
+@property (assign) BOOL inputForceFlashRendering;
+
 @property (assign) id<QCPlugInOutputImageProvider> outputImage;
 @property (assign) double outputDocWidth;
 @property (assign) double outputDocHeight;
@@ -96,10 +104,9 @@
 @end
 
 @interface CoGeWebKitPlugIn (Execution)
-- (void) buildWebTexture1:(CGLContextObj)context;
 
 // thread worker method..
-- (void) copyWebViewToBitmap1InBackground;
+- (void) copyWebViewToBitmapInBackground;
 - (NSPoint) normalizedMouseLocationForMouseX:(double)inputMouseX mouseY:(double)inputMouseY isFlippedY:(BOOL)flippedy;
 
 - (NSString *)sourceFromWebView:(WebView *)webView;
