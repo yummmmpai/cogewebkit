@@ -32,6 +32,8 @@
 		1BA79BFE0FFF0382007CE5DB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA79BFD0FFF0382007CE5DB /* AppKit.framework */; };
 		30B9D331128696F000C83F82 /* TransparentWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B9D32F128696F000C83F82 /* TransparentWebView.m */; };
 		30B9D53A1286B68E00C83F82 /* wrapperNEW.html in Resources */ = {isa = PBXBuildFile; fileRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */; };
+		30B9D7651286FB4000C83F82 /* swfobject.js in Sources */ = {isa = PBXBuildFile; fileRef = 30B9D7641286FB4000C83F82 /* swfobject.js */; };
+		30B9D7661286FB4600C83F82 /* swfobject.js in Resources */ = {isa = PBXBuildFile; fileRef = 30B9D7641286FB4000C83F82 /* swfobject.js */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,7 @@
 		30B9D32F128696F000C83F82 /* TransparentWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransparentWebView.m; path = "../../../cogewebkit-read-only/TransparentWebView.m"; sourceTree = SOURCE_ROOT; };
 		30B9D330128696F000C83F82 /* TransparentWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransparentWebView.h; path = "../../../cogewebkit-read-only/TransparentWebView.h"; sourceTree = SOURCE_ROOT; };
 		30B9D5391286B68E00C83F82 /* wrapperNEW.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wrapperNEW.html; sourceTree = "<group>"; };
+		30B9D7641286FB4000C83F82 /* swfobject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* CoGeWebKit.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoGeWebKit.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				30B9D5391286B68E00C83F82 /* wrapperNEW.html */,
+				30B9D7641286FB4000C83F82 /* swfobject.js */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				1B858BEE100112A300C52334 /* WebWindow.xib */,
 			);
@@ -204,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B9D7661286FB4600C83F82 /* swfobject.js in Resources */,
 				1B858BFA100114EE00C52334 /* WebWindow.xib in Resources */,
 				30B9D53A1286B68E00C83F82 /* wrapperNEW.html in Resources */,
 			);
@@ -236,6 +241,7 @@
 				1B5B5AE8100194BB0043536B /* TransparentWindow.m in Sources */,
 				1B5B5B6E1001BC9D0043536B /* NonTransparentWebTitleBar.m in Sources */,
 				30B9D331128696F000C83F82 /* TransparentWebView.m in Sources */,
+				30B9D7651286FB4000C83F82 /* swfobject.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

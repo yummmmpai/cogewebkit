@@ -279,6 +279,40 @@
 			30B9D75B1286EF3D00C83F82 /* PBXTextBookmark */ = 30B9D75B1286EF3D00C83F82 /* PBXTextBookmark */;
 			30B9D75F1286EFA500C83F82 /* PBXTextBookmark */ = 30B9D75F1286EFA500C83F82 /* PBXTextBookmark */;
 			30B9D7601286EFA500C83F82 /* PBXTextBookmark */ = 30B9D7601286EFA500C83F82 /* PBXTextBookmark */;
+			30B9D7671286FB4800C83F82 /* PBXTextBookmark */ = 30B9D7671286FB4800C83F82 /* PBXTextBookmark */;
+			30B9D7681286FB4800C83F82 /* PBXBookmark */ = 30B9D7681286FB4800C83F82 /* PBXBookmark */;
+			30B9D7691286FB4800C83F82 /* PBXTextBookmark */ = 30B9D7691286FB4800C83F82 /* PBXTextBookmark */;
+			30B9D76A1286FBE900C83F82 /* PBXTextBookmark */ = 30B9D76A1286FBE900C83F82 /* PBXTextBookmark */;
+			30B9D76D1286FCCD00C83F82 /* PBXTextBookmark */ = 30B9D76D1286FCCD00C83F82 /* PBXTextBookmark */;
+			30B9D76F1286FD6500C83F82 /* PBXTextBookmark */ = 30B9D76F1286FD6500C83F82 /* PBXTextBookmark */;
+			30B9D7721286FD7A00C83F82 /* PBXTextBookmark */ = 30B9D7721286FD7A00C83F82 /* PBXTextBookmark */;
+			30B9D7781286FDEC00C83F82 /* PBXTextBookmark */ = 30B9D7781286FDEC00C83F82 /* PBXTextBookmark */;
+			30B9D77A1286FE2D00C83F82 /* PBXTextBookmark */ = 30B9D77A1286FE2D00C83F82 /* PBXTextBookmark */;
+			30B9D77B1286FE2D00C83F82 /* PBXTextBookmark */ = 30B9D77B1286FE2D00C83F82 /* PBXTextBookmark */;
+			30B9D77C1286FE2D00C83F82 /* PBXTextBookmark */ = 30B9D77C1286FE2D00C83F82 /* PBXTextBookmark */;
+			30B9D77F1286FF4500C83F82 /* PBXTextBookmark */ = 30B9D77F1286FF4500C83F82 /* PBXTextBookmark */;
+			30B9D7801286FF4500C83F82 /* PBXTextBookmark */ = 30B9D7801286FF4500C83F82 /* PBXTextBookmark */;
+			30B9D7861286FFF500C83F82 /* PBXTextBookmark */ = 30B9D7861286FFF500C83F82 /* PBXTextBookmark */;
+			30B9D78A1287003300C83F82 /* PBXTextBookmark */ = 30B9D78A1287003300C83F82 /* PBXTextBookmark */;
+			30B9D78E1287034600C83F82 /* PlistBookmark */ = 30B9D78E1287034600C83F82 /* PlistBookmark */;
+			30B9D78F1287034600C83F82 /* PBXTextBookmark */ = 30B9D78F1287034600C83F82 /* PBXTextBookmark */;
+			30B9D7901287034600C83F82 /* PBXTextBookmark */ = 30B9D7901287034600C83F82 /* PBXTextBookmark */;
+			30B9D7911287034600C83F82 /* PBXTextBookmark */ = 30B9D7911287034600C83F82 /* PBXTextBookmark */;
+			30B9D7921287034600C83F82 /* PBXTextBookmark */ = 30B9D7921287034600C83F82 /* PBXTextBookmark */;
+			30B9D794128703C300C83F82 /* PBXTextBookmark */ = 30B9D794128703C300C83F82 /* PBXTextBookmark */;
+			30B9D7971287044800C83F82 /* PBXTextBookmark */ = 30B9D7971287044800C83F82 /* PBXTextBookmark */;
+			30B9D7981287044800C83F82 /* PBXTextBookmark */ = 30B9D7981287044800C83F82 /* PBXTextBookmark */;
+			30B9D7991287044800C83F82 /* PBXTextBookmark */ = 30B9D7991287044800C83F82 /* PBXTextBookmark */;
+			30B9D79A1287044800C83F82 /* PBXTextBookmark */ = 30B9D79A1287044800C83F82 /* PBXTextBookmark */;
+			30B9D79C1287047900C83F82 /* PBXTextBookmark */ = 30B9D79C1287047900C83F82 /* PBXTextBookmark */;
+			30B9D79D1287047900C83F82 /* PBXTextBookmark */ = 30B9D79D1287047900C83F82 /* PBXTextBookmark */;
+			30B9D79E1287047900C83F82 /* PBXTextBookmark */ = 30B9D79E1287047900C83F82 /* PBXTextBookmark */;
+			30B9D7A1128704B700C83F82 /* PBXTextBookmark */ = 30B9D7A1128704B700C83F82 /* PBXTextBookmark */;
+			30B9D7A5128704D800C83F82 /* PBXTextBookmark */ = 30B9D7A5128704D800C83F82 /* PBXTextBookmark */;
+			30B9D7A9128704F400C83F82 /* PBXTextBookmark */ = 30B9D7A9128704F400C83F82 /* PBXTextBookmark */;
+			30B9D7AD128705EC00C83F82 /* PBXTextBookmark */ = 30B9D7AD128705EC00C83F82 /* PBXTextBookmark */;
+			30B9D7B11287073E00C83F82 /* PBXTextBookmark */ = 30B9D7B11287073E00C83F82 /* PBXTextBookmark */;
+			30B9D7B31287077400C83F82 /* PBXTextBookmark */ = 30B9D7B31287077400C83F82 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 23E90CA40A83C4F400A6A40A /* Source Control */;
 		userBuildSettings = {
@@ -294,9 +328,9 @@
 	};
 	16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 14092}}";
-			sepNavSelRange = "{17861, 0}";
-			sepNavVisRange = "{16866, 1035}";
+			sepNavIntBoundsRect = "{{0, 0}, {1321, 13988}}";
+			sepNavSelRange = "{31059, 9}";
+			sepNavVisRange = "{30198, 1475}";
 		};
 	};
 	1B5B5AE6100194BB0043536B /* TransparentWindow.h */ = {
@@ -575,7 +609,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1028";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1120;
 		vrLoc = 29957;
@@ -585,7 +619,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1020";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1054;
 		vrLoc = 29680;
@@ -705,7 +739,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 914";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 531;
 		vrLoc = 27054;
@@ -715,7 +749,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 935";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 18416;
@@ -725,7 +759,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 935";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 840;
 		vrLoc = 24972;
@@ -735,7 +769,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 516";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 631;
 		vrLoc = 15083;
@@ -785,7 +819,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 500";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 550;
 		vrLoc = 15023;
@@ -795,7 +829,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 512";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 564;
 		vrLoc = 15360;
@@ -805,7 +839,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 512";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 31043;
@@ -835,7 +869,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 505";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 31043;
@@ -845,7 +879,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 880";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 722;
 		vrLoc = 25950;
@@ -855,7 +889,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 880";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 802;
 		vrLoc = 25869;
@@ -865,7 +899,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 850";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1006;
 		vrLoc = 24862;
@@ -875,7 +909,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 859";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 25106;
@@ -945,7 +979,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 859";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 977;
 		vrLoc = 25106;
@@ -955,7 +989,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1065";
 		rLen = 0;
-		rLoc = 31411;
+		rLoc = 31589;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 31239;
@@ -965,7 +999,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1066";
 		rLen = 0;
-		rLoc = 31411;
+		rLoc = 31589;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 31255;
@@ -975,7 +1009,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1056";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 31036;
@@ -985,7 +1019,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1056";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 31034;
@@ -995,7 +1029,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 507";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 15083;
@@ -1005,7 +1039,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1064";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 31072;
@@ -1015,7 +1049,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1055";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 31072;
@@ -1025,17 +1059,24 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1050";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1142;
 		vrLoc = 30969;
+	};
+	30B9D5391286B68E00C83F82 /* wrapperNEW.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {992, 445}}";
+			sepNavSelRange = "{540, 0}";
+			sepNavVisRange = "{0, 602}";
+		};
 	};
 	30B9D53F1286B6DE00C83F82 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 609";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 604;
 		vrLoc = 18114;
@@ -1045,7 +1086,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 611";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 18140;
@@ -1055,7 +1096,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 515";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 15023;
@@ -1065,7 +1106,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1060";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 30903;
@@ -1075,7 +1116,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1067";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1332;
 		vrLoc = 30903;
@@ -1085,7 +1126,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 784";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 841;
 		vrLoc = 22848;
@@ -1095,7 +1136,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 851";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 24763;
@@ -1105,7 +1146,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 960";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 27992;
@@ -1115,7 +1156,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 940";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 27803;
@@ -1125,7 +1166,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 938";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 27910;
@@ -1145,7 +1186,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 939";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 27461;
@@ -1155,7 +1196,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 942";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 840;
 		vrLoc = 27852;
@@ -1165,7 +1206,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 942";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 820;
 		vrLoc = 27852;
@@ -1185,7 +1226,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 530";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 503;
 		vrLoc = 16498;
@@ -1195,7 +1236,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 566";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 528;
 		vrLoc = 16498;
@@ -1205,7 +1246,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 570";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 16501;
@@ -1261,7 +1302,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 570";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 553;
 		vrLoc = 16501;
@@ -1271,7 +1312,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 959";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 803;
 		vrLoc = 28095;
@@ -1281,7 +1322,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 977";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 756;
 		vrLoc = 28136;
@@ -1291,7 +1332,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 850";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1118;
 		vrLoc = 25161;
@@ -1301,7 +1342,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 862";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 826;
 		vrLoc = 25002;
@@ -1311,7 +1352,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 896";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 25716;
@@ -1321,7 +1362,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 876";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 1404;
 		vrLoc = 25370;
@@ -1331,7 +1372,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 878";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 809;
 		vrLoc = 25160;
@@ -1341,7 +1382,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 618";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 18083;
@@ -1351,7 +1392,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 846";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 24490;
@@ -1361,7 +1402,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 618";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 976;
 		vrLoc = 18114;
@@ -1371,7 +1412,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 826";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 846;
 		vrLoc = 23950;
@@ -1381,7 +1422,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 874";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 980;
 		vrLoc = 24075;
@@ -1391,7 +1432,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 757";
 		rLen = 0;
-		rLoc = 9402;
+		rLoc = 9405;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 22086;
@@ -1401,7 +1442,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 846";
 		rLen = 0;
-		rLoc = 23271;
+		rLoc = 23274;
 		rType = 0;
 		vrLen = 870;
 		vrLoc = 24522;
@@ -1411,7 +1452,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 618";
 		rLen = 0;
-		rLoc = 17862;
+		rLoc = 17865;
 		rType = 0;
 		vrLen = 976;
 		vrLoc = 18111;
@@ -1421,7 +1462,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 635";
 		rLen = 0;
-		rLoc = 17862;
+		rLoc = 17865;
 		rType = 0;
 		vrLen = 1017;
 		vrLoc = 17948;
@@ -1431,7 +1472,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 511";
 		rLen = 0;
-		rLoc = 13107;
+		rLoc = 13110;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 14728;
@@ -1441,7 +1482,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 507";
 		rLen = 0;
-		rLoc = 12983;
+		rLoc = 12986;
 		rType = 0;
 		vrLen = 721;
 		vrLoc = 14994;
@@ -1451,7 +1492,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 853";
 		rLen = 0;
-		rLoc = 23276;
+		rLoc = 23279;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 24598;
@@ -1461,7 +1502,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 531";
 		rLen = 0;
-		rLoc = 13604;
+		rLoc = 13607;
 		rType = 0;
 		vrLen = 1031;
 		vrLoc = 15376;
@@ -1471,7 +1512,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 876";
 		rLen = 0;
-		rLoc = 23819;
+		rLoc = 23822;
 		rType = 0;
 		vrLen = 1024;
 		vrLoc = 25356;
@@ -1481,7 +1522,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 878";
 		rLen = 0;
-		rLoc = 23815;
+		rLoc = 23818;
 		rType = 0;
 		vrLen = 959;
 		vrLoc = 25377;
@@ -1491,7 +1532,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 997";
 		rLen = 0;
-		rLoc = 27487;
+		rLoc = 27490;
 		rType = 0;
 		vrLen = 815;
 		vrLoc = 28594;
@@ -1501,7 +1542,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 889";
 		rLen = 0;
-		rLoc = 23787;
+		rLoc = 23790;
 		rType = 0;
 		vrLen = 899;
 		vrLoc = 25352;
@@ -1511,7 +1552,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 989";
 		rLen = 0;
-		rLoc = 27487;
+		rLoc = 27490;
 		rType = 0;
 		vrLen = 779;
 		vrLoc = 28760;
@@ -1521,7 +1562,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 866";
 		rLen = 0;
-		rLoc = 23664;
+		rLoc = 23667;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 25163;
@@ -1531,7 +1572,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 879";
 		rLen = 0;
-		rLoc = 23819;
+		rLoc = 23822;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 25352;
@@ -1541,7 +1582,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 875";
 		rLen = 0;
-		rLoc = 23815;
+		rLoc = 23818;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 25375;
@@ -1551,7 +1592,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 866";
 		rLen = 0;
-		rLoc = 23549;
+		rLoc = 23552;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 25201;
@@ -1561,7 +1602,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 889";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 25743;
@@ -1571,7 +1612,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 871";
 		rLen = 0;
-		rLoc = 23815;
+		rLoc = 23818;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 25321;
@@ -1581,7 +1622,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 880";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 25586;
@@ -1591,7 +1632,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 982";
 		rLen = 0;
-		rLoc = 27434;
+		rLoc = 27437;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 28386;
@@ -1601,7 +1642,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 890";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1176;
 		vrLoc = 25870;
@@ -1611,7 +1652,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 890";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 25876;
@@ -1621,7 +1662,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 905";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1249;
 		vrLoc = 26423;
@@ -1631,7 +1672,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 890";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1229;
 		vrLoc = 25741;
@@ -1641,7 +1682,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 803";
 		rLen = 0;
-		rLoc = 22164;
+		rLoc = 22167;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 23357;
@@ -1651,7 +1692,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 893";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 25863;
@@ -1661,7 +1702,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1000";
 		rLen = 5;
-		rLoc = 27440;
+		rLoc = 27443;
 		rType = 0;
 		vrLen = 1259;
 		vrLoc = 10099;
@@ -1671,7 +1712,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 811";
 		rLen = 0;
-		rLoc = 23547;
+		rLoc = 23550;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 22853;
@@ -1681,7 +1722,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 833";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 23313;
@@ -1691,7 +1732,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 825";
 		rLen = 0;
-		rLoc = 23815;
+		rLoc = 23818;
 		rType = 0;
 		vrLen = 926;
 		vrLoc = 22997;
@@ -1711,7 +1752,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 825";
 		rLen = 0;
-		rLoc = 23815;
+		rLoc = 23818;
 		rType = 0;
 		vrLen = 701;
 		vrLoc = 26140;
@@ -1721,7 +1762,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 855";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 23583;
@@ -1731,7 +1772,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 845";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1132;
 		vrLoc = 23589;
@@ -1741,7 +1782,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 854";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1216;
 		vrLoc = 23617;
@@ -1751,7 +1792,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 854";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1213;
 		vrLoc = 23688;
@@ -1761,7 +1802,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 854";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1228;
 		vrLoc = 23688;
@@ -1771,7 +1812,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 854";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 23692;
@@ -1781,7 +1822,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 843";
 		rLen = 0;
-		rLoc = 23820;
+		rLoc = 23823;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 23757;
@@ -1791,7 +1832,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 839";
 		rLen = 0;
-		rLoc = 24919;
+		rLoc = 24922;
 		rType = 0;
 		vrLen = 1285;
 		vrLoc = 23219;
@@ -1801,7 +1842,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 908";
 		rLen = 0;
-		rLoc = 27128;
+		rLoc = 27131;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 25603;
@@ -1811,7 +1852,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 919";
 		rLen = 0;
-		rLoc = 27337;
+		rLoc = 27340;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 25601;
@@ -1831,7 +1872,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 841";
 		rLen = 0;
-		rLoc = 24911;
+		rLoc = 24914;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 23021;
@@ -1841,7 +1882,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 751";
 		rLen = 0;
-		rLoc = 22164;
+		rLoc = 22167;
 		rType = 0;
 		vrLen = 736;
 		vrLoc = 20995;
@@ -1851,7 +1892,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 751";
 		rLen = 0;
-		rLoc = 22164;
+		rLoc = 22167;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 20995;
@@ -1881,7 +1922,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 751";
 		rLen = 0;
-		rLoc = 22164;
+		rLoc = 22167;
 		rType = 0;
 		vrLen = 765;
 		vrLoc = 20995;
@@ -1891,7 +1932,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 834";
 		rLen = 0;
-		rLoc = 24076;
+		rLoc = 24079;
 		rType = 0;
 		vrLen = 1271;
 		vrLoc = 23045;
@@ -1901,7 +1942,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 818";
 		rLen = 0;
-		rLoc = 23664;
+		rLoc = 23667;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 22888;
@@ -1911,7 +1952,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 806";
 		rLen = 0;
-		rLoc = 23364;
+		rLoc = 23367;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 22888;
@@ -1921,7 +1962,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 849";
 		rLen = 0;
-		rLoc = 24910;
+		rLoc = 24913;
 		rType = 0;
 		vrLen = 1165;
 		vrLoc = 23295;
@@ -1931,7 +1972,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 814";
 		rLen = 0;
-		rLoc = 23493;
+		rLoc = 23496;
 		rType = 0;
 		vrLen = 905;
 		vrLoc = 22892;
@@ -1941,7 +1982,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 379";
 		rLen = 0;
-		rLoc = 10757;
+		rLoc = 10760;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 10233;
@@ -1951,7 +1992,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 748";
 		rLen = 0;
-		rLoc = 22164;
+		rLoc = 22167;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 21024;
@@ -1961,7 +2002,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 821";
 		rLen = 0;
-		rLoc = 23791;
+		rLoc = 23794;
 		rType = 0;
 		vrLen = 1026;
 		vrLoc = 22558;
@@ -1971,7 +2012,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 386";
 		rLen = 0;
-		rLoc = 10868;
+		rLoc = 10871;
 		rType = 0;
 		vrLen = 920;
 		vrLoc = 10132;
@@ -1981,7 +2022,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 384";
 		rLen = 0;
-		rLoc = 10868;
+		rLoc = 10871;
 		rType = 0;
 		vrLen = 979;
 		vrLoc = 10453;
@@ -1991,7 +2032,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 815";
 		rLen = 0;
-		rLoc = 23466;
+		rLoc = 23469;
 		rType = 0;
 		vrLen = 940;
 		vrLoc = 22677;
@@ -2001,7 +2042,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 586";
 		rLen = 0;
-		rLoc = 16443;
+		rLoc = 16446;
 		rType = 0;
 		vrLen = 903;
 		vrLoc = 15942;
@@ -2011,7 +2052,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 573";
 		rLen = 0;
-		rLoc = 16081;
+		rLoc = 16084;
 		rType = 0;
 		vrLen = 858;
 		vrLoc = 16001;
@@ -2021,7 +2062,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 440";
 		rLen = 0;
-		rLoc = 12636;
+		rLoc = 12639;
 		rType = 0;
 		vrLen = 939;
 		vrLoc = 11971;
@@ -2031,7 +2072,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 439";
 		rLen = 0;
-		rLoc = 12636;
+		rLoc = 12639;
 		rType = 0;
 		vrLen = 1095;
 		vrLoc = 11971;
@@ -2041,7 +2082,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 564";
 		rLen = 0;
-		rLoc = 15952;
+		rLoc = 15955;
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 15575;
@@ -2051,7 +2092,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 846";
 		rLen = 0;
-		rLoc = 24791;
+		rLoc = 24794;
 		rType = 0;
 		vrLen = 1316;
 		vrLoc = 22991;
@@ -2061,7 +2102,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 268";
 		rLen = 4;
-		rLoc = 8639;
+		rLoc = 8642;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 21629;
@@ -2071,7 +2112,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 837";
 		rLen = 0;
-		rLoc = 24124;
+		rLoc = 24127;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 23209;
@@ -2081,7 +2122,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 837";
 		rLen = 0;
-		rLoc = 24067;
+		rLoc = 24070;
 		rType = 0;
 		vrLen = 1268;
 		vrLoc = 23215;
@@ -2091,7 +2132,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 834";
 		rLen = 0;
-		rLoc = 24067;
+		rLoc = 24070;
 		rType = 0;
 		vrLen = 1292;
 		vrLoc = 23217;
@@ -2101,7 +2142,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 843";
 		rLen = 0;
-		rLoc = 24128;
+		rLoc = 24131;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 23245;
@@ -2111,7 +2152,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 819";
 		rLen = 0;
-		rLoc = 23707;
+		rLoc = 23710;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 22884;
@@ -2121,7 +2162,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 819";
 		rLen = 0;
-		rLoc = 23707;
+		rLoc = 23710;
 		rType = 0;
 		vrLen = 884;
 		vrLoc = 22884;
@@ -2131,7 +2172,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 440";
 		rLen = 0;
-		rLoc = 12689;
+		rLoc = 12692;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 12154;
@@ -2141,7 +2182,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 818";
 		rLen = 0;
-		rLoc = 23784;
+		rLoc = 23787;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 22912;
@@ -2151,7 +2192,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 818";
 		rLen = 0;
-		rLoc = 23784;
+		rLoc = 23787;
 		rType = 0;
 		vrLen = 962;
 		vrLoc = 22912;
@@ -2161,7 +2202,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 442";
 		rLen = 0;
-		rLoc = 12694;
+		rLoc = 12697;
 		rType = 0;
 		vrLen = 777;
 		vrLoc = 12327;
@@ -2171,7 +2212,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 442";
 		rLen = 0;
-		rLoc = 12694;
+		rLoc = 12697;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 12340;
@@ -2181,7 +2222,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 442";
 		rLen = 0;
-		rLoc = 12694;
+		rLoc = 12697;
 		rType = 0;
 		vrLen = 625;
 		vrLoc = 12513;
@@ -2191,7 +2232,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 285";
 		rLen = 0;
-		rLoc = 8941;
+		rLoc = 8944;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 8448;
@@ -2201,7 +2242,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 917";
 		rLen = 0;
-		rLoc = 26876;
+		rLoc = 26879;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 25707;
@@ -2211,7 +2252,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 917";
 		rLen = 0;
-		rLoc = 26876;
+		rLoc = 26879;
 		rType = 0;
 		vrLen = 815;
 		vrLoc = 25709;
@@ -2221,7 +2262,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 919";
 		rLen = 0;
-		rLoc = 26870;
+		rLoc = 26873;
 		rType = 0;
 		vrLen = 795;
 		vrLoc = 25751;
@@ -2231,7 +2272,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 921";
 		rLen = 0;
-		rLoc = 26806;
+		rLoc = 26809;
 		rType = 0;
 		vrLen = 780;
 		vrLoc = 25817;
@@ -2241,7 +2282,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 922";
 		rLen = 0;
-		rLoc = 26866;
+		rLoc = 26869;
 		rType = 0;
 		vrLen = 807;
 		vrLoc = 25846;
@@ -2251,7 +2292,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 922";
 		rLen = 0;
-		rLoc = 26837;
+		rLoc = 26840;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 25848;
@@ -2261,7 +2302,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 921";
 		rLen = 0;
-		rLoc = 26756;
+		rLoc = 26759;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 25709;
@@ -2271,7 +2312,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 922";
 		rLen = 0;
-		rLoc = 26554;
+		rLoc = 26557;
 		rType = 0;
 		vrLen = 894;
 		vrLoc = 25712;
@@ -2281,7 +2322,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 926";
 		rLen = 0;
-		rLoc = 26748;
+		rLoc = 26751;
 		rType = 0;
 		vrLen = 810;
 		vrLoc = 25546;
@@ -2291,7 +2332,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 926";
 		rLen = 0;
-		rLoc = 26748;
+		rLoc = 26751;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 25622;
@@ -2301,7 +2342,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 591";
 		rLen = 0;
-		rLoc = 16683;
+		rLoc = 16686;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 15923;
@@ -2311,7 +2352,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 576";
 		rLen = 0;
-		rLoc = 16409;
+		rLoc = 16412;
 		rType = 0;
 		vrLen = 1015;
 		vrLoc = 15555;
@@ -2321,7 +2362,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 470";
 		rLen = 0;
-		rLoc = 13421;
+		rLoc = 13424;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 12738;
@@ -2331,7 +2372,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 471";
 		rLen = 0;
-		rLoc = 13425;
+		rLoc = 13428;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 12792;
@@ -2341,7 +2382,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 474";
 		rLen = 0;
-		rLoc = 13489;
+		rLoc = 13492;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 12827;
@@ -2351,7 +2392,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 1074";
 		rLen = 0;
-		rLoc = 30971;
+		rLoc = 31149;
 		rType = 0;
 		vrLen = 1408;
 		vrLoc = 29650;
@@ -2361,7 +2402,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 470";
 		rLen = 0;
-		rLoc = 13421;
+		rLoc = 13424;
 		rType = 0;
 		vrLen = 983;
 		vrLoc = 12996;
@@ -2371,7 +2412,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 468";
 		rLen = 0;
-		rLoc = 13176;
+		rLoc = 13179;
 		rType = 0;
 		vrLen = 844;
 		vrLoc = 13034;
@@ -2381,7 +2422,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 471";
 		rLen = 0;
-		rLoc = 13331;
+		rLoc = 13304;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 12790;
@@ -2391,7 +2432,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 470";
 		rLen = 0;
-		rLoc = 13255;
+		rLoc = 13258;
 		rType = 0;
 		vrLen = 825;
 		vrLoc = 12827;
@@ -2401,7 +2442,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 473";
 		rLen = 0;
-		rLoc = 13331;
+		rLoc = 13304;
 		rType = 0;
 		vrLen = 814;
 		vrLoc = 13034;
@@ -2411,7 +2452,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 480";
 		rLen = 0;
-		rLoc = 13463;
+		rLoc = 13466;
 		rType = 0;
 		vrLen = 777;
 		vrLoc = 13071;
@@ -2421,7 +2462,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 473";
 		rLen = 0;
-		rLoc = 13333;
+		rLoc = 13304;
 		rType = 0;
 		vrLen = 755;
 		vrLoc = 12738;
@@ -2431,7 +2472,7 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 473";
 		rLen = 0;
-		rLoc = 13333;
+		rLoc = 13304;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 12738;
@@ -2441,10 +2482,352 @@
 		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
 		name = "CoGeWebKitPlugIn.m: 632";
 		rLen = 0;
-		rLoc = 17861;
+		rLoc = 17864;
 		rType = 0;
 		vrLen = 1035;
 		vrLoc = 16866;
+	};
+	30B9D7641286FB4000C83F82 /* swfobject.js */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {70509, 445}}";
+			sepNavSelRange = "{10220, 0}";
+			sepNavVisRange = "{0, 10220}";
+		};
+	};
+	30B9D7671286FB4800C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 602";
+		rLen = 0;
+		rLoc = 17021;
+		rType = 0;
+		vrLen = 1086;
+		vrLoc = 16472;
+	};
+	30B9D7681286FB4800C83F82 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+	};
+	30B9D7691286FB4800C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 600;
+		vrLoc = 0;
+	};
+	30B9D76A1286FBE900C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 8";
+		rLen = 0;
+		rLoc = 550;
+		rType = 0;
+		vrLen = 676;
+		vrLoc = 0;
+	};
+	30B9D76D1286FCCD00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 14";
+		rLen = 0;
+		rLoc = 538;
+		rType = 0;
+		vrLen = 534;
+		vrLoc = 0;
+	};
+	30B9D76F1286FD6500C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 16";
+		rLen = 0;
+		rLoc = 586;
+		rType = 0;
+		vrLen = 560;
+		vrLoc = 0;
+	};
+	30B9D7721286FD7A00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 12";
+		rLen = 0;
+		rLoc = 419;
+		rType = 0;
+		vrLen = 601;
+		vrLoc = 0;
+	};
+	30B9D7781286FDEC00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 16";
+		rLen = 0;
+		rLoc = 559;
+		rType = 0;
+		vrLen = 602;
+		vrLoc = 0;
+	};
+	30B9D77A1286FE2D00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 16";
+		rLen = 0;
+		rLoc = 559;
+		rType = 0;
+		vrLen = 602;
+		vrLoc = 0;
+	};
+	30B9D77B1286FE2D00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 602";
+		rLen = 0;
+		rLoc = 17021;
+		rType = 0;
+		vrLen = 1080;
+		vrLoc = 16478;
+	};
+	30B9D77C1286FE2D00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 139";
+		rLen = 0;
+		rLoc = 4285;
+		rType = 0;
+		vrLen = 1305;
+		vrLoc = 3614;
+	};
+	30B9D77F1286FF4500C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 139";
+		rLen = 0;
+		rLoc = 4285;
+		rType = 0;
+		vrLen = 1305;
+		vrLoc = 3614;
+	};
+	30B9D7801286FF4500C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 1084";
+		rLen = 0;
+		rLoc = 30808;
+		rType = 0;
+		vrLen = 1492;
+		vrLoc = 30107;
+	};
+	30B9D7861286FFF500C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 473";
+		rLen = 0;
+		rLoc = 13335;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 13071;
+	};
+	30B9D78A1287003300C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 473";
+		rLen = 0;
+		rLoc = 13337;
+		rType = 0;
+		vrLen = 780;
+		vrLoc = 12834;
+	};
+	30B9D78E1287034600C83F82 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tamasnagy/Documents/QC Projects/CoGeWebKit/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	30B9D78F1287034600C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 818";
+		rLen = 16;
+		rLoc = 23179;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 13121;
+	};
+	30B9D7901287034600C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D7641286FB4000C83F82 /* swfobject.js */;
+		name = "swfobject.js: 4";
+		rLen = 0;
+		rLoc = 10220;
+		rType = 0;
+		vrLen = 10220;
+		vrLoc = 0;
+	};
+	30B9D7911287034600C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 18";
+		rLen = 10;
+		rLoc = 576;
+		rType = 0;
+		vrLen = 602;
+		vrLoc = 0;
+	};
+	30B9D7921287034600C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 13";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 615;
+		vrLoc = 0;
+	};
+	30B9D794128703C300C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 13";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 615;
+		vrLoc = 0;
+	};
+	30B9D7971287044800C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 1087";
+		rLen = 8;
+		rLoc = 30891;
+		rType = 0;
+		vrLen = 1475;
+		vrLoc = 30198;
+	};
+	30B9D7981287044800C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D7641286FB4000C83F82 /* swfobject.js */;
+		name = "swfobject.js: 4";
+		rLen = 0;
+		rLoc = 10220;
+		rType = 0;
+		vrLen = 10220;
+		vrLoc = 0;
+	};
+	30B9D7991287044800C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 11";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 612;
+		vrLoc = 0;
+	};
+	30B9D79A1287044800C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 13";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 590;
+		vrLoc = 0;
+	};
+	30B9D79C1287047900C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 1088";
+		rLen = 9;
+		rLoc = 31059;
+		rType = 0;
+		vrLen = 1475;
+		vrLoc = 30198;
+	};
+	30B9D79D1287047900C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 13";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 590;
+		vrLoc = 0;
+	};
+	30B9D79E1287047900C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 12";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 590;
+		vrLoc = 0;
+	};
+	30B9D7A1128704B700C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 16";
+		rLen = 0;
+		rLoc = 540;
+		rType = 0;
+		vrLen = 650;
+		vrLoc = 0;
+	};
+	30B9D7A5128704D800C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 16";
+		rLen = 0;
+		rLoc = 540;
+		rType = 0;
+		vrLen = 644;
+		vrLoc = 0;
+	};
+	30B9D7A9128704F400C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 14";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 644;
+		vrLoc = 0;
+	};
+	30B9D7AD128705EC00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 14";
+		rLen = 0;
+		rLoc = 420;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
+	30B9D7B11287073E00C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 14";
+		rLen = 0;
+		rLoc = 540;
+		rType = 0;
+		vrLen = 651;
+		vrLoc = 0;
+	};
+	30B9D7B31287077400C83F82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */;
+		name = "wrapperNEW.html: 13";
+		rLen = 0;
+		rLoc = 540;
+		rType = 0;
+		vrLen = 602;
+		vrLoc = 0;
 	};
 	8D5B49AC048680CD000E48DA /* CoGeWebKit */ = {
 		activeExec = 0;

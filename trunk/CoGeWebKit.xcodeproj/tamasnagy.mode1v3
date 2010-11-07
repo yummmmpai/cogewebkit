@@ -267,13 +267,14 @@
 								<string>08FB77AFFE84173DC02AAC07</string>
 								<string>089C167CFE841241C02AAC07</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>30B9D3AF12869EF700C83F82</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>17</integer>
+									<integer>24</integer>
+									<integer>18</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -314,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CoGeWebKitPlugIn.m</string>
+								<string>wrapperNEW.html</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CoGeWebKitPlugIn.m</string>
+										<string>wrapperNEW.html</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>30B9D7601286EFA500C83F82</string>
+										<string>30B9D7B31287077400C83F82</string>
 										<key>history</key>
 										<array>
 											<string>308CAB7E128455D3007DF8C0</string>
@@ -338,7 +339,10 @@
 											<string>30B9D5811286BD3300C83F82</string>
 											<string>30B9D6811286D37000C83F82</string>
 											<string>30B9D6821286D37000C83F82</string>
-											<string>30B9D75F1286EFA500C83F82</string>
+											<string>30B9D78E1287034600C83F82</string>
+											<string>30B9D7981287044800C83F82</string>
+											<string>30B9D79C1287047900C83F82</string>
+											<string>30B9D79D1287047900C83F82</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -536,7 +540,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>30B9D7611286EFA500C83F82</string>
+		<string>30B9D7B21287073E00C83F82</string>
 		<string>30B9D3491286993000C83F82</string>
 		<string>30B9D34A1286993000C83F82</string>
 		<string>3084094A125D082800E88EF0</string>
