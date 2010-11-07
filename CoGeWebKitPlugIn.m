@@ -136,7 +136,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	if([key isEqualToString:@"inputForceFlashRendering"])
 	{
 		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeBoolean, QCPortAttributeTypeKey,
-				[NSNumber numberWithInt:0], QCPortAttributeDefaultValueKey,
+				[NSNumber numberWithInt:TRUE], QCPortAttributeDefaultValueKey,
 				@"Force Flash Rendering", QCPortAttributeNameKey, nil];
 	}
 	
@@ -469,9 +469,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	NSLog(@"load local flash stuff...");
 	
-	//first, we have to clear the current HTML
+	//first, we have to clear the current HTML	
 	[self webviewLoadRequest:@""];
-	
+
 	
 	[[theWebView mainFrame] loadHTMLString:htmlstring baseURL:[NSURL URLWithString:@"/"]];
 	[theWebView setDrawsBackground:NO];
@@ -1083,7 +1083,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	NSString *wrapper = [NSString stringWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"wrapperNEW" ofType:@"html"] encoding:NSUTF8StringEncoding error:NULL];
 	
 	//replacing data
-	NSString *html1 = [wrapper stringByReplacingOccurrencesOfString:@"thewidth" withString:[NSString stringWithFormat:@"%d",[[NSNumber numberWithInteger:width] intValue]]];
+	NSString *html0 = [wrapper stringByReplacingOccurrencesOfString:@"swfobject.js" withString:[[NSBundle bundleForClass:[self class]] pathForResource:@"swfobject" ofType:@"js"]];
+	NSString *html1 = [html0 stringByReplacingOccurrencesOfString:@"thewidth" withString:[NSString stringWithFormat:@"%d",[[NSNumber numberWithInteger:width] intValue]]];
 	NSString *html2 = [html1 stringByReplacingOccurrencesOfString:@"theheight" withString:[NSString stringWithFormat:@"%d",[[NSNumber numberWithInteger:height] intValue]]];
 	
 	

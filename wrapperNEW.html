@@ -4,11 +4,16 @@
 	OBJECT { background-color: transparent; margin:0; padding:0; }
 </style>
 
+<head>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+var flashvars = {};
+var params= {menu: "false", wmode: "transparent" };
+var attributes = {};
+swfobject.embedSWF("thefilename.swf", "swfcontent", "thewidth", "theheight", "9.0.0","", flashvars, params, attributes);
+</script>
+</head>
+
 <body>
-<object id="playableSWF" width="thewidth" height="theheight" type="application/x-shockwave-flash" >
-<param name="movie" value="thefilename.swf" />  
-<param name="wmode" value="transparent" /> 
-<embed src="thefilename.swf" width="thewidth" height="theheight" wmode="transparent" loop="true" play="true" quality="high" swliveconnect="true">
-</embed>
-</object>
+<div id="swfcontent"></div>
 </body>
