@@ -110,8 +110,7 @@
 - (NSPoint) normalizedMouseLocationForMouseX:(double)inputMouseX mouseY:(double)inputMouseY isFlippedY:(BOOL)flippedy;
 
 - (NSString *)sourceFromWebView:(WebView *)webView;
-- (NSString *)fileKind:(NSString *)path;
-- (void) handleLoadingFlashSetup;
+- (void) handleLoadingFlashSetup:(NSString *)swffile;
 
 
 
