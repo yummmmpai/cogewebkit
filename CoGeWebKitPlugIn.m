@@ -456,7 +456,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		[theWebView setDrawsBackground:NO];
 		[offscreenWindow setOpaque:NO];
 		
-		NSLog(@"webview request loaded");
+	//	NSLog(@"webview request loaded");
 		
 	}
 	
@@ -467,7 +467,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 //	NSLog(@"inject html: %@", htmlstring);
 	
-	NSLog(@"load local flash stuff...");
+//	NSLog(@"load local flash stuff...");
 	
 	//first, we have to clear the current HTML	
 	[self webviewLoadRequest:@""];
@@ -920,6 +920,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	CGLUnlockContext(cgl_ctx);
 }
 
+
+
 - (void) copyWebViewToBitmapInBackground
 {
 //	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -976,11 +978,12 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				
 	
 //	[lock1 unlock];
-	
+ 	
 	[self setWorkingOn1:NO];
 	
 //	[pool drain];
 	
+
 }
 
 - (NSPoint) normalizedMouseLocationForMouseX:(double)inputMouseX mouseY:(double)inputMouseY isFlippedY:(BOOL)flippedy
