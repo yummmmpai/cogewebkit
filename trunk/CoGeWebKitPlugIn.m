@@ -465,6 +465,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 -(void)loadHTMLOnMainThread:(NSString *)htmlstring {
 	
+    contentLoaded = NO;
 //	NSLog(@"inject html: %@", htmlstring);
 	
 //	NSLog(@"load local flash stuff...");
@@ -498,9 +499,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	*/
 
 	CGLContextObj cgl_ctx = [context CGLContextObj];
-	// lock for thread saftey
-	CGLLockContext(cgl_ctx);
 
+    // lock for thread saftey
+	CGLLockContext(cgl_ctx);
 	
 	//if filepath changed, reload
 	if ([self didValueForInputKeyChange:@"inputShowWindow"])
@@ -826,12 +827,15 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 	
 #pragma mark Image provider
+    
+
 	
 	if (!(self.workingOn1) || (needsrebuild)) 
 	{
 		
 	//	NSLog(@"start rebuilding!");
-		[self performSelectorOnMainThread:@selector(copyWebViewToBitmapInBackground) withObject:webBitmap waitUntilDone:NO];
+	//	[self performSelectorOnMainThread:@selector(copyWebViewToBitmapInBackground) withObject:nil waitUntilDone:NO];
+       [self performSelectorInBackground:@selector(copyWebViewToBitmapInBackground) withObject:nil];
 	//	NSLog(@"rebuilding finished!");
 	//	NSLog(@"bitmap width: %d  inputwidth: %d", [self.webBitmap pixelsWide], width);
 		
@@ -852,7 +856,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	if ((self.webBitmap != NULL) && (!liveresize)) {
 		
 		
-		@synchronized(webBitmap) 
+		@synchronized(self.webBitmap) 
 		{
 
 			glPixelStorei(GL_UNPACK_ROW_LENGTH, [self.webBitmap bytesPerRow] / [self.webBitmap samplesPerPixel]);
@@ -921,18 +925,34 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 }
 
 
+-(void)cacheTexture {
+
+    NSView *view = [[theWebView mainFrame] frameView];
+
+    NSBitmapImageRep *imagerep = [view bitmapImageRepForCachingDisplayInRect:[view visibleRect]];
+    [view cacheDisplayInRect:[view visibleRect] toBitmapImageRep:imagerep];	
+    
+    @synchronized(self.webBitmap)
+    {
+        if (imagerep != NULL) {
+            [self setWebBitmap:imagerep];
+        }
+    }
+
+}
 
 - (void) copyWebViewToBitmapInBackground
 {
-//	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+    [self setWorkingOn1:YES];
+
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-	[self setWorkingOn1:YES];
 	
-//	[lock1 lock];
+
 
 	NSView *view = [[theWebView mainFrame] frameView];
-	NSBitmapImageRep *bitmap;
-
+	NSBitmapImageRep *bitmap = nil;
 
 	// this shit needed
 	// or 
@@ -949,40 +969,31 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		 
 	}
 	
+    if ((rendersflash) || (needsforcerenderflash)) {
+        
+        
+        //NSLog(@"will render flash content!");
+        [self performSelectorOnMainThread:@selector(cacheTexture) withObject:nil waitUntilDone:YES];
+        
+        
+        
+    } else {
+        
+        [view lockFocus];
+        bitmap = [[NSBitmapImageRep alloc] initWithFocusedViewRect:[view visibleRect]];
+        [view unlockFocus];
+        
+        @synchronized(self.webBitmap)
+        {
+            [self setWebBitmap:bitmap];
+            [bitmap release]; 
+        }
+    }
 
-	if ((rendersflash) || (needsforcerenderflash)) {
-		
-	//	NSLog(@"will render flash content!");
-		
-		bitmap = [view bitmapImageRepForCachingDisplayInRect:[view visibleRect]];
-		[view cacheDisplayInRect:[view visibleRect] toBitmapImageRep:bitmap];	
-		
-		@synchronized(webBitmap)
-		{
-			[self setWebBitmap:bitmap];
-		}
-		
-	} else {
-		
-		[view lockFocus];
-		bitmap = [[NSBitmapImageRep alloc] initWithFocusedViewRect:[view visibleRect]];
-		[view unlockFocus];
-		
-		@synchronized(webBitmap)
-		{
-			[self setWebBitmap:bitmap];
-			[bitmap release]; 
-		}
-	}
 	
-				
+	[pool drain];
 	
-//	[lock1 unlock];
- 	
 	[self setWorkingOn1:NO];
-	
-//	[pool drain];
-	
 
 }
 
@@ -1046,6 +1057,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 // getting image resources URL - ok, now only grab urls from html, not css 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {	
+    contentLoaded = YES;
+    
 	DOMNodeList *imgList = [[frame DOMDocument] getElementsByTagName:@"img"];
 	// NSLog(@"img elements count: %d", [imgList length]);
 	
