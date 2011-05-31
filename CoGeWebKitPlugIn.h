@@ -53,6 +53,8 @@
 	BOOL needsforcerenderflash;
 	
 	BOOL liveresize;
+    
+    BOOL contentLoaded;
 	
 }
 

@@ -30,7 +30,7 @@
 		1BA791DB0FFC7F95007CE5DB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA791DA0FFC7F95007CE5DB /* OpenGL.framework */; };
 		1BA791DD0FFC7FAB007CE5DB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA791DC0FFC7FAB007CE5DB /* WebKit.framework */; };
 		1BA79BFE0FFF0382007CE5DB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA79BFD0FFF0382007CE5DB /* AppKit.framework */; };
-		30B9D331128696F000C83F82 /* TransparentWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B9D32F128696F000C83F82 /* TransparentWebView.m */; };
+		3035BDB9139561ED00A29938 /* TransparentWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3035BDB8139561ED00A29938 /* TransparentWebView.m */; };
 		30B9D53A1286B68E00C83F82 /* wrapperNEW.html in Resources */ = {isa = PBXBuildFile; fileRef = 30B9D5391286B68E00C83F82 /* wrapperNEW.html */; };
 		30B9D7651286FB4000C83F82 /* swfobject.js in Sources */ = {isa = PBXBuildFile; fileRef = 30B9D7641286FB4000C83F82 /* swfobject.js */; };
 		30B9D7661286FB4600C83F82 /* swfobject.js in Resources */ = {isa = PBXBuildFile; fileRef = 30B9D7641286FB4000C83F82 /* swfobject.js */; };
@@ -73,8 +73,8 @@
 		1BA791DA0FFC7F95007CE5DB /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		1BA791DC0FFC7FAB007CE5DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		1BA79BFD0FFF0382007CE5DB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		30B9D32F128696F000C83F82 /* TransparentWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransparentWebView.m; path = "../../../cogewebkit-read-only/TransparentWebView.m"; sourceTree = SOURCE_ROOT; };
-		30B9D330128696F000C83F82 /* TransparentWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransparentWebView.h; path = "../../../cogewebkit-read-only/TransparentWebView.h"; sourceTree = SOURCE_ROOT; };
+		3035BDB7139561ED00A29938 /* TransparentWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentWebView.h; sourceTree = "<group>"; };
+		3035BDB8139561ED00A29938 /* TransparentWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentWebView.m; sourceTree = "<group>"; };
 		30B9D5391286B68E00C83F82 /* wrapperNEW.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wrapperNEW.html; sourceTree = "<group>"; };
 		30B9D7641286FB4000C83F82 /* swfobject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* CoGeWebKit.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoGeWebKit.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,12 +137,12 @@
 			children = (
 				16BA95400A7EB2EB001E4983 /* CoGeWebKitPlugIn.h */,
 				16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */,
-				30B9D330128696F000C83F82 /* TransparentWebView.h */,
-				30B9D32F128696F000C83F82 /* TransparentWebView.m */,
 				1B5B5AE6100194BB0043536B /* TransparentWindow.h */,
 				1B5B5AE7100194BB0043536B /* TransparentWindow.m */,
 				1B5B5B6C1001BC9D0043536B /* NonTransparentWebTitleBar.h */,
 				1B5B5B6D1001BC9D0043536B /* NonTransparentWebTitleBar.m */,
+				3035BDB7139561ED00A29938 /* TransparentWebView.h */,
+				3035BDB8139561ED00A29938 /* TransparentWebView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -192,7 +192,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "CoGeWebKit" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* Quartz Composer Plug In */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,8 +247,8 @@
 				16BA95420A7EB2EB001E4983 /* CoGeWebKitPlugIn.m in Sources */,
 				1B5B5AE8100194BB0043536B /* TransparentWindow.m in Sources */,
 				1B5B5B6E1001BC9D0043536B /* NonTransparentWebTitleBar.m in Sources */,
-				30B9D331128696F000C83F82 /* TransparentWebView.m in Sources */,
 				30B9D7651286FB4000C83F82 /* swfobject.js in Sources */,
+				3035BDB9139561ED00A29938 /* TransparentWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				PRODUCT_NAME = CoGeWebKit;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = YES;
 			};
@@ -299,6 +307,7 @@
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @executable_path/../Frameworks";
 				PRODUCT_NAME = CoGeWebKit;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;
@@ -331,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "Build & Install";
+				SDKROOT = "Mac OSX 10.5";
 			};
 			name = Debug;
 		};
@@ -338,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "Build & Install";
+				SDKROOT = "Mac OSX 10.5";
 			};
 			name = Release;
 		};
