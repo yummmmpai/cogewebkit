@@ -941,6 +941,18 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 }
 
+-(void)initMeOnStart {
+
+    NSView *view = [[theWebView mainFrame] frameView];
+
+    //	NSLog(@"visible: %f", [view visibleRect].size.width);
+    //	NSLog(@"set new frame!");
+    [offscreenWindow setContentSize:NSMakeSize(width, height+38.0)];
+    [view setFrame:NSMakeRect(0, 0, width, height)];
+    [view setNeedsDisplay:YES];
+    [offscreenWindow display];
+}
+
 - (void) copyWebViewToBitmapInBackground
 {
 
@@ -960,13 +972,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//
 	
 	if ([view visibleRect].size.width != width) {
-	//	NSLog(@"visible: %f", [view visibleRect].size.width);
-	//	NSLog(@"set new frame!");
-		[offscreenWindow setContentSize:NSMakeSize(width, height+38.0)];
-		[view setFrame:NSMakeRect(0, 0, width, height)];
-		[view setNeedsDisplay:YES];
-		[offscreenWindow display];
-		 
+        [self performSelectorOnMainThread:@selector(initMeOnStart) withObject:nil waitUntilDone:YES];
 	}
 	
     if ((rendersflash) || (needsforcerenderflash)) {
