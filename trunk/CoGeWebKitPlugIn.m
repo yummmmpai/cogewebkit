@@ -12,7 +12,7 @@
 #import "CoGeWebKitPlugIn.h"
 
 #define	kQCPlugIn_Name				@"CoGeWebKit"
-#define	kQCPlugIn_Description		@"CoGeWebKit Beta 3 via .lov. and vade. Renders the file at the given URL with WebKit."
+#define	kQCPlugIn_Description		@"CoGeWebKit RC1 via .lov. and vade. Renders the file at the given URL with WebKit."
 
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
