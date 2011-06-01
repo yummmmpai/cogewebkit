@@ -573,7 +573,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		width = floorf(self.inputWidth);
 		height = floorf(self.inputHeight);
 		
-		[offscreenWindow setContentSize:NSMakeSize(width, height + 38.0)];
+		
 		
 		[self performSelectorOnMainThread:@selector(webviewSetFrame) withObject:nil waitUntilDone:NO];
 		
@@ -839,7 +839,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//	NSLog(@"rebuilding finished!");
 	//	NSLog(@"bitmap width: %d  inputwidth: %d", [self.webBitmap pixelsWide], width);
 		
-		needsrebuild = NO;
 	}	
 	
 	
@@ -972,7 +971,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//
 	
 	if ([view visibleRect].size.width != width) {
-        [self performSelectorOnMainThread:@selector(initMeOnStart) withObject:nil waitUntilDone:YES];
+        [self performSelectorOnMainThread:@selector(initMeOnStart) withObject:nil waitUntilDone:NO];
 	}
 	
     if ((rendersflash) || (needsforcerenderflash)) {
@@ -1000,6 +999,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	[pool drain];
 	
 	[self setWorkingOn1:NO];
+    needsrebuild = NO;
 
 }
 
