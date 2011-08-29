@@ -26,9 +26,7 @@
 	// we use two textures to double buffer texture upload
 	NSBitmapImageRep* webBitmap;
 	NSUInteger width, height;
-	
-	GLuint webTexture1;
-	
+		
 	// cheap way to keep form spawning too many threads.
 	BOOL workingOn1;	
 	NSRecursiveLock* lock1;

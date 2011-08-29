@@ -17,9 +17,8 @@
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
 {
-	// we dont delete our texture becauser we generate it once and update it via glSubTexImage2D.
-	// we release during disableExecution.
 	glDeleteTextures(1, &name);
+    [(NSBitmapImageRep *)info release];
 }
 
 @implementation CoGeWebKitPlugIn
@@ -499,9 +498,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	*/
 
 	CGLContextObj cgl_ctx = [context CGLContextObj];
-
-    // lock for thread saftey
-	CGLLockContext(cgl_ctx);
 	
 	//if filepath changed, reload
 	if ([self didValueForInputKeyChange:@"inputShowWindow"])
@@ -842,63 +838,67 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	}	
 	
 	
-
-	//NSLog(@"rendering...");
-	glPushAttrib(GL_COLOR_BUFFER_BIT | GL_TRANSFORM_BIT | GL_VIEWPORT);
-	
-	// create our texture 
-	glEnable(GL_TEXTURE_RECTANGLE_EXT);
-	glGenTextures(1, &webTexture1);
-	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, webTexture1);
-	
-	
-	if ((self.webBitmap != NULL) && (!liveresize)) {
-		
-		
-		@synchronized(self.webBitmap) 
-		{
-
-			glPixelStorei(GL_UNPACK_ROW_LENGTH, [self.webBitmap bytesPerRow] / [self.webBitmap samplesPerPixel]);
-			glPixelStorei (GL_UNPACK_ALIGNMENT, 1); 
-			
-			
-			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_S, GL_CLAMP);
-			glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_T, GL_CLAMP);
-			
-			glTexImage2D(GL_TEXTURE_RECTANGLE_EXT, 0, [self.webBitmap samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, [self.webBitmap pixelsWide], [self.webBitmap pixelsHigh], 0, [self.webBitmap samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [self.webBitmap bitmapData]);
-			
-		}
-		
-	}
-	
-	glFlushRenderAPPLE();
-	
-	
+    if (!liveresize)
+    {
+        NSBitmapImageRep *bitmap = self.webBitmap;
+        
+        if (bitmap != nil)
+        {
+            //NSLog(@"rendering...");
+            glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT);
+            glPushClientAttrib(GL_CLIENT_PIXEL_STORE_BIT);
+            
+            // create our texture 
+            GLuint webTexture1;
+            
+            glEnable(GL_TEXTURE_RECTANGLE_EXT);
+            glGenTextures(1, &webTexture1);
+            glBindTexture(GL_TEXTURE_RECTANGLE_EXT, webTexture1);
+            
+            // Retain it for glTextureRangeApple, released in callback
+            [bitmap retain];
+            
+            glPixelStorei(GL_UNPACK_CLIENT_STORAGE_APPLE, GL_TRUE);
+            
+            glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_STORAGE_HINT_APPLE, GL_STORAGE_SHARED_APPLE);
+            glTextureRangeAPPLE(GL_TEXTURE_RECTANGLE_EXT, [bitmap bytesPerRow] * [bitmap pixelsHigh], [bitmap bitmapData]);
+            
+            glPixelStorei(GL_UNPACK_ROW_LENGTH, [bitmap bytesPerRow] / [bitmap samplesPerPixel]);
+            glPixelStorei (GL_UNPACK_ALIGNMENT, 1); 
+            
+            glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_S, GL_CLAMP);
+            glTexParameteri(GL_TEXTURE_RECTANGLE_EXT, GL_TEXTURE_WRAP_T, GL_CLAMP);
+            
+            glTexImage2D(GL_TEXTURE_RECTANGLE_EXT, 0, [bitmap samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, [bitmap pixelsWide], [bitmap pixelsHigh], 0, [bitmap samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [bitmap bitmapData]);
+            
+        
 #if __BIG_ENDIAN__
 #define CogePrivatePlugInPixelFormat QCPlugInPixelFormatARGB8
 #else
 #define CogePrivatePlugInPixelFormat QCPlugInPixelFormatBGRA8
 #endif
+        
+            self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
+                                                                            pixelsWide:width
+                                                                            pixelsHigh:height
+                                                                                  name:webTexture1
+                                                                               flipped:YES
+                                                                       releaseCallback:_TextureReleaseCallback
+                                                                        releaseContext:bitmap
+                                                                            colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
+                                                                      shouldColorMatch:YES];
+            
+            glPopClientAttrib();
+            glPopAttrib();
 	
-	self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
-																	pixelsWide:width
-																	pixelsHigh:height
-																		  name:webTexture1
-																	   flipped:YES
-															   releaseCallback:_TextureReleaseCallback
-																releaseContext:NULL
-																	colorSpace:CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB)
-															  shouldColorMatch:YES];
-	
-	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
-	
-	glPopAttrib();
-	
-	
-	// unlock to allow anything else to grab the context
-	CGLUnlockContext(cgl_ctx);
+        }
+        else
+        {
+            self.outputImage = nil;
+        }
+    }
 	
 	return YES;
 }
@@ -916,11 +916,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	/*
 	Called by Quartz Composer when rendering of the composition stops: perform any required cleanup for the plug-in.
 	*/
-	CGLContextObj cgl_ctx = [context CGLContextObj];
-	CGLLockContext(cgl_ctx);
-	// delete our texture
-	glDeleteTextures(1, &webTexture1);
-	CGLUnlockContext(cgl_ctx);
+    self.webBitmap = nil;
 }
 
 
@@ -931,13 +927,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
     NSBitmapImageRep *imagerep = [view bitmapImageRepForCachingDisplayInRect:[view visibleRect]];
     [view cacheDisplayInRect:[view visibleRect] toBitmapImageRep:imagerep];	
     
-    @synchronized(self.webBitmap)
-    {
-        if (imagerep != NULL) {
-            [self setWebBitmap:imagerep];
-        }
+    if (imagerep != NULL) {
+        [self setWebBitmap:imagerep];
     }
-
 }
 
 -(void)initMeOnStart {
@@ -988,11 +980,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
         bitmap = [[NSBitmapImageRep alloc] initWithFocusedViewRect:[view visibleRect]];
         [view unlockFocus];
         
-        @synchronized(self.webBitmap)
-        {
-            [self setWebBitmap:bitmap];
-            [bitmap release]; 
-        }
+        [self setWebBitmap:bitmap];
+        [bitmap release]; 
     }
 
 	
