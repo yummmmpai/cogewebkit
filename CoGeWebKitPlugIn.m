@@ -12,7 +12,7 @@
 #import "CoGeWebKitPlugIn.h"
 
 #define	kQCPlugIn_Name				@"CoGeWebKit"
-#define	kQCPlugIn_Description		@"CoGeWebKit RC1 via .lov. and vade. Renders the file at the given URL with WebKit."
+#define	kQCPlugIn_Description		@"CoGeWebKit 1.0 by .lov., vade and bangnoise. Renders the file to texture at the given URL with WebKit."
 
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
@@ -387,7 +387,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 -(void)executeJavascriptWithString:(NSString *)string{
 
-	[theWebView stringByEvaluatingJavaScriptFromString:string];
+	[theWebView performSelectorOnMainThread:@selector(stringByEvaluatingJavaScriptFromString:) withObject:string waitUntilDone:NO];
 }
 
 -(void)setOutputWidthAndHeight {
@@ -1054,7 +1054,15 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 {	
     contentLoaded = YES;
     
-	DOMNodeList *imgList = [[frame DOMDocument] getElementsByTagName:@"img"];
+    [self performSelectorOnMainThread:@selector(grabImagesFromWebSiteWithSources:) withObject:[NSArray arrayWithObjects:sender,frame, nil] waitUntilDone:NO];
+}
+
+-(void)grabImagesFromWebSiteWithSources:(NSArray *)sources {
+
+    id sender = [sources objectAtIndex:0];
+    id frame = [sources objectAtIndex:1];
+    
+    DOMNodeList *imgList = [[frame DOMDocument] getElementsByTagName:@"img"];
 	// NSLog(@"img elements count: %d", [imgList length]);
 	
 	// autoreleased temp array.
@@ -1067,17 +1075,13 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	// update our oneshot ports
 	[self setUrlList:newURLArray];
-	[self setStringHTMLSource:[self sourceFromWebView:sender]];	
+	[self setStringHTMLSource:[[[[sender mainFrame] dataSource] representation] documentSource]];	
 	updateOneshotOutputPorts = YES;
 
 }
 
 #pragma mark -
 #pragma mark Helper Functions
-- (NSString *)sourceFromWebView:(WebView *)webView
-{
-    return [[[[webView mainFrame] dataSource] representation] documentSource];
-}
 
 
 - (void) handleLoadingFlashSetup:(NSString *)swffile;
