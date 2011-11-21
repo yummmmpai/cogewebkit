@@ -504,12 +504,12 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	{
 		if(self.inputShowWindow)
 		{
-			[offscreenWindow center];
-			[offscreenWindow orderFront:nil];
+			[offscreenWindow performSelectorOnMainThread:@selector(center) withObject:nil waitUntilDone:NO];
+			[offscreenWindow performSelectorOnMainThread:@selector(orderFront:) withObject:nil waitUntilDone:NO];
 		}
 		else
 		{
-			[offscreenWindow orderOut:nil];
+			[offscreenWindow performSelectorOnMainThread:@selector(orderOut:) withObject:nil waitUntilDone:NO];
 		}	
 			
 	}
@@ -585,7 +585,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	if ([self didValueForInputKeyChange:@"inputFilePath"])
 	{
-		
+		[offscreenWindow orderFront:self];
 		//stops swf playing - this actually stops current swf audio playing
 		//needed in any situation
 		
@@ -627,7 +627,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 		self.outputCurrentURL = [NSString stringWithString:self.inputFilePath];
 
-	
+        [offscreenWindow orderOut:self];
 	}
 	
 	
@@ -963,15 +963,15 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//
 	
 	if ([view visibleRect].size.width != width) {
-        [self performSelectorOnMainThread:@selector(initMeOnStart) withObject:nil waitUntilDone:NO];
+        [self performSelectorOnMainThread:@selector(initMeOnStart) withObject:nil waitUntilDone:YES];
 	}
 	
     if ((rendersflash) || (needsforcerenderflash)) {
         
         
         //NSLog(@"will render flash content!");
-        [self performSelectorOnMainThread:@selector(cacheTexture) withObject:nil waitUntilDone:YES];
-        
+        [self performSelectorOnMainThread:@selector(cacheTexture) withObject:nil waitUntilDone:NO];
+       
         
         
     } else {
