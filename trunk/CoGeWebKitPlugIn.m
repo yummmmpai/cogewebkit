@@ -585,7 +585,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	if ([self didValueForInputKeyChange:@"inputFilePath"])
 	{
-		[offscreenWindow orderFront:self];
+		[offscreenWindow performSelectorOnMainThread:@selector(orderFront:) withObject:nil waitUntilDone:NO];
 		//stops swf playing - this actually stops current swf audio playing
 		//needed in any situation
 		
@@ -627,7 +627,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 		self.outputCurrentURL = [NSString stringWithString:self.inputFilePath];
 
-        [offscreenWindow orderOut:self];
+        [offscreenWindow performSelectorOnMainThread:@selector(orderOut:) withObject:nil waitUntilDone:NO];
 	}
 	
 	
