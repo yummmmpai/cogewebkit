@@ -97,20 +97,17 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 343414173;
-			PBXWorkspaceStateSaveDate = 343414173;
+			PBXPerProjectTemplateStateSaveDate = 345066193;
+			PBXWorkspaceStateSaveDate = 345066193;
 		};
 		perUserProjectItems = {
-			3001A7BF1476A343002EEC68 /* PBXTextBookmark */ = 3001A7BF1476A343002EEC68 /* PBXTextBookmark */;
-			3001A7C11476A343002EEC68 /* PBXTextBookmark */ = 3001A7C11476A343002EEC68 /* PBXTextBookmark */;
 			305A109D14759D5A00CDB257 /* PlistBookmark */ = 305A109D14759D5A00CDB257 /* PlistBookmark */;
+			30861CFB14914ADE00C587D3 /* PBXBookmark */ = 30861CFB14914ADE00C587D3 /* PBXBookmark */;
+			30861D06149150BC00C587D3 /* PBXTextBookmark */ = 30861D06149150BC00C587D3 /* PBXTextBookmark */;
 			30B9D3341286987100C83F82 /* PBXTextBookmark */ = 30B9D3341286987100C83F82 /* PBXTextBookmark */;
-			30B9D5041286B47800C83F82 /* PBXTextBookmark */ = 30B9D5041286B47800C83F82 /* PBXTextBookmark */;
-			30B9D5051286B47800C83F82 /* PBXTextBookmark */ = 30B9D5051286B47800C83F82 /* PBXTextBookmark */;
 			30B9D6811286D37000C83F82 /* PBXTextBookmark */ = 30B9D6811286D37000C83F82 /* PBXTextBookmark */;
 			30B9D7981287044800C83F82 /* PBXTextBookmark */ = 30B9D7981287044800C83F82 /* PBXTextBookmark */;
 			30B9D7C21287217800C83F82 /* PBXTextBookmark */ = 30B9D7C21287217800C83F82 /* PBXTextBookmark */;
-			30FF0D03147815A0005F6CB8 /* PBXTextBookmark */ = 30FF0D03147815A0005F6CB8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 23E90CA40A83C4F400A6A40A /* Source Control */;
 		userBuildSettings = {
@@ -126,9 +123,9 @@
 	};
 	16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1692, 14326}}";
-			sepNavSelRange = "{24172, 1587}";
-			sepNavVisRange = "{24302, 1635}";
+			sepNavIntBoundsRect = "{{0, 0}, {1692, 14495}}";
+			sepNavSelRange = "{14593, 5}";
+			sepNavVisRange = "{14260, 740}";
 		};
 	};
 	1B5B5AE6100194BB0043536B /* TransparentWindow.h */ = {
@@ -217,26 +214,6 @@
 		path = "/Developer/Applications/Quartz Composer.app";
 		sourceTree = "<absolute>";
 	};
-	3001A7BF1476A343002EEC68 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 16BA95400A7EB2EB001E4983 /* CoGeWebKitPlugIn.h */;
-		name = "CoGeWebKitPlugIn.h: 93";
-		rLen = 63;
-		rLoc = 2369;
-		rType = 0;
-		vrLen = 847;
-		vrLoc = 2257;
-	};
-	3001A7C11476A343002EEC68 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
-		name = "CoGeWebKitPlugIn.m: 848";
-		rLen = 1587;
-		rLoc = 24172;
-		rType = 0;
-		vrLen = 1644;
-		vrLoc = 24302;
-	};
 	305A109D14759D5A00CDB257 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
@@ -249,6 +226,20 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
+	30861CFB14914ADE00C587D3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+	};
+	30861D06149150BC00C587D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
+		name = "CoGeWebKitPlugIn.m: 508";
+		rLen = 5;
+		rLoc = 14593;
+		rType = 0;
+		vrLen = 740;
+		vrLoc = 14260;
+	};
 	30B9D3341286987100C83F82 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1B5B5B6D1001BC9D0043536B /* NonTransparentWebTitleBar.m */;
@@ -258,26 +249,6 @@
 		rType = 0;
 		vrLen = 370;
 		vrLoc = 0;
-	};
-	30B9D5041286B47800C83F82 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1B5B5AE6100194BB0043536B /* TransparentWindow.h */;
-		name = "TransparentWindow.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 287;
-		vrLoc = 0;
-	};
-	30B9D5051286B47800C83F82 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1B5B5AE7100194BB0043536B /* TransparentWindow.m */;
-		name = "TransparentWindow.m: 4";
-		rLen = 0;
-		rLoc = 44;
-		rType = 0;
-		vrLen = 550;
-		vrLoc = 139;
 	};
 	30B9D5391286B68E00C83F82 /* wrapperNEW.html */ = {
 		uiCtxt = {
@@ -322,16 +293,6 @@
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 0;
-	};
-	30FF0D03147815A0005F6CB8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 16BA95410A7EB2EB001E4983 /* CoGeWebKitPlugIn.m */;
-		name = "CoGeWebKitPlugIn.m: 848";
-		rLen = 1587;
-		rLoc = 24172;
-		rType = 0;
-		vrLen = 1635;
-		vrLoc = 24302;
 	};
 	8D5B49AC048680CD000E48DA /* CoGeWebKit */ = {
 		activeExec = 0;
