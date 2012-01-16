@@ -57,6 +57,8 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 @dynamic outputDocWidth;
 @dynamic outputDocHeight;
 
+@dynamic inputHideScrollbar;
+
 // class stuff
 @synthesize theURLString;
 @synthesize webBitmap;
@@ -132,6 +134,13 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				@"Re-execute Javascript", QCPortAttributeNameKey, nil];
 	}
 
+	if([key isEqualToString:@"inputHideScrollbar"])
+	{
+		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeBoolean, QCPortAttributeTypeKey,
+				[NSNumber numberWithInt:0], QCPortAttributeDefaultValueKey,
+				@"Hide Scrollbar", QCPortAttributeNameKey, nil];
+	}
+	
 	if([key isEqualToString:@"inputForceFlashRendering"])
 	{
 		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeBoolean, QCPortAttributeTypeKey,
@@ -229,6 +238,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			@"inputShowWindow",
 			@"inputBackwardHistory",
 			@"inputForwardHistory",
+			@"inputHideScrollbar",
 			@"inputReload",
 			@"inputMouseX",
 			@"inputMouseY",
@@ -382,7 +392,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	needsrebuild = YES;
 	
 	
-	
 }
 
 -(void)executeJavascriptWithString:(NSString *)string{
@@ -412,6 +421,15 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	lastScrollValueY = [value doubleValue];
 
 //	NSLog(@"scrollY %f", lastScrollValueY);
+}
+
+-(void)toggleScrollbarVisibility {
+
+	BOOL val = !self.inputHideScrollbar; 
+	
+	[[theWebView windowScriptObject] evaluateWebScript:[NSString stringWithFormat:@"document.body.style.overflow='%@';",val?@"auto":@"hidden"]];
+	
+//	NSLog(@"%@", [NSString stringWithFormat:@"document.body.style.overflow='%@';",val?@"auto":@"hidden"]);
 }
 
 -(void)webviewScrollX:(NSNumber *)value {
@@ -820,6 +838,11 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		needJSExecute = NO;
 	}
+	
+	if ([self didValueForInputKeyChange:@"inputHideScrollbar"]) {
+		
+		[self performSelectorOnMainThread:@selector(toggleScrollbarVisibility) withObject:nil waitUntilDone:YES];
+	}
 
 	
 #pragma mark Image provider
@@ -828,6 +851,15 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	if (!(self.workingOn1) || (needsrebuild)) 
 	{
+		
+		if (justDisabled) {
+			
+			[self performSelectorOnMainThread:@selector(webviewLoadRequest:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
+			
+			
+			justDisabled = NO;
+		}
+		
 		
 	//	NSLog(@"start rebuilding!");
 	//	[self performSelectorOnMainThread:@selector(copyWebViewToBitmapInBackground) withObject:nil waitUntilDone:NO];
@@ -909,6 +941,10 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	Called by Quartz Composer when the plug-in instance stops being used by Quartz Composer.
 	*/	
 	
+	[self performSelectorOnMainThread:@selector(webviewLoadRequest:) withObject:[NSString stringWithString:@""] waitUntilDone:NO];
+	
+	justDisabled = YES;
+	
 }
 
 - (void) stopExecution:(id<QCPlugInContext>)context
@@ -917,6 +953,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	Called by Quartz Composer when rendering of the composition stops: perform any required cleanup for the plug-in.
 	*/
     self.webBitmap = nil;
+	
 }
 
 
@@ -1053,8 +1090,10 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {	
     contentLoaded = YES;
-    
+    	
     [self performSelectorOnMainThread:@selector(grabImagesFromWebSiteWithSources:) withObject:[NSArray arrayWithObjects:sender,frame, nil] waitUntilDone:NO];
+
+	
 }
 
 -(void)grabImagesFromWebSiteWithSources:(NSArray *)sources {
@@ -1082,7 +1121,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 #pragma mark -
 #pragma mark Helper Functions
-
 
 - (void) handleLoadingFlashSetup:(NSString *)swffile;
 {

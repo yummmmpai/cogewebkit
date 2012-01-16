@@ -54,6 +54,8 @@
     
     BOOL contentLoaded;
 	
+	BOOL justDisabled;
+	
 }
 
 @property (readwrite, retain) NSString* theURLString;
@@ -90,6 +92,8 @@
 //for fucking swf
 @property (assign) BOOL inputForceFlashRendering;
 
+@property (assign) BOOL inputHideScrollbar;
+
 @property (assign) id<QCPlugInOutputImageProvider> outputImage;
 @property (assign) double outputDocWidth;
 @property (assign) double outputDocHeight;
@@ -109,7 +113,6 @@
 - (void) copyWebViewToBitmapInBackground;
 - (NSPoint) normalizedMouseLocationForMouseX:(double)inputMouseX mouseY:(double)inputMouseY isFlippedY:(BOOL)flippedy;
 
-- (NSString *)sourceFromWebView:(WebView *)webView;
 - (void) handleLoadingFlashSetup:(NSString *)swffile;
 
 
