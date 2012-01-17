@@ -12,7 +12,7 @@
 #import "CoGeWebKitPlugIn.h"
 
 #define	kQCPlugIn_Name				@"CoGeWebKit"
-#define	kQCPlugIn_Description		@"CoGeWebKit 1.0 by .lov., vade and bangnoise. Renders the file to texture at the given URL with WebKit."
+#define	kQCPlugIn_Description		@"CoGeWebKit 1.0 RC2 by .lov., vade and bangnoise. Renders the file to texture at the given URL with WebKit."
 
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
@@ -293,6 +293,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//delegate to make popup works
 	[theWebView setPolicyDelegate:self];
 	[theWebView setUIDelegate:self];
+	
+	//we should tell we are Safari, or some web services won't work as expected, like TypeKit
+	[theWebView setApplicationNameForUserAgent:@"Safari"];
 
 	
 
@@ -1090,6 +1093,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {	
     contentLoaded = YES;
+	
     	
     [self performSelectorOnMainThread:@selector(grabImagesFromWebSiteWithSources:) withObject:[NSArray arrayWithObjects:sender,frame, nil] waitUntilDone:NO];
 
