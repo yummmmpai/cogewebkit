@@ -12,7 +12,7 @@
 #import "CoGeWebKitPlugIn.h"
 
 #define	kQCPlugIn_Name				@"CoGeWebKit"
-#define	kQCPlugIn_Description		@"CoGeWebKit 1.0 RC2 by .lov., vade and bangnoise. Renders the file to texture at the given URL with WebKit."
+#define	kQCPlugIn_Description		@"CoGeWebKit 1.0 RC3 by .lov., vade and bangnoise. Renders the file to texture at the given URL with WebKit."
 
 
 static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* info)
@@ -32,6 +32,8 @@ static void _TextureReleaseCallback(CGLContextObj cgl_ctx, GLuint name, void* in
 @dynamic inputReexecuteJS;
 
 @dynamic inputForceFlashRendering;
+
+@dynamic inputIsActive;
 
 @dynamic inputReload;
 @dynamic inputForwardHistory;
@@ -199,6 +201,13 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 				@"View Browser Window", QCPortAttributeNameKey, nil];
 	}
 
+	if([key isEqualToString:@"inputIsActive"])
+	{
+		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeBoolean, QCPortAttributeTypeKey,
+				[NSNumber numberWithInt:1], QCPortAttributeDefaultValueKey,
+				@"Is Active", QCPortAttributeNameKey, nil];
+	}
+	
 	
 	if([key isEqualToString:@"outputImage"])
 		return [NSDictionary dictionaryWithObjectsAndKeys:QCPortTypeImage, QCPortAttributeTypeKey,@"Image", QCPortAttributeNameKey,nil];
@@ -247,6 +256,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			@"inputMouseScrollX",
 			@"inputMouseScrollY",
 			@"inputKeyDown",
+			@"inputIsActive",
 			@"outputImage",
 			@"outputDocWidth", 
 			@"outputDocHeight",
@@ -379,6 +389,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	width = self.inputWidth;
 	height = self.inputHeight;
 	
+	justStarted = YES;
+	
 	return YES;
 }
 
@@ -467,18 +479,25 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 -(void)webviewLoadRequest:(NSString *)filepath {
 	
+	[filepath retain];
+	
+//	NSLog(@"load request: %@", filepath);
+	
 	//if (self.inputFilePath != nil) 
 	{
 
 		[offscreenWindow setBackgroundColor:[NSColor clearColor]];
 		
-		[[theWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:filepath]]];
 		[theWebView setDrawsBackground:NO];
 		[offscreenWindow setOpaque:NO];
-		
+		//[[theWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:filepath]]];
+		//this method is seems to be better:
+		[offscreenWindow setNaviPath:filepath];
 	//	NSLog(@"webview request loaded");
 		
 	}
+	
+	[filepath release];
 	
 
 }
@@ -519,6 +538,30 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	*/
 
 	CGLContextObj cgl_ctx = [context CGLContextObj];
+	
+	if (([self didValueForInputKeyChange:@"inputIsActive"]) && (!justStarted)) {
+				
+		if (self.inputIsActive) {
+			
+			[self setWebBitmap:nil];
+			
+			[self performSelectorOnMainThread:@selector(webviewLoadRequest:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
+			
+			justDisabled = NO;
+			needsrebuild = YES;
+		
+			
+		} else {
+			
+			[self performSelectorOnMainThread:@selector(webviewLoadRequest:) withObject:[NSString stringWithString:@""] waitUntilDone:NO];
+			
+		}
+	} else if (justStarted) {
+		justStarted = NO;
+	}
+	
+	
+	
 	
 	//if filepath changed, reload
 	if ([self didValueForInputKeyChange:@"inputShowWindow"])
@@ -606,7 +649,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	if ([self didValueForInputKeyChange:@"inputFilePath"])
 	{
-		[offscreenWindow performSelectorOnMainThread:@selector(orderFront:) withObject:nil waitUntilDone:NO];
+		//[offscreenWindow performSelectorOnMainThread:@selector(orderFront:) withObject:nil waitUntilDone:NO];
 		//stops swf playing - this actually stops current swf audio playing
 		//needed in any situation
 		
@@ -648,8 +691,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 		self.outputCurrentURL = [NSString stringWithString:self.inputFilePath];
 
-        [offscreenWindow performSelectorOnMainThread:@selector(orderOut:) withObject:nil waitUntilDone:NO];
+       // [offscreenWindow performSelectorOnMainThread:@selector(orderOut:) withObject:nil waitUntilDone:NO];
 	}
+	
 	
 	
 	if(updateOneshotOutputPorts)
@@ -846,15 +890,16 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		[self performSelectorOnMainThread:@selector(toggleScrollbarVisibility) withObject:nil waitUntilDone:YES];
 	}
-
+	
+	
 	
 #pragma mark Image provider
     
 
 	
-	if (!(self.workingOn1) || (needsrebuild)) 
+	if ((!(self.workingOn1) || (needsrebuild)) && (self.inputIsActive == YES))
 	{
-		
+				
 		if (justDisabled) {
 			
 			[self performSelectorOnMainThread:@selector(webviewLoadRequest:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
@@ -876,8 +921,9 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
     if (!liveresize)
     {
         NSBitmapImageRep *bitmap = self.webBitmap;
+		
         
-        if (bitmap != nil)
+        if ((bitmap != nil)  && (self.inputIsActive == YES))
         {
             //NSLog(@"rendering...");
             glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT);
@@ -1011,8 +1057,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
         
         //NSLog(@"will render flash content!");
         [self performSelectorOnMainThread:@selector(cacheTexture) withObject:nil waitUntilDone:NO];
-       
-        
+               
         
     } else {
         
