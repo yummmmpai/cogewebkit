@@ -39,6 +39,8 @@
 	NSString *stringHTMLSource;	
 	BOOL needJSExecute;
 	
+	BOOL justStarted;
+	
 	//remember to scrollview current location
 	double lastScrollValueX;
 	double lastScrollValueY;
@@ -93,6 +95,8 @@
 @property (assign) BOOL inputForceFlashRendering;
 
 @property (assign) BOOL inputHideScrollbar;
+
+@property (assign) BOOL inputIsActive;
 
 @property (assign) id<QCPlugInOutputImageProvider> outputImage;
 @property (assign) double outputDocWidth;

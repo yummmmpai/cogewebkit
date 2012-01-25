@@ -12,8 +12,10 @@
 @interface TransparentWindow : NSWindow
 {
 
-	IBOutlet NSTextField *urlField;
+	NSTextField *urlField;
 }
+
+@property (assign, readwrite) IBOutlet NSTextField *urlField;
 
 -(void)setNaviPath:(NSString *)path;
 

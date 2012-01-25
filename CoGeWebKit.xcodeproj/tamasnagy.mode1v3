@@ -327,7 +327,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>307CDC7714C5869B00CB4114</string>
+										<string>304BD7FD14CED4F100069CC3</string>
 										<key>history</key>
 										<array>
 											<string>30B9D3341286987100C83F82</string>
@@ -338,8 +338,8 @@
 											<string>302DF67414C4992D0072D877</string>
 											<string>302DF68014C49B5A0072D877</string>
 											<string>302DF68114C49B5A0072D877</string>
-											<string>302DF68B14C49D360072D877</string>
-											<string>307CDC6014C5858D00CB4114</string>
+											<string>304BD78F14CEC70200069CC3</string>
+											<string>304BD79014CEC70200069CC3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -351,14 +351,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1053, 388}}</string>
+								<string>{{0, 0}, {1053, 363}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 95 1280 683 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>388pt</string>
+							<string>363pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -371,14 +371,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 393}, {1053, 249}}</string>
+								<string>{{0, 368}, {1053, 274}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 95 1280 683 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>249pt</string>
+							<string>274pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -397,9 +397,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>307CDC6214C5858D00CB4114</string>
+				<string>304BD7FE14CED4F100069CC3</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>307CDC6314C5858D00CB4114</string>
+				<string>304BD7FF14CED4F100069CC3</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -537,11 +537,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>307CDC7014C585A400CB4114</string>
-		<string>307CDC7114C585A400CB4114</string>
 		<string>3084094A125D082800E88EF0</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/tamasnagy/Documents/QC Projects/CoGeWebKit/CoGeWebKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -622,7 +619,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>3084094A125D082800E88EF0</string>
-				<string>307CDC6414C5858D00CB4114</string>
+				<string>304BD80014CED4F100069CC3</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -744,13 +741,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>307CDC6514C5858D00CB4114</string>
+				<string>304BD80114CED4F100069CC3</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>307CDC6614C5858D00CB4114</string>
-				<string>307CDC6714C5858D00CB4114</string>
-				<string>307CDC6814C5858D00CB4114</string>
-				<string>307CDC6914C5858D00CB4114</string>
-				<string>307CDC6A14C5858D00CB4114</string>
+				<string>304BD80214CED4F100069CC3</string>
+				<string>304BD80314CED4F100069CC3</string>
+				<string>304BD80414CED4F100069CC3</string>
+				<string>304BD80514CED4F100069CC3</string>
+				<string>304BD80614CED4F100069CC3</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
