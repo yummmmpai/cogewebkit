@@ -92,7 +92,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		return [NSDictionary dictionaryWithObjectsAndKeys:
 				QCPortTypeString, QCPortAttributeTypeKey,
 				@"URL", QCPortAttributeNameKey,
-				@"http://coge.lovqc.hu",  QCPortAttributeDefaultValueKey,				
+				@"http://www.cogevj.hu",  QCPortAttributeDefaultValueKey,				
 				nil];
 	}
 	
@@ -101,7 +101,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		return [NSDictionary dictionaryWithObjectsAndKeys:@"Width", QCPortAttributeNameKey,
 				[NSNumber numberWithDouble:640], QCPortAttributeDefaultValueKey,
 				[NSNumber numberWithDouble:1], QCPortAttributeMinimumValueKey,
-				[NSNumber numberWithFloat:[[NSScreen mainScreen] frame].size.width], QCPortAttributeMaximumValueKey,
+				//[NSNumber numberWithFloat:[[NSScreen mainScreen] frame].size.width], QCPortAttributeMaximumValueKey,
 				nil];
 	}
 
@@ -119,7 +119,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		return [NSDictionary dictionaryWithObjectsAndKeys:@"Height", QCPortAttributeNameKey,
 				[NSNumber numberWithDouble:480], QCPortAttributeDefaultValueKey,
 				[NSNumber numberWithDouble:1], QCPortAttributeMinimumValueKey,
-				[NSNumber numberWithFloat:[[NSScreen mainScreen] frame].size.height], QCPortAttributeMaximumValueKey,
+			//	[NSNumber numberWithFloat:[[NSScreen mainScreen] frame].size.height], QCPortAttributeMaximumValueKey,
 				nil];
 	}
 		
@@ -322,7 +322,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		//init on the main thread
 		[self performSelectorOnMainThread:@selector(initWebViewOnMainThread) withObject:nil waitUntilDone:NO];
 		
-		lock1 = [[NSRecursiveLock alloc] init];
 		
 		[self setWorkingOn1:NO];
 		
@@ -363,7 +362,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	[theWebView setUIDelegate:nil];
 	
 	
-	[lock1 release];
 	
 	[offscreenWindow close];
 	[offscreenWindow release];
@@ -898,6 +896,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 	
 	if ((!(self.workingOn1) || (needsrebuild)) && (self.inputIsActive == YES))
+//	if (1)
 	{
 				
 		if (justDisabled) {
@@ -912,10 +911,17 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//	NSLog(@"start rebuilding!");
 	//	[self performSelectorOnMainThread:@selector(copyWebViewToBitmapInBackground) withObject:nil waitUntilDone:NO];
        [self performSelectorInBackground:@selector(copyWebViewToBitmapInBackground) withObject:nil];
-	//	NSLog(@"rebuilding finished!");
+	/*	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0),  ^{
+			[self copyWebViewToBitmapInBackground];
+		});
+	*/
+	 //NSLog(@"rebuilding finished!");
 	//	NSLog(@"bitmap width: %d  inputwidth: %d", [self.webBitmap pixelsWide], width);
 		
-	}	
+	}	else {
+		
+	//	NSLog(@"skip texture creation!");
+	}
 	
 	
     if (!liveresize)
@@ -954,13 +960,16 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
             
             glTexImage2D(GL_TEXTURE_RECTANGLE_EXT, 0, [bitmap samplesPerPixel] == 4 ? GL_RGBA8 : GL_RGB8, [bitmap pixelsWide], [bitmap pixelsHigh], 0, [bitmap samplesPerPixel] == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, [bitmap bitmapData]);
             
+		//	glBindTexture(GL_TEXTURE_RECTANGLE_EXT, 0);
         
 #if __BIG_ENDIAN__
 #define CogePrivatePlugInPixelFormat QCPlugInPixelFormatARGB8
 #else
 #define CogePrivatePlugInPixelFormat QCPlugInPixelFormatBGRA8
 #endif
-        
+			
+
+			
             self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
                                                                             pixelsWide:width
                                                                             pixelsHigh:height
@@ -1056,8 +1065,10 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
         
         
         //NSLog(@"will render flash content!");
-        [self performSelectorOnMainThread:@selector(cacheTexture) withObject:nil waitUntilDone:NO];
+		//its much better if we wait till our texture is done
+        [self performSelectorOnMainThread:@selector(cacheTexture) withObject:nil waitUntilDone:YES];
                
+		
         
     } else {
         
@@ -1206,5 +1217,5 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	// set this to "fire" oneshot updates
 	updateOneshotOutputPorts = YES;
 }
-
 @end
+
