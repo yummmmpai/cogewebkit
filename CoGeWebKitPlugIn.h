@@ -10,7 +10,6 @@
 #import <WebKit/WebKit.h>
 #import <OpenGL/OpenGL.h>
 #import <TransparentWindow.h>
-
 #import <Appkit/Appkit.h>
 
 // AWT java view forward class declaration for Java plugins a la Processing 
@@ -29,7 +28,6 @@
 		
 	// cheap way to keep form spawning too many threads.
 	BOOL workingOn1;	
-	NSRecursiveLock* lock1;
 
 	// this is a boolean that trigers properties that only need to be set once per frame, ie
 	// output document height,width, source, image urls.
@@ -57,6 +55,8 @@
     BOOL contentLoaded;
 	
 	BOOL justDisabled;
+	
+	
 	
 }
 
@@ -122,3 +122,4 @@
 
 
 @end
+
