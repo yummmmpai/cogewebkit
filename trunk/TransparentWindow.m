@@ -30,4 +30,12 @@
 	
 	[urlField performClick:nil];
 }
+
+
+//this makes animated gifs working
+-(BOOL)isVisible {
+	
+	return YES;
+}
+
 @end
