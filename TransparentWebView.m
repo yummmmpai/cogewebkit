@@ -11,6 +11,13 @@
 
 @implementation TransparentWebView
 
+-(void)awakeFromNib {
+	
+	//this will enable WebGL
+	[[self preferences] setWebGLEnabled:YES];
+		
+}
+
 - (BOOL) isOpaque
 {
 	return NO;

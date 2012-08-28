@@ -25,8 +25,18 @@
 }
 
 -(void)setNaviPath:(NSString *)path {
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+    
+        [urlField setTitleWithMnemonic:[NSString stringWithFormat:@"file://%@", path]];
+
+        
+    } else {
+
+        [urlField setTitleWithMnemonic:path];
+
+    }
 	
-	[urlField setTitleWithMnemonic:path];
 	
 	[urlField performClick:nil];
 }

@@ -307,7 +307,6 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//we should tell we are Safari, or some web services won't work as expected, like TypeKit
 	[theWebView setApplicationNameForUserAgent:@"Safari"];
 
-	
 
 }
 
@@ -892,8 +891,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	
 	
 #pragma mark Image provider
-    
-
+	
 	
 	if ((!(self.workingOn1) || (needsrebuild)) && (self.inputIsActive == YES))
 //	if (1)
