@@ -292,6 +292,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	WebViewNib = [[NSNib alloc] initWithNibNamed:@"WebWindow" bundle:[NSBundle bundleForClass:[self class]]];
 	
 	[WebViewNib instantiateNibWithOwner:self topLevelObjects:nil];
+    [WebViewNib release];
 	
 	[offscreenWindow setInitialFirstResponder:theWebView];
 	[offscreenWindow display];
@@ -307,30 +308,22 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//we should tell we are Safari, or some web services won't work as expected, like TypeKit
 	[theWebView setApplicationNameForUserAgent:@"Safari"];
 
+    NSLog(@"WebView inited!");
 
+    isReady = YES;
 }
 
 - (id) init
 {
+    
 	if(self = [super init])
 	{
 		/*
 		Allocate any permanent resource required by the plug-in.
-		*/		
+		*/
+        
+        isReady = NO;
 		
-		//init on the main thread
-		[self performSelectorOnMainThread:@selector(initWebViewOnMainThread) withObject:nil waitUntilDone:NO];
-		
-		
-		[self setWorkingOn1:NO];
-		
-		
-		[self setStringHTMLSource:@""];
-		[self setUrlList:[NSMutableArray array]];
-		
-		updateOneshotOutputPorts = NO;
-		
-		JSOut = @"";
 	}
 	
 	return self;
@@ -399,7 +392,24 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	//we are going to init our textures, and use client storage optimizations
 //	CGLContextObj cgl_ctx = [context CGLContextObj];
 	
+    NSLog(@"enableExrcution");
+    
 //	[self buildWebTexture:cgl_ctx];
+    
+    //init on the main thread
+    [self performSelectorOnMainThread:@selector(initWebViewOnMainThread) withObject:nil waitUntilDone:YES];
+    
+    
+    [self setWorkingOn1:NO];
+    
+    
+    [self setStringHTMLSource:@""];
+    [self setUrlList:[NSMutableArray array]];
+    
+    updateOneshotOutputPorts = NO;
+    
+    JSOut = @"";
+
 	
 	needsrebuild = YES;
 	
@@ -476,7 +486,11 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 -(void)webviewLoadRequest:(NSString *)filepath {
 	
-	[filepath retain];
+    NSString *_filepath = filepath;
+    
+    if (_filepath == nil) _filepath = @"";
+    
+	[_filepath retain];
 	
 //	NSLog(@"load request: %@", filepath);
 	
@@ -487,14 +501,14 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		[theWebView setDrawsBackground:NO];
 		[offscreenWindow setOpaque:NO];
-		//[[theWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:filepath]]];
-		//this method is seems to be better:
-		[offscreenWindow setNaviPath:filepath];
+		//[[theWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_filepath]]];
+        //this method is seems to be better:
+		[offscreenWindow setNaviPath:_filepath];
 	//	NSLog(@"webview request loaded");
 		
 	}
 	
-	[filepath release];
+	[_filepath release];
 	
 
 }
@@ -533,6 +547,14 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	The OpenGL context for rendering can be accessed and defined for CGL macros using:
 	CGLContextObj cgl_ctx = [context CGLContextObj];
 	*/
+    
+    
+    if (!isReady) {
+    
+        NSLog(@"skipping because resources are not loaded yet");
+        
+        return NO;
+    } 
 
 	CGLContextObj cgl_ctx = [context CGLContextObj];
 	
@@ -632,11 +654,11 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 		
 		
 		
-		[self performSelectorOnMainThread:@selector(webviewSetFrame) withObject:nil waitUntilDone:NO];
+		[self performSelectorOnMainThread:@selector(webviewSetFrame) withObject:nil waitUntilDone:YES];
 		
 		if (rendersflash) {
 			
-			[self performSelectorOnMainThread:@selector(handleLoadingFlashSetup:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:NO];
+			[self performSelectorOnMainThread:@selector(handleLoadingFlashSetup:) withObject:[NSString stringWithString:self.inputFilePath] waitUntilDone:YES];
 			
 		}
 		
@@ -672,7 +694,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 			}
 			
 			//for pure swf, we need to set the filepath on the transparent window's textfield, weird...
-			//NO, WE DON'T WANNA THIS PIECE OF SITH
+			//NO, WE DON'T WANNA THIS PIECE OF SIT
 			//	[offscreenWindow setNaviPath:self.inputFilePath];
 			
 			
@@ -1206,7 +1228,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 //	NSLog(@"ok, 'upload' or html content...");
 	
 	//load with webframe
-	[self performSelectorOnMainThread:@selector(loadHTMLOnMainThread:) withObject:htmlfull waitUntilDone:NO];
+	[self performSelectorOnMainThread:@selector(loadHTMLOnMainThread:) withObject:htmlfull waitUntilDone:YES];
 	
 	[offscreenWindow setBackgroundColor:[NSColor clearColor]];
 	[offscreenWindow setOpaque:NO];

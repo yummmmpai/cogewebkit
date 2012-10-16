@@ -56,7 +56,7 @@
 	
 	BOOL justDisabled;
 	
-	
+	BOOL isReady;
 	
 }
 
