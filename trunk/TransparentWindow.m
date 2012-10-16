@@ -15,11 +15,15 @@
 
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
 {
-	if(![super initWithContentRect:contentRect styleMask:windowStyle backing:bufferingType defer:deferCreation])
-		return nil;
+	self = [super initWithContentRect:contentRect styleMask:windowStyle backing:bufferingType defer:deferCreation];
 
-	[self setBackgroundColor:[NSColor clearColor]];
-	[self setOpaque:NO];
+    if (self) {
+
+        [self setBackgroundColor:[NSColor clearColor]];
+        [self setOpaque:NO];
+
+    }
+    
 	
 	return self;
 }
@@ -37,8 +41,7 @@
 
     }
 	
-	
-	[urlField performClick:nil];
+	[urlField sendAction:[urlField action] to:[urlField target]];
 }
 
 

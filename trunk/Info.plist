@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>CoGeWebKit version 1.0, Copyright YourCompany.</string>
+	<string>CoGeWebKit version 1.0.1., Copyright .lov.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.lov.${PRODUCT_NAME:identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>QCPlugInClasses</key>
 	<array>
 		<string>CoGeWebKitPlugIn</string>
