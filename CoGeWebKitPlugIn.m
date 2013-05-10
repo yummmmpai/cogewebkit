@@ -477,7 +477,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 -(void)webviewSetFrame {
 	
 	[theWebView setFrame:NSMakeRect(0, 0, width, height)];
-;
+
 	
 	liveresize = NO;
 	
@@ -991,8 +991,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 
 			
             self.outputImage =  [context outputImageProviderFromTextureWithPixelFormat:CogePrivatePlugInPixelFormat
-                                                                            pixelsWide:width
-                                                                            pixelsHigh:height
+                                                                            pixelsWide:[bitmap pixelsWide]
+                                                                            pixelsHigh:[bitmap pixelsHigh]
                                                                                   name:webTexture1
                                                                                flipped:YES
                                                                        releaseCallback:_TextureReleaseCallback
